@@ -13,6 +13,7 @@ function normalize() {
     targetDeployment ? 'vault-deployed-awaiting-ticket' : sourceDeployment ? 'source-deployed-awaiting-target-funding' : 'not-deployed';
   const run = {
     schemaVersion: 1, project: 'GasBack', generatedAt: new Date().toISOString(), status,
+    repoURL: 'https://github.com/stetang98/gasback-attestcoin',
     networkMode: 'testnet-only',
     networks: { source: { name: 'Ethereum Sepolia', chainId: CHAIN.source, chainKey: 1, rpc: RPC.source },
       target: { name: 'Creditcoin Testnet', chainId: CHAIN.target, rpc: RPC.target } },

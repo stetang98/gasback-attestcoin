@@ -28,22 +28,40 @@ async function main() {
           }
         }
         write('preclaim-rejections.json', { observedAt: new Date().toISOString(), cases: rejected });
-        await vault.claim.staticCall(...args);
+        await vault.claim.staticCall(...args, { gasLimit: 1800000 });
         const balanceBefore = await p.getBalance(deployment.address);
         const totalPaidBefore = await vault.totalPaid();
         const tx = await vault.claim(...args, { gasLimit: 1800000 });
-        pending = { transactionHash: tx.hash, vaultBalanceBefore: balanceBefore.toString(), totalPaidBefore: totalPaidBefore.toString() };
+        pending = { transactionHash: tx.hash, submittedObservedAt: new Date().toISOString(),
+          vaultBalanceBefore: balanceBefore.toString(), totalPaidBefore: totalPaidBefore.toString() };
         write('claim-pending.json', pending);
         console.log(JSON.stringify({ claimSent: tx.hash }));
       }
       const r = await p.waitForTransaction(pending.transactionHash, 1, 180000);
+      const receiptConfirmedObservedAt = new Date().toISOString();
       if (!r || r.status !== 1) throw new Error('Claim not confirmed successful');
       const event = r.logs.map(l => { try { return vault.interface.parseLog(l); } catch { return null; } }).find(l => l && l.name === 'RebatePaid');
       if (!event || !await vault.claimed(ticket.ticketId)) throw new Error('Successful receipt lacks expected rebate event/state');
+      const beneficiaryBalanceBeforeBlock = await p.getBalance(event.args.beneficiary, r.blockNumber - 1);
+      const beneficiaryBalanceAfterBlock = await p.getBalance(event.args.beneficiary, r.blockNumber);
+      const claimGasFee = r.gasUsed * r.gasPrice;
+      const beneficiaryNetDelta = beneficiaryBalanceAfterBlock - beneficiaryBalanceBeforeBlock;
+      const beneficiaryPaysClaimGas = r.from.toLowerCase() === event.args.beneficiary.toLowerCase();
+      const expectedBeneficiaryNetDelta = event.args.amount - (beneficiaryPaysClaimGas ? claimGasFee : 0n);
+      const beneficiaryBalanceMatches = beneficiaryNetDelta === expectedBeneficiaryNetDelta;
+      if (!beneficiaryBalanceMatches) throw new Error('Beneficiary block balance delta needs reconciliation before claiming payout verified');
       claim = { observedAt: new Date().toISOString(), chainId: 102031, asset: 'test CTC', vault: deployment.address,
         ticketId: ticket.ticketId, sourceTransaction: read('source-failure.json').receipt.transactionHash,
         beneficiary: event.args.beneficiary, amount: event.args.amount.toString(), sourceBlock: Number(event.args.sourceBlock),
         nullifier: event.args.nullifier, receipt: receipt(r), ...pending,
+        receiptConfirmedObservedAt,
+        submissionToReceiptObservedMs: pending.submittedObservedAt ? Date.parse(receiptConfirmedObservedAt) - Date.parse(pending.submittedObservedAt) : null,
+        targetBlockTimestamp: (await p.getBlock(r.blockNumber)).timestamp,
+        beneficiaryTransfer: { balanceBeforeBlockNumber: r.blockNumber - 1, balanceAfterBlockNumber: r.blockNumber,
+          balanceBeforeWei: beneficiaryBalanceBeforeBlock.toString(), balanceAfterWei: beneficiaryBalanceAfterBlock.toString(),
+          grossRebateWei: event.args.amount.toString(), claimGasFeeWei: claimGasFee.toString(), beneficiaryPaysClaimGas,
+          observedNetDeltaWei: beneficiaryNetDelta.toString(), expectedNetDeltaWei: expectedBeneficiaryNetDelta.toString(),
+          verified: beneficiaryBalanceMatches, boundary: 'Block-boundary RPC balances for this dedicated test wallet; net increase subtracts the claim gas paid by the beneficiary.' },
         vaultBalanceAfter: (await p.getBalance(deployment.address)).toString(), totalPaidAfter: (await vault.totalPaid()).toString(),
         explorer: `https://creditcoin-testnet.blockscout.com/tx/${r.hash}` };
       write('claim.json', claim);

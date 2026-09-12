@@ -1,0 +1,31 @@
+{
+  "observedAt": "2026-09-12T06:42:05.151Z",
+  "chainId": 11155111,
+  "chainKey": 1,
+  "fixtureType": "prospective-ticket-live-testnet-demo",
+  "authorizationOrder": "Ticket mined on Creditcoin before source transaction broadcast.",
+  "ticketId": "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+  "authorizationTransaction": "0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1",
+  "sender": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+  "target": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+  "nonce": 1,
+  "type": 2,
+  "value": "0",
+  "gasLimit": "100000",
+  "intent": "0xdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+  "data": "0x21d2a07cdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+  "calldataHash": "0x609c6a85acd78ae4b472f29f90fb678a4c201e97202e700a48e51311e4dae0ef",
+  "receipt": {
+    "transactionHash": "0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a",
+    "blockNumber": 11687232,
+    "blockHash": "0x8a96bc421d7428efe9a21764cdfd1c1aa2e5faa2a735224ea6deadead1e3e7de",
+    "status": 0,
+    "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "to": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "contractAddress": null,
+    "gasUsed": "22440",
+    "gasPrice": "1187437711",
+    "logs": []
+  },
+  "explorer": "https://sepolia.etherscan.io/tx/0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a"
+}

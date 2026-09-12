@@ -1,0 +1,47 @@
+{
+  "observedAt": "2026-09-12T06:51:02.863Z",
+  "mode": "read-only native precompile eth_call",
+  "sdkVersion": "0.18.0",
+  "timing": {
+    "proofAttemptStartedAt": "2026-09-12T06:47:05.824Z",
+    "sourceFailureConfirmedObservedAt": "2026-09-12T06:42:05.151Z",
+    "attestationReadyObservedAt": "2026-09-12T06:50:59.726Z",
+    "nativeVerificationFinishedAt": "2026-09-12T06:51:02.566Z",
+    "pollingIntervalMs": 15000,
+    "sourceFailureToAttestationObservedMs": 534575,
+    "sourceFailureToNativeVerifiedMs": 537415,
+    "boundary": "Local observation timestamps, not source protocol timestamps or an exact attestation publication time."
+  },
+  "sourceTransaction": "0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a",
+  "headerNumber": 11687232,
+  "chainKey": 1,
+  "supportedChains": [
+    {
+      "chainKey": 3,
+      "chainId": 1,
+      "chainName": "0x457468657265756d",
+      "chainEncoding": 1
+    },
+    {
+      "chainKey": 1,
+      "chainId": 11155111,
+      "chainName": "0x5365706f6c696120657468657265756d",
+      "chainEncoding": 1
+    }
+  ],
+  "verified": true,
+  "tamperRejected": true,
+  "tamperReason": "execution reverted: \"Merkle proof validation failed\"",
+  "decoded": {
+    "type": 2,
+    "nonce": 1,
+    "gasLimit": "100000",
+    "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "to": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "value": "0",
+    "data": "0x21d2a07cdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+    "receiptStatus": 0,
+    "receiptGasUsed": "22440"
+  },
+  "boundary": "Proves failure and transaction identity. Does not establish fault, damages, or source UTC timestamp."
+}

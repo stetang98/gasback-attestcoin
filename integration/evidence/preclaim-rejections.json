@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-09-12T06:51:11.966Z",
+  "cases": [
+    {
+      "test": "wrong source chain",
+      "rejected": true,
+      "errorName": "WrongSourceChain",
+      "mode": "read-only eth_call"
+    },
+    {
+      "test": "unissued ticket",
+      "rejected": true,
+      "errorName": "TicketNotIssued",
+      "mode": "read-only eth_call"
+    }
+  ]
+}

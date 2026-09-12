@@ -1,0 +1,32 @@
+{
+  "observedAt": "2026-09-12T06:41:31.755Z",
+  "chainId": 102031,
+  "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+  "owner": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+  "initialBudget": "10000000000000000000",
+  "asset": "test CTC",
+  "receipt": {
+    "transactionHash": "0x06c5a7072cabdd026c68b8f14412199f0c2b0f7e41859a03bcf2324339ff0127",
+    "blockNumber": 5473616,
+    "blockHash": "0x17f253483622eb61776240896fd48094a0e915d87912edcdddccd7ddd7c52bd4",
+    "status": 1,
+    "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "to": null,
+    "contractAddress": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "gasUsed": "1467705",
+    "gasPrice": "500000000",
+    "logs": [
+      {
+        "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+        "topics": [
+          "0x40a14bd23a0a5919e9066881811ad566099a9fe5eec523116c065649e3fe109f",
+          "0x000000000000000000000000619709ff6a37a85baf75419f910c85800d27c427"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000008ac7230489e80000",
+        "index": 0
+      }
+    ]
+  },
+  "codeHash": "0x6a0aa58878f0270b0ca122785798a6e89d63eee2c5edfaae022844896f1fb918",
+  "explorer": "https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea"
+}

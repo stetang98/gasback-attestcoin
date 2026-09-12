@@ -23,12 +23,24 @@ async function main() {
     const vault = new ethers.Contract(run.vaultAddress, artifact('GasBackVault').abi, target);
     const paidEvent = claimReceipt.logs.map(l=>{try{return vault.interface.parseLog(l);}catch{return null;}}).find(l=>l?.name==='RebatePaid');
     if (!paidEvent || paidEvent.args.ticketId!==run.ticketId || paidEvent.args.beneficiary.toLowerCase()!==run.beneficiary.toLowerCase() || paidEvent.args.amount.toString()!==run.rebateWei || !await vault.claimed(run.ticketId)) throw new Error('Payout event or state differs from manifest');
+    const beneficiaryBefore = await target.getBalance(run.beneficiary, claimReceipt.blockNumber - 1);
+    const beneficiaryAfter = await target.getBalance(run.beneficiary, claimReceipt.blockNumber);
+    const claimGasFee = claimReceipt.gasUsed * claimReceipt.gasPrice;
+    const expectedNetDelta = paidEvent.args.amount - (claimReceipt.from.toLowerCase() === run.beneficiary.toLowerCase() ? claimGasFee : 0n);
+    if (beneficiaryAfter - beneficiaryBefore !== expectedNetDelta) throw new Error('Beneficiary net balance change does not reconcile with rebate and claim gas');
+    let duplicateError;
+    try { await vault.claim.staticCall(run.ticketId, proof.chainKey, proof.headerNumber, proof.txBytes, proof.merkleProof, proof.continuityProof); }
+    catch(error) { try { duplicateError = vault.interface.parseError(error.data || error.info?.error?.data)?.name; } catch {} }
+    if (duplicateError !== 'TicketAlreadyClaimed') throw new Error('Independent read-only duplicate check did not return TicketAlreadyClaimed');
     const ticketBlock = await target.getBlock(ticketReceipt.blockNumber);
     const sourceBlock = await source.getBlock(sourceReceipt.blockNumber);
     const result = { observedAt:new Date().toISOString(), mode:'read-only RPC and eth_call; no wallet needed',
       nativeVerified, sourceFailureConfirmed:true, targetPayoutConfirmed:true,
       sourceTxHash:run.sourceTxHash, claimTxHash:run.claimTxHash, ticketId:run.ticketId,
       rebateWei:run.rebateWei, asset:'test CTC',
+      beneficiaryGrossRebateWei:paidEvent.args.amount.toString(), beneficiaryNetDeltaWei:(beneficiaryAfter-beneficiaryBefore).toString(),
+      claimGasFeeWei:claimGasFee.toString(), beneficiaryTransferConfirmed:true,
+      duplicateRejected:true, duplicateError, duplicateCheckMode:'read-only eth_call; no second mined claim',
       authorizationTargetBlockTimestamp:ticketBlock.timestamp, sourceFailureBlockTimestamp:sourceBlock.timestamp,
       timingBoundary:'Timestamps here are separate RPC observations. Source timestamp is not part of the Attestcoin transaction encoding.',
       vaultCodeHash:ethers.keccak256(await target.getCode(run.vaultAddress)),

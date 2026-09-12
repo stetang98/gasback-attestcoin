@@ -1,0 +1,20 @@
+{
+  "ticketId": "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+  "ticket": {
+    "beneficiary": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "sourceSender": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "sourceTarget": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "sourceNonce": 1,
+    "minSourceBlock": 11687230,
+    "maxSourceBlock": 11694429,
+    "claimDeadline": 1789281690,
+    "minGasLimit": 100000,
+    "rebate": "1000000000000000000",
+    "calldataHash": "0x609c6a85acd78ae4b472f29f90fb678a4c201e97202e700a48e51311e4dae0ef"
+  },
+  "intent": "0xdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+  "sourceData": "0x21d2a07cdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+  "transactionHash": "0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1",
+  "sourceHeadAtAuthorizationSubmission": 11687229,
+  "sourceNonceBeforeAuthorization": 1
+}

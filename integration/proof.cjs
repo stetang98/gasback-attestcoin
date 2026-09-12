@@ -1,6 +1,7 @@
 const { proofProvider, chainInfo, blockProver } = require('@gluwa/usc-sdk');
 const { ethers, RPC, write, read, provider, reportError } = require('./common.cjs');
 async function prepareProof({ wait = false } = {}) {
+  const proofAttemptStartedAt = new Date().toISOString();
   const source = read('source-failure.json');
   if (!source || source.receipt.status !== 0) throw new Error('Confirmed source failure evidence is required');
   const p = await provider('target');
@@ -12,11 +13,13 @@ async function prepareProof({ wait = false } = {}) {
     console.log(JSON.stringify({ sourceBlock: source.receipt.blockNumber, attestedHeight: latest.height, waitingRequired: latest.height < source.receipt.blockNumber }));
     if (wait) await builder.waitUntilHeightAttested(1, source.receipt.blockNumber, 15000, 1200000);
     else if (latest.height < source.receipt.blockNumber) throw new Error('Source block not yet attested; rerun with --wait');
+    const attestationReadyObservedAt = new Date().toISOString();
     const result = await builder.getProof(source.receipt.transactionHash);
     if (!result.success || !result.data) throw new Error(result.error || 'Proof service returned no data');
     const proof = result.data;
     const prover = new blockProver.PrecompileBlockProver(p);
     const verified = await prover.verifySingle(proof.chainKey, proof.headerNumber, proof.txBytes, proof.merkleProof, proof.continuityProof);
+    const nativeVerificationFinishedAt = new Date().toISOString();
     if (!verified) throw new Error('Native verifier did not accept source proof');
     const coder = ethers.AbiCoder.defaultAbiCoder();
     const [type, chunks] = coder.decode(['uint8', 'bytes[]'], proof.txBytes);
@@ -33,6 +36,11 @@ async function prepareProof({ wait = false } = {}) {
     write('source-proof.json', proof);
     write('proof-verification.json', {
       observedAt: new Date().toISOString(), mode: 'read-only native precompile eth_call', sdkVersion: '0.18.0',
+      timing: { proofAttemptStartedAt, sourceFailureConfirmedObservedAt: source.observedAt,
+        attestationReadyObservedAt, nativeVerificationFinishedAt, pollingIntervalMs: 15000,
+        sourceFailureToAttestationObservedMs: Date.parse(attestationReadyObservedAt) - Date.parse(source.observedAt),
+        sourceFailureToNativeVerifiedMs: Date.parse(nativeVerificationFinishedAt) - Date.parse(source.observedAt),
+        boundary: 'Local observation timestamps, not source protocol timestamps or an exact attestation publication time.' },
       sourceTransaction: source.receipt.transactionHash, headerNumber: proof.headerNumber, chainKey: proof.chainKey,
       supportedChains: chains, verified, tamperRejected, tamperReason,
       decoded: {type: Number(type), nonce: Number(common[0]), gasLimit: common[1].toString(), from: common[2], to: common[4],

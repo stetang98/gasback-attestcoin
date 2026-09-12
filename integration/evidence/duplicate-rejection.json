@@ -1,0 +1,10 @@
+{
+  "observedAt": "2026-09-12T06:51:21.107Z",
+  "mode": "read-only eth_call, no second payout transaction",
+  "ticketId": "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+  "rejected": true,
+  "errorName": "TicketAlreadyClaimed",
+  "errorData": "0x12d2ded8",
+  "totalPaidAfterAttempt": "1000000000000000000",
+  "vaultBalanceAfterAttempt": "9000000000000000000"
+}
