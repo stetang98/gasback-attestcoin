@@ -19,7 +19,7 @@ SNAPSHOT = "2026-09-12 06:51 UTC"
 SOURCE_URL = "https://sepolia.etherscan.io/tx/0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a"
 TICKET_URL = "https://creditcoin-testnet.blockscout.com/tx/0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1"
 CLAIM_URL = "https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035"
-APP_URL = "https://gasback-ctc-2026.stetang.chatgpt.site"
+APP_URL = "https://stetang98.github.io/gasback-attestcoin/"
 GITHUB_URL = "https://github.com/stetang98/gasback-attestcoin"
 VAULT_URL = "https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea?tab=contract"
 OFFICIAL_URL = "https://dorahacks.io/hackathon/buidl-ctc-2026-fall/detail"
@@ -174,7 +174,7 @@ para("Proof latency, claim completion, rejection causes, sponsor spend and retry
 text("NEXT GATE", 48, 175, 11, AMBER, True)
 para("Publish the synchronized demo and evidence. Then validate demand with one sponsor before expanding scope.", 48, 148, 852, 20, 26)
 text("One verified testnet run. No claimed traction, partners, revenue or accepted submission.", 48, 99, 13, MUTED)
-link("App: gasback-ctc-2026.stetang.chatgpt.site", APP_URL, 48, 78, 11)
+link("GasBack live demo", APP_URL, 48, 78, 11)
 link("Source: github.com/stetang98/gasback-attestcoin", GITHUB_URL, 486, 78, 11)
 link("Official competition", OFFICIAL_URL, 48, 56, 10)
 link("Fully verified vault source on Blockscout", VAULT_URL, 486, 56, 10)

@@ -1,0 +1,188 @@
+{
+  "checkedAtUtc": "2026-09-12T07:45:51.459441+00:00",
+  "status": "passed: final exported URL and requested technical gates verified",
+  "sourceFile": "C:\\Users\\stetang\\Downloads\\GasBack-demo-Peter-V3.mp4",
+  "workspaceCopy": "C:\\Users\\stetang\\Documents\\ChatGPT\\Web3 2\\docs\\submission\\video\\GasBack-demo-Peter-V3.mp4",
+  "sha256": "d20a94b87b962702367f379bfb23bd2fcd8240f0ec42b6bd8c6b982556041c1c",
+  "bytes": 12121489,
+  "under25MiB": true,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "start_time": "0.000000",
+        "duration": "110.000000",
+        "nb_frames": "2640"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "start_time": "0.000000",
+        "duration": "110.080000",
+        "nb_frames": "5160"
+      }
+    ],
+    "format": {
+      "start_time": "0.000000",
+      "duration": "110.080000",
+      "size": "12121489"
+    }
+  },
+  "fullDecode": {
+    "exitCode": 0,
+    "stderr": "",
+    "passed": true
+  },
+  "edit": {
+    "projectId": "36890aa3-9738-4c53-b882-b3ff77eecaa2",
+    "timelineId": "8ac4f702-f215-4dbb-82ea-e93977534f18",
+    "motionGraphicAssetId": "9bf42298-aaa5-4c86-b85b-e87e0be811d1",
+    "motionGraphicItemId": "edead599-c012-4ec4-b572-4ff291cdc0c3",
+    "fromFrame": 2195,
+    "endFrameExclusive": 2640,
+    "url": "https://stetang98.github.io/gasback-attestcoin/",
+    "editableMaskAndText": true,
+    "noNarrationRegenerated": true,
+    "captionCount": 24,
+    "beforeCaptionRevision": "fnv1a:cda7615e",
+    "afterCaptionRevision": "fnv1a:cda7615e",
+    "captionRevisionUnchanged": true,
+    "export": {
+      "codec": "h264",
+      "completedAt": "2026-09-12T07:42:21.546Z",
+      "error": null,
+      "frameRange": [
+        0,
+        2639
+      ],
+      "name": "GasBack-demo-Peter-V3.mp4",
+      "outputSizeBytes": 12121489,
+      "progress": 1,
+      "renderId": "39700f1b-a9f5-450e-a9c5-7c4e088bee5c",
+      "resolution": "720p",
+      "startedAt": "2026-09-12T07:42:01.268Z",
+      "status": "complete",
+      "timelineId": "8ac4f702-f215-4dbb-82ea-e93977534f18",
+      "id": "39700f1b-a9f5-450e-a9c5-7c4e088bee5c",
+      "ok": true,
+      "terminal": true,
+      "downloadUrl": "https://rendererbucket-48236b1.s3-accelerate.amazonaws.com/renders/1-day-qqb72f1a0o/out.mp4"
+    }
+  },
+  "audioComparison": {
+    "format": "decoded interleaved stereo float32 little-endian PCM, 48000 Hz",
+    "files": [
+      {
+        "file": "C:\\Users\\stetang\\Downloads\\GasBack-demo-Peter-V2.mp4",
+        "pcmFloat32LeSha256": "4c981d85f4fd9aef1cb2a0b834641f90c01a9ba5f72d175821aa9babcf641cca",
+        "pcmBytes": 42270720,
+        "aacAdtsSha256": "1ce88266501bd1a0c828e78eb56428e417db4beac0584b29d2936c447430de0a",
+        "aacAdtsBytes": 4403185
+      },
+      {
+        "file": "C:\\Users\\stetang\\Downloads\\GasBack-demo-Peter-V3.mp4",
+        "pcmFloat32LeSha256": "4c981d85f4fd9aef1cb2a0b834641f90c01a9ba5f72d175821aa9babcf641cca",
+        "pcmBytes": 42270720,
+        "aacAdtsSha256": "1ce88266501bd1a0c828e78eb56428e417db4beac0584b29d2936c447430de0a",
+        "aacAdtsBytes": 4403185
+      }
+    ],
+    "exactPcmBytesEqual": true,
+    "exactAacAdtsEqual": true,
+    "maxAbsolutePcmSampleDifference": 0.0,
+    "v3TailAfter110SecondsIsDigitalSilence": true
+  },
+  "unchangedEarlierVideo": {
+    "method": "Compare decoded video framemd5 for every frame before closing card",
+    "range": [
+      0,
+      2195
+    ],
+    "counts": [
+      2195,
+      2195
+    ],
+    "matchingFrames": 2170,
+    "allEqual": false,
+    "note": "2170 of 2195 decoded earlier frames are byte-identical; 25 differ after the fresh lossy render. No earlier source item, narration or caption timing changed. Representative final exported earlier frames retain the intended visible content. Further pixel-difference diagnostics were stopped at coordinator request; no re-encoding was performed."
+  },
+  "sidecarSubtitles": {
+    "path": "C:\\Users\\stetang\\Documents\\ChatGPT\\Web3 2\\docs\\submission\\video\\GasBack-demo-Peter-V2.srt",
+    "sha256": "d372ac0c63ce38169f934fe40727c0b56f8914254471bed87357fc3f5ca86bf3",
+    "cueCount": 24,
+    "forbiddenTextMatches": [],
+    "unchanged": true,
+    "note": "Preserves the manually corrected Attestcoin cue 13 and its timing. ChatCut's original SRT export omitted the editable Card text override; that original is preserved separately."
+  },
+  "visualInspection": {
+    "keyFramesExtracted": [
+      120,
+      480,
+      840,
+      1200,
+      1680,
+      2016,
+      2194,
+      2195,
+      2448,
+      2616,
+      2639
+    ],
+    "directory": "C:\\Users\\stetang\\.codex\\tmp\\gasback-peter-v3-qa",
+    "contactSheet": "C:\\Users\\stetang\\.codex\\tmp\\gasback-peter-v3-qa\\v3-contact-sheet.jpg",
+    "composedCloudFramesInspected": [
+      2195,
+      2448,
+      2639
+    ],
+    "exportedFramesInspected": [
+      120,
+      480,
+      840,
+      1200,
+      1680,
+      2016,
+      2194,
+      2195,
+      2448,
+      2616,
+      2639
+    ],
+    "closingOldUrlVisible": false,
+    "newUrlWithinBounds": true,
+    "fullSizeClosingFrameInspected": 2448,
+    "subtitlesWithinBoundsInInspectedFrames": true,
+    "excludedBrandNamesVisibleInInspectedFrames": false,
+    "scope": "Final MP4 contact sheet spanning all seven sections, closing start and final frames; full-size 102 s closing frame. Static editable mask covers the old URL for the complete closing interval. No exhaustive OCR of every frame is claimed."
+  },
+  "preservedV2": {
+    "path": "C:\\Users\\stetang\\Downloads\\GasBack-demo-Peter-V2.mp4",
+    "sha256": "beb180ef76f7e6059a9eb5fbbaa0bae6dea6bdd0760e18106fd80ce06b23fcfb",
+    "matchesPriorSha256": true
+  },
+  "limits": [
+    "No complete human listening pass or subjective voice guarantee is claimed.",
+    "Technical signal equality establishes unchanged exported audio only.",
+    "Public hosting and browser playback are separate coordinator checks."
+  ],
+  "releaseCopy": {
+    "path": "C:\\Users\\stetang\\Documents\\ChatGPT\\Web3 2\\web\\dist\\demo.mp4",
+    "sha256": "d20a94b87b962702367f379bfb23bd2fcd8240f0ec42b6bd8c6b982556041c1c",
+    "identicalToExport": true,
+    "publicationNotPerformedByThisAgent": true
+  }
+}

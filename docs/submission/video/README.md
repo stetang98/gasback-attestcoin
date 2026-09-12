@@ -1,18 +1,28 @@
 # GasBack video production materials
 
-## Current revision: Peter V2 exported and publicly hosted
+## Current revision: Peter V3 for GitHub Pages
+
+Peter V3 replaces the closing card's public-app URL with `https://stetang98.github.io/gasback-attestcoin/`. The correction is an editable opaque Motion Graphic and text layer on ChatCut V3, covering frames **2195–2639**, with an exclusive end at frame **2640**. The source footage, seven Peter narration clips and 24 caption cards retain their timing. The corrected **Attestcoin** caption is preserved. No narration was regenerated.
+
+Current local exports: `docs/submission/video/GasBack-demo-Peter-V3.mp4` and `C:/Users/stetang/Downloads/GasBack-demo-Peter-V3.mp4`. Both contain **12,121,489 bytes**, **1280 x 720**, **24 fps / 2,640 frames**, H.264 video and AAC audio. Video duration is **110.000 seconds**; container duration is **110.080 seconds**, including the unchanged silent audio tail. SHA-256: `d20a94b87b962702367f379bfb23bd2fcd8240f0ec42b6bd8c6b982556041c1c`.
+
+Full decode passed. The V2 and V3 AAC streams and decoded PCM samples have identical SHA-256 hashes, confirming unchanged exported audio. The final exported closing card displays the new URL within bounds. The existing corrected 24-cue SRT remains unchanged and contains none of the retired domain or excluded brand names. No full human listening pass is claimed. [Domain edit snapshot](chatcut-v3-domain-edit.json) preserves editable code, properties and the export ID; [V3 QA](../../qa/chatcut-v3-domain-check.json) records checks and limits.
+
+Deployment target: [GitHub Pages demo](https://stetang98.github.io/gasback-attestcoin/demo.html). The checked V3 is copied to `web/dist/demo.mp4` for the coordinator's release. Public deployment and browser playback are verified separately; this production record does not assert that deployment has already occurred.
+
+## Preserved Peter V2 export and publication history
 
 The participant selected Peter for the replacement narration. ChatCut V2 has been exported from the [editable project](https://app.chatcut.io/editor/36890aa3-9738-4c53-b882-b3ff77eecaa2?chatcutLaunchClient=codex_app&chatcutLaunchSurface=ext_browser&chatcutLaunchRuntimeSource=codex_app__hosted_mcp), with seven independently aligned narration clips on a dedicated audio track, seven source cuts, 24 editable caption cards and an editable matte covering the old burned captions. The original source audio is muted. The local V1 export is preserved as source footage and history; it is not the current replacement.
 
-Current export: `C:/Users/stetang/Downloads/GasBack-demo-Peter-V2.mp4`, **12,123,810 bytes**, **1280 x 720**, **24 fps / 2,640 frames**, H.264 with AAC audio. The video stream is **110.000 seconds**; the container is **110.080 seconds**, with an extra **80 ms of exact digital silence** in the audio tail. SHA-256: `beb180ef76f7e6059a9eb5fbbaa0bae6dea6bdd0760e18106fd80ce06b23fcfb`.
+Preserved V2 export: `C:/Users/stetang/Downloads/GasBack-demo-Peter-V2.mp4`, **12,123,810 bytes**, **1280 x 720**, **24 fps / 2,640 frames**, H.264 with AAC audio. The video stream is **110.000 seconds**; the container is **110.080 seconds**, with an extra **80 ms of exact digital silence** in the audio tail. SHA-256: `beb180ef76f7e6059a9eb5fbbaa0bae6dea6bdd0760e18106fd80ce06b23fcfb`.
 
-[Watch Peter V2](https://gasback-ctc-2026.stetang.chatgpt.site/demo.html) · [MP4](https://gasback-ctc-2026.stetang.chatgpt.site/demo.mp4) · [corrected SRT](https://gasback-ctc-2026.stetang.chatgpt.site/demo.srt) · [PDF deck](https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf). The coordinator confirmed anonymous HTTP 200 and exact local/public hashes for the MP4, PDF and completed-run evidence. The sidecar subtitle spells **Attestcoin** correctly. Public browser playback reached `currentTime=duration=110.08`, `ended=true`, `readyState=4`, with no error. That session paused at 98.78 s and then resumed through the ending, so it is not described as unattended continuous playback. No complete human listening pass has been recorded; technical checks do not establish human approval of the voice.
+For the prior V2 release, the coordinator confirmed anonymous HTTP 200 and exact local/public hashes for the MP4, PDF and completed-run evidence. Its hosting links are retired. The sidecar subtitle spells **Attestcoin** correctly. Prior public browser playback reached `currentTime=duration=110.08`, `ended=true`, `readyState=4`, with no error. That session paused at 98.78 s and then resumed through the ending, so it is not described as unattended continuous playback. No complete human listening pass has been recorded; technical checks do not establish human approval of the voice.
 
 See [V2 edit and publication summary](../../qa/chatcut-v2-edit-summary.md), [independent export checks](../../qa/chatcut-v2-export-check.json) and [public release evidence](../../qa/public-release-check.json). `chatcut-v2-sync.json` preserves the pre-export editing snapshot, including its then-pending export labels; the export-check record and this section supersede those labels for current export/publication status.
 
 ## Preserved V1 production history
 
-The records below describe the preserved local V1 production and its technical checks. They are historical records and do not replace the Peter V2 export or its separate public-playback and listening checks.
+The records below describe the preserved local V1 production and its technical checks. They are historical records and do not replace the current Peter V3 export or separate public-playback and listening checks.
 
 **The original narration was prepared while the live run was still in progress. Its WAV filename and JSON retain their historical `DRAFT` wording to preserve their hashes. Final MP4 evidence readiness is established by the passed evidence gates and input fingerprints in `GasBack-demo.manifest.json`, not by renaming those original production assets. Human playback and public upload verification remain separate checks.**
 
