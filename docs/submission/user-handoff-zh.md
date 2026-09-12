@@ -1,6 +1,6 @@
-# GasBack 参赛交接初稿
+# GasBack 参赛交接
 
-项目链上进度依据：`integration/evidence/run.json` 的 `2026-09-12T05:56:16.294Z` 快照。另已补入 2026-09-12 实际网页发布检查和登录后的 DoraHacks 表单要求。后续链上结果请以最终证据文件为准，当前尚不能称为已提交成功。
+真实两链流程已完成：`integration/evidence/run.json` 于 `2026-09-12T06:51:34.633Z` 达到 `completed-live-testnet-rebate`，加强后的公开 RPC 复核记录为 `public-reverification-reviewed.json`（`07:04:13.308Z`），复审通过。网站、PDF、视频的最终公开版本同步与 DoraHacks 接收确认另行验收；当前尚不能称为已提交成功。
 
 ## 项目是什么
 
@@ -11,13 +11,19 @@ GasBack 为协议方提供固定额度的失败交易补贴。赞助方先授权
 ## 已有材料与当前边界
 
 - Solidity 合约、42 项策略/安全测试场景及独立源码审查已经形成；本地 verifier harness 不等于真实密码学验证。
+- 最新复审关闭了独立复核脚本的 P2 证据关联问题；42 项合约、10 项网页、16 项复核脚本测试及真实 RPC/native/余额/重复领取重验均通过。审查范围内无剩余 Critical/Important 问题；这不等于对整个项目或 native 预编译做过专业安全审计。
 - Sepolia 源合约地址 `0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea` 已有成功部署回执。
-- 英文 README、技术架构、威胁模型、DoraHacks 字段草稿、约 110 秒演示脚本与六页 PDF 初稿已经准备。
-- 当前快照尚未证明 Creditcoin 目标合约部署、预授权票据、真实失败交易、native proof 与补贴支付的完整流程。
-- 正式网页已按用户授权发布：`https://gasback-ctc-2026.stetang.chatgpt.site`。已通过不携带账号 Cookie 的请求验证 HTTP 200；此前 jazzy-lamp 预期地址不再使用。
-- 线上历史 proof 验证已经成功，但这只是历史证据的技术可行性演示，不是 GasBack 本项目的补贴支付。
-- 公开源码已上传至 https://github.com/stetang98/gasback-attestcoin ，main 提交为 `4c5a0a19cbc7049f3cf68a8d7c4e0750602d8f17`；公共 API 的 98 个文件路径及哈希与上传内容匹配，关键源码 raw 链接读取一致。
-- [PDF 审阅稿已在公开仓库中](https://github.com/stetang98/gasback-attestcoin/blob/main/docs/submission/GasBack-deck.pdf)，仍待真实预授权流程完成后更新最终证据。演示视频及 DoraHacks 接收结果尚待完成；不要把本地成品、已公开材料或注册地址当成已经提交成功。
+- [Creditcoin 票据](https://creditcoin-testnet.blockscout.com/tx/0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1) 在源交易广播前确认；独立区块时间分别为票据 06:41:45 UTC、源失败 06:42:00 UTC。两链 RPC 时间记录支持本次先授权后执行，源 UTC 时间不在 Attestcoin 交易编码内。
+- [真实 Sepolia 失败交易](https://sepolia.etherscan.io/tx/0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a) 位于区块 11,687,232，status 0、零日志、gasUsed 22,440；本次失败为明确披露的故意 revert。
+- [真实 Creditcoin claim](https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035) 位于区块 5,473,655，status 1；固定补贴转账为 **1 test CTC**，vault 由 10 降到 9。收款人也是领取 gas 的支付人，所以钱包**净增 0.9999184485 test CTC**，另付 gas **0.0000815515 test CTC**；独立区块前后余额校正通过。
+- 真实 native proof 验证通过；修改已证明的 status 字节会触发 Merkle proof 拒绝。错误链、未出票、重复领取分别以 `WrongSourceChain`、`TicketNotIssued`、`TicketAlreadyClaimed` 拒绝。这四项均为只读调用，没有第二笔被挖出的 claim。真实成功回执和其他输入条件仍以本地测试覆盖，不能把改字节测试说成另发了一笔成功源交易。
+- 从失败确认到首次观察到 attestation 就绪为 **8 分 54.575 秒**；native 验证完成为 **8 分 57.415 秒**；claim 提交到确认 **5.061 秒**。轮询间隔 15 秒，这是本次观测耗时，不是协议精确发布时间或后续速度承诺。
+- 目标合约源码已在 [Blockscout 完整验证](https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea?tab=contract)，不等于专业安全审计。
+- 本次部署、出票、源动作与领取由 **CLI** 执行；网页是**只读证据回放与验证**，不是通过回放按钮重新发起支付。历史 feasibility probe 与本项目真实 run 分开记录。
+- 正式网页为 `https://gasback-ctc-2026.stetang.chatgpt.site`；公开 v1 已通过无 Cookie 的 HTTP 200 检查，本地完整流程回放已核验，待将新 PDF 与视频同步发布为 v2。
+- 公开仓库 https://github.com/stetang98/gasback-attestcoin 已包含 `17da7ec` 的完整 integration 证据；本轮 README、PDF 与投稿文档另待同步。
+- 英文 README、DoraHacks 文案、约 110 秒演示脚本与六页 PDF 已按真实流程更新。[仓库 PDF](https://github.com/stetang98/gasback-attestcoin/blob/main/docs/submission/GasBack-deck.pdf) 的新版同步、演示视频和 DoraHacks 接收结果仍须验收。计划直链 `/GasBack-deck.pdf` 与 `/demo.mp4` 尚未验证公开，不可当成已上线。
+- 视频在 ChatCut V2 中拆成 7 个可编辑段落，旧旁白已静音；等待本人选择音色后生成新旁白。新版最终视频尚未公开，不能把旧版或本地预览说成最终发布。
 - 用户已登录 DoraHacks，并进入实际 BUIDL 创建流程；登录完成不等于参赛提交已被接收。
 
 ## 用户需要提供的最少信息
@@ -41,13 +47,13 @@ GasBack 为协议方提供固定额度的失败交易补贴。赞助方先授权
 
 不要提供身份证扫描件、钱包助记词或私钥来填写普通参赛信息；当前已读取的表单要求没有这些字段。
 
-GitHub 公开源码上传和 DoraHacks 登录已完成。接下来仅在实际需要时由用户完成测试网水龙头的正常验证、必要的钱包交互和最终事实声明。当前没有依据要求另交独立外部报名表；若后续实际流程明确提出，再按页面处理。
+GitHub 公开源码上传、测试币到账、真实支付和 DoraHacks 登录已完成。当前尚需本人 Telegram 及对已解释资格条件的事实声明；不需要为了回放重复支付或重新索取助记词。当前没有依据要求另交独立外部报名表；若后续实际流程明确提出，再按页面处理。
 
 ## 提交前最后验收
 
-1. 成功得到真实的两链流程：先发 ticket，再发生源链失败，最终在 Creditcoin 支付固定补贴。
-2. 保存原始 proof、两链回执、状态变更和重复领取拒绝证据，并区分只读调用与上链交易。
-3. 录制并检查完整演示视频；更新 PDF 和所有文案，使其与最终证据一致。
+1. 已完成先发 ticket、后源失败、再 Creditcoin 支付；核对投稿链接指向本项目这次真实交易。
+2. 原始 proof、两链回执、到账余额、状态变更与重复领取拒绝证据已保存，核对公开仓库同步结果。
+3. 完成约 110 秒视频并检查完整播放；保留等待时长、CLI 执行与网页只读回放的说明。
 4. 检查 GitHub、网页、PDF、视频均能公开打开，且未包含密钥或个人隐私。
 5. 在 DoraHacks 填写真实成员资料，提交并看到接收确认；再次打开实际 BUIDL 页面检查内容。
 

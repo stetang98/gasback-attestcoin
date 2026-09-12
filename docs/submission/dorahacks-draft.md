@@ -1,6 +1,6 @@
 # DoraHacks submission draft
 
-Review draft, 2026-09-12. Updated with the public-site verification and the live DoraHacks creation form observed in the participant's signed-in session. The entry has not been confirmed submitted. These fields require a final project-evidence refresh before submission; do not claim a completed native payout until the corresponding receipts exist.
+Submission copy, 2026-09-12. Refreshed against `integration/evidence/run.json` (`completed-live-testnet-rebate`, 06:51:34.633 UTC) and the stricter reviewed public RPC verification (07:04:13.308 UTC). The completed testnet payout is verified; synchronized public media and accepted DoraHacks submission remain separate checks.
 
 ## Project name
 
@@ -24,7 +24,15 @@ The relayer cannot redirect payment. Replay protection binds the authenticated s
 
 This is a testnet sponsorship prototype. It does not prove fault, user innocence or economic damages, and does not promise full gas reimbursement. The demonstration deliberately reverts; exact tickets and bounded campaign funds constrain sponsor exposure.
 
-Current project evidence: the Sepolia source contract is deployed and the public app is available. A historical proof has been successfully verified through the online app; it is a feasibility demonstration, not this project's rebate. The target deployment, prospective ticket, proof for this project's eligible failure and mined rebate are still pending verification. The local contract suite contains 42 policy/security cases using a disclosed verifier harness. Native verification and a mined rebate remain separate acceptance gates.
+The live testnet run is complete. The sponsor ticket confirmed before source broadcast; the matching Sepolia transaction reverted with status 0 and zero logs. The native Attestcoin verifier authenticated its receipt and identity, and the Creditcoin claim paid the fixed gross 1 test CTC rebate. Public RPC checks independently verified the event, consumed ticket, vault balance change from 10 to 9 and beneficiary transfer. Because the beneficiary also paid claim gas, its wallet net increase was 0.9999184485 test CTC after 0.0000815515 in gas.
+
+Attestation readiness was first observed 8 minutes 54.575 seconds after source failure confirmation, using 15-second polling; native verification completed after 8 minutes 57.415 seconds. Claim submission to confirmation took 5.061 seconds. These are local observations for one run, not protocol latency guarantees. The CLI executed the transactions; the website provides read-only replay and verification of the linked run.
+
+One dedicated test wallet filled the sponsor, source-sender and claimant roles in this demonstration. This verifies the technical path, not independent sponsor adoption.
+
+Four live read-only negative controls rejected a changed receipt status, wrong source chain, unissued ticket and duplicate claim. There was no second mined claim. The 42-case local suite separately covers authentic successful receipts and other policy/security cases using a disclosed verifier harness; changing a status byte is not a separate authentic successful transaction.
+
+Fresh review closed a P2 evidence-binding issue in the independent verification tooling. The corrected verifier links the source proof, historical sponsor ticket and vault-emitted payment event, with 16 regression tests and a fresh real-RPC check. No Critical or Important findings remain within the reviewed testnet code/evidence scope; this is not a professional security audit.
 
 ## Attestcoin integration summary
 
@@ -45,32 +53,33 @@ This is the project's positioning, not a claim of global novelty or superiority 
 
 ## Artifact fields
 
-| DoraHacks field | Review-draft value |
+| DoraHacks field | Prepared value |
 | --- | --- |
-| GitHub URL | https://github.com/stetang98/gasback-attestcoin ; public API and key raw source verified on 2026-09-12 at main commit `4c5a0a19cbc7049f3cf68a8d7c4e0750602d8f17` (98 published file paths and hashes matched) |
-| Website | https://gasback-ctc-2026.stetang.chatgpt.site ; deployed with the participant's authorization and independently returned HTTP 200 without account cookies on 2026-09-12 |
-| Deck / whitepaper PDF URL | [Public review draft in repository](https://github.com/stetang98/gasback-attestcoin/blob/main/docs/submission/GasBack-deck.pdf); final prospective-run refresh pending |
-| Prototype video URL | Pending recording, publication and playback check |
+| GitHub URL | https://github.com/stetang98/gasback-attestcoin ; completed integration evidence published at commit `17da7ec`; final documentation/media refresh checked separately |
+| Website | https://gasback-ctc-2026.stetang.chatgpt.site ; public v1 access checked; completed-run replay verified locally, with public v2 synchronization pending |
+| Deck / whitepaper PDF URL | [Repository PDF](https://github.com/stetang98/gasback-attestcoin/blob/main/docs/submission/GasBack-deck.pdf); local evidence edition ready for synchronization. Planned direct URL `https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf` is not yet verified public |
+| Prototype video URL | Final narration revision, publication and playback check pending; the revised video is not yet public |
 | Logo | Required by the live Create new BUIDL Profile form: PNG/JPEG, under 2 MB; 480 x 480 pixels is the recommended size |
 | Profile social links | At least one link is required by the live Profile form |
 
-## Final evidence to insert
+## Completed chain evidence and remaining publication checks
 
 - Source deployment and contract address: verified in `integration/evidence/source-deployment.json`.
-- Creditcoin target deployment address and receipt: pending.
-- Ticket issuance receipt before the eligible source action: pending.
-- Eligible failed source transaction hash and status-0 receipt: pending.
-- Native proof verification and altered-payload rejection: pending.
-- Real claim hash, matching `RebatePaid`, consumed state and beneficiary payment: pending.
-- Duplicate claim rejection, accurately labeled as read-only or mined: pending.
-- Native successful-receipt rejection and required mismatches: pending.
+- Target vault: [Creditcoin deployment](https://creditcoin-testnet.blockscout.com/tx/0x06c5a7072cabdd026c68b8f14412199f0c2b0f7e41859a03bcf2324339ff0127), status 1, block 5,473,616; 10 test CTC initial funds.
+- Vault source: [fully verified in Blockscout](https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea?tab=contract); source verification is not a security audit.
+- Ticket: [issuance receipt](https://creditcoin-testnet.blockscout.com/tx/0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1), status 1, block 5,473,617, confirmed before source broadcast.
+- Source: [failed transaction](https://sepolia.etherscan.io/tx/0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a), status 0, zero logs, block 11,687,232.
+- Native proof and changed-status rejection: verified in `integration/evidence/proof-verification.json`; tampered status reverted with `Merkle proof validation failed`.
+- Payment: [mined claim](https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035), status 1, block 5,473,655; matching `RebatePaid`, consumed ticket and gas-adjusted beneficiary balance checked independently.
+- Duplicate: read-only `TicketAlreadyClaimed`; no second mined claim, totalPaid remains 1 test CTC.
+- Wrong chain and unissued ticket: read-only `WrongSourceChain` and `TicketNotIssued` before claim. Authentic successful-receipt rejection remains a local test rather than a separate live transaction.
 - Public app access: verified without account cookies at https://gasback-ctc-2026.stetang.chatgpt.site .
-- Public repository: verified at https://github.com/stetang98/gasback-attestcoin ; main commit `4c5a0a19cbc7049f3cf68a8d7c4e0750602d8f17`.
-- Public review PDF is in the repository; final prospective-run refresh pending.
-- Public video, recording and playback check: pending.
+- Public repository includes the completed integration evidence at `17da7ec`; final documentation synchronization is pending.
+- Public PDF final refresh pending; the local deck now describes the verified completed run.
+- Public revised video and playback check: pending. The editable sequence has seven segments and awaits replacement narration. Planned URL `https://gasback-ctc-2026.stetang.chatgpt.site/demo.mp4` must not be treated as the published final version until verified.
 - DoraHacks accepted-submission confirmation and actual BUIDL URL: pending; account login is not submission.
 
-Replace the current-evidence paragraph with the verified final outcome only after these observations exist. Remove review-draft notices only after checking that every linked artifact agrees with the evidence manifest.
+Before submission, verify the public app, PDF and video agree with the completed evidence manifest. Ticket/source block timestamps independently observed by RPC were 06:41:45 and 06:42:00 UTC; the Attestcoin transaction encoding itself does not prove a source UTC timestamp. The earlier historical probe must not replace this run's linked transactions.
 
 ## Originality and tool disclosure
 

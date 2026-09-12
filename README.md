@@ -8,21 +8,37 @@ Built for [BUIDL CTC 2026 Fall](https://dorahacks.io/hackathon/buidl-ctc-2026-fa
 
 ## Current evidence
 
-The repository is under active development. The chain evidence snapshot is `2026-09-12T05:56:16.294Z`; use [the machine-readable run](integration/evidence/run.json) for the latest recorded chain state. Public deployment checks were refreshed at approximately `2026-09-12T06:30:00Z`.
+**A real prospective testnet run paid the fixed 1 test CTC rebate.** [The machine-readable run](integration/evidence/run.json) reached `completed-live-testnet-rebate` at `2026-09-12T06:51:34.633Z`. [Reviewed public RPC re-verification](integration/evidence/public-reverification-reviewed.json) at `07:04:13.308Z` confirmed the native proof, source-to-ticket-to-payment binding, event issuers, consumed state and gas-adjusted beneficiary transfer. The original check remains preserved separately.
 
 | Item | Status |
 | --- | --- |
 | Solidity contracts and 42 policy/security test cases | Implemented; see [contract package](chain/README.md) and [independent source review](docs/research/contract-review.md) |
 | Frontend and 10 proof/payment identity tests | Implemented; see [frontend review](docs/research/frontend-review.md) |
+| Independent verification tooling | 16 regression tests passed after closing the evidence-binding P2; [fresh review](docs/qa/final-code-review.md) found no remaining Critical/Important findings within the reviewed testnet code and evidence scope |
 | Sepolia source deployment | Receipt status 1, block 11,686,978; [deployment transaction](https://sepolia.etherscan.io/tx/0x11c6cadadf3b945cda0b2cb4129e736932518cc7d042c83d67fbcb68c2676267) |
 | Source contract | [`0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea`](https://sepolia.etherscan.io/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea) |
-| Target vault, prospective ticket, eligible failed action, native proof and rebate | Pending at this snapshot; no completed rebate is claimed |
-| Public app | [GasBack](https://gasback-ctc-2026.stetang.chatgpt.site); unauthenticated HTTP 200 and historical native proof verification checked; see [deployment evidence](docs/qa/deployment-2026-09-12.md) |
-| Public GitHub repository | [stetang98/gasback-attestcoin](https://github.com/stetang98/gasback-attestcoin); all 98 files in the initial full upload verified against the local commit |
-| PDF deck | [Six-page review draft](docs/submission/GasBack-deck.pdf); published as a repository artifact, pending the final prospective-run evidence refresh |
-| Demonstration video / DoraHacks submission | Pending; [recording script](docs/submission/demo-script.md) and [submission draft](docs/submission/dorahacks-draft.md) are prepared |
+| Creditcoin vault | [Deployment](https://creditcoin-testnet.blockscout.com/tx/0x06c5a7072cabdd026c68b8f14412199f0c2b0f7e41859a03bcf2324339ff0127), block 5,473,616, status 1; funded with 10 test CTC |
+| Publicly verified vault source | [Blockscout contract source](https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea?tab=contract), fully verified; [verification result](integration/evidence/blockscout-verification-result.json) |
+| Prospective sponsor ticket | [Ticket issuance](https://creditcoin-testnet.blockscout.com/tx/0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1), block 5,473,617; confirmed before source transaction broadcast |
+| Eligible source failure | [Sepolia transaction](https://sepolia.etherscan.io/tx/0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a), block 11,687,232; status 0, zero logs, gas used 22,440 |
+| Native Attestcoin verification | Real `0xFD2` verification passed for this source transaction; changing the encoded receipt status to 1 failed with `Merkle proof validation failed` |
+| Mined fixed rebate | [Claim receipt](https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035), block 5,473,655, status 1; `RebatePaid` for 1 test CTC; vault balance 10 -> 9 |
+| Beneficiary transfer | Gross 1 test CTC; wallet net increase **0.9999184485 test CTC** after paying **0.0000815515 test CTC** claim gas; exact block-boundary balance check passed |
+| Live negative controls | Tampered status, wrong source chain, unissued ticket and duplicate claim rejected by read-only RPC calls; no second mined claim |
+| Public app | [GasBack](https://gasback-ctc-2026.stetang.chatgpt.site), a read-only evidence replay and native-verification interface; see [deployment checks](docs/qa/deployment-2026-09-12.md) for the public release state |
+| Public GitHub repository | [stetang98/gasback-attestcoin](https://github.com/stetang98/gasback-attestcoin); original upload checked publicly, with the final evidence/artifact refresh tracked separately |
+| PDF deck | [Six-page evidence deck](docs/submission/GasBack-deck.pdf), refreshed against the completed live run; public release synchronization remains a separate check |
+| Demonstration video / DoraHacks submission | Final narration revision and publication pending; accepted submission not yet confirmed. [Recording script](docs/submission/demo-script.md) and [submission draft](docs/submission/dorahacks-draft.md) are prepared |
 
-A historical proof probe establishes feasibility only. It is not a deployment or payout by this project. Local policy tests use a clearly identified verifier harness; they do not substitute for native verification on Creditcoin.
+The deployment, ticket, source action and claim were executed by the reproducible **CLI workflow**. The web interface replays linked evidence and performs **read-only** verification; opening it or pressing replay does not create another payout. The earlier historical feasibility probe is separate from this project's completed run. Local policy tests still use a disclosed verifier harness.
+
+One dedicated test wallet filled the sponsor, source-sender and claimant roles in this demonstration. The run proves the technical path; it does not establish independent sponsor adoption or production use.
+
+The fresh post-run review identified and then closed a P2 issue in the **independent verification script**. The fix binds the signed source transaction hash and decoded policy fields to the historical on-chain ticket, vault-emitted `TicketIssued`/`RebatePaid`, nullifier, source block, amount, beneficiary and consumed state. All 16 new verifier regression tests passed; the 42 contract and 10 web tests passed, and an independent live RPC/native/balance/duplicate recheck passed. No Critical or Important finding remains **within that reviewed testnet code and evidence scope**. This is a bounded code review, not a professional security audit of the project or native precompile.
+
+The ticket's target block timestamp was `06:41:45 UTC`; the source failure block timestamp was `06:42:00 UTC`. The runner confirmed the ticket before broadcasting the source action. These timestamps are independent RPC observations across two chains, not a source UTC timestamp proven by the Attestcoin payload.
+
+Attestation was first observed ready **8 min 54.575 s** after the source failure confirmation (`06:42:05.151 -> 06:50:59.726 UTC`); native verification completed after **8 min 57.415 s**. The 15-second polling interval means this is observed end-to-end waiting, not the exact attestation publication time or a latency guarantee. Claim submission to receipt confirmation took **5.061 s**. See [proof timing](integration/evidence/proof-verification.json) and [payment/balance evidence](integration/evidence/claim.json).
 
 ## The product in one flow
 
@@ -46,9 +62,9 @@ pnpm --dir web test
 python -m http.server 4173 --bind 127.0.0.1 --directory web/dist
 ```
 
-Open `http://127.0.0.1:4173`. The UI must preserve pending states; opening it is not evidence that a claim executed. The `web/dist` directory contains the static application, not a backend signer.
+Open `http://127.0.0.1:4173`. The `web/dist` directory is a static replay and verification app, with no backend signer. Match its displayed transaction hashes to the evidence files when reviewing the completed run.
 
-For an actual testnet run, follow [the integration runbook](integration/README.md). It uses `@gluwa/usc-sdk` 0.18.0, checks chain IDs before signing, and stores pending transaction hashes to resume safely. A dedicated test-only wallet and faucet assets are required for deployments and claims; its private key stays outside the repository. The planned demo campaign has 10 test CTC in funding and a fixed 1 test CTC rebate; these are configuration values until live evidence confirms them.
+For an actual testnet run, follow [the integration runbook](integration/README.md). It uses `@gluwa/usc-sdk` 0.18.0, checks chain IDs before signing, and stores pending transaction hashes to resume safely. A dedicated test-only wallet and faucet assets are required for deployments and claims; its private key stays outside the repository. The completed campaign was funded with 10 test CTC and paid its fixed 1 test CTC rebate.
 
 ```powershell
 pnpm --dir integration install --frozen-lockfile --ignore-scripts
@@ -58,9 +74,10 @@ node integration/prospective-source.cjs
 node integration/proof.cjs --wait
 node integration/claim.cjs
 node integration/normalize.cjs
+node integration/verify-public.cjs
 ```
 
-Do not run the transaction-producing steps using a wallet with real assets. Use the recorded proof and read-only checks when reviewing an existing run. Attestation takes time; recorded timestamps and any skipped waiting period belong in the demonstration.
+To inspect this completed run without a funded wallet, use `node integration/verify-public.cjs`; it performs public RPC reads and native `eth_call` checks. The preceding transaction-producing commands are for test-only wallets. Preserve the measured waiting interval in any recording rather than presenting attestation as instantaneous.
 
 ## Design boundaries
 
@@ -77,6 +94,7 @@ See [the threat model](docs/threat-model.md) for assumptions, attacks and eviden
 - [Attestcoin integration and architecture](docs/architecture.md)
 - [Threat model](docs/threat-model.md)
 - [Independent contract source review](docs/research/contract-review.md)
+- [Final code review and closed evidence-verifier finding](docs/qa/final-code-review.md)
 - [DoraHacks English fields and evidence gates](docs/submission/dorahacks-draft.md)
 - [90-120 second demonstration script](docs/submission/demo-script.md)
 - [Editable six-page deck content](docs/submission/deck-content.md)

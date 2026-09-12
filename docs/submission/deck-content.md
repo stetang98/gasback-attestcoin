@@ -1,6 +1,6 @@
 # GasBack - six-page English deck content
 
-Review draft. On-chain evidence snapshot: 2026-09-12T05:56:16.294Z. Public website and repository access verified separately on 2026-09-12. Editable PDF builder: `create_deck.py`. Final publication requires replacing pending states with actual verified evidence, not unverified promises.
+Testnet evidence edition. Run completed at 2026-09-12T06:51:34.633Z; the stricter reviewed public RPC re-verification passed at 07:04:13.308Z. Editable PDF builder: `create_deck.py`. Public artifact synchronization, revised demonstration video and DoraHacks acceptance are separate publication checks.
 
 ## 1. Prove the failure. Claim the sponsor rebate.
 
@@ -10,7 +10,7 @@ GasBack is a fixed sponsor rebate for preauthorized reverted transactions.
 
 Primary track: DeFi / BUIDL CTC 2026 Fall. Testnet assets only.
 
-Current evidence: source contract deployed; complete target proof and rebate pending.
+Completed evidence: a ticket confirmed before source broadcast, a real status-0 source receipt with zero logs, native proof verification and a mined fixed 1 test CTC rebate.
 
 ## 2. A precise job for a sponsorship budget
 
@@ -38,31 +38,33 @@ Policy: sender / destination / nonce / calldata hash / minimum gas limit / sourc
 
 ## 4. A claim that can survive hostile inputs
 
-Tampered evidence: native verification must reject it.
+Live native negative control: changing the encoded receipt status from 0 to 1 was rejected with `Merkle proof validation failed`.
 
-Success or wrong intent: receipt and ticket checks reject it.
+Live read-only policy controls: wrong chain -> `WrongSourceChain`; unissued ticket -> `TicketNotIssued`; duplicate -> `TicketAlreadyClaimed`. No second mined claim occurred.
 
-Reused transaction: sender + nonce + chain nullifier rejects it.
+Local policy/security tests additionally cover authentic successful receipts, wrong intent, reused source identity, redirected payment, transfer failure and reentry. The status-tampering control is not a separate authenticated successful source transaction.
 
-Redirected payout: beneficiary is fixed by the ticket.
+The beneficiary is fixed by the ticket; the nullifier binds verified source chain, sender and nonce.
 
-Failed transfer or reentry: atomic rollback and a claim guard protect state.
+Atomic rollback and a claim guard protect payment state.
 
 42 local policy/security cases; disclosed verifier harness. A bounded independent code review found no actionable P0-P2 defect at eb31caa. This is not a professional audit or native-integration certificate.
 
+Post-run review note: a separate P2 in independent evidence-verification tooling was fixed and independently re-reviewed. 16 verifier regressions, 42 contract tests and 10 web tests passed, with a new live RPC/native recheck. No Critical/Important findings remain within the reviewed testnet code/evidence scope. The PDF's transaction facts and amounts remain unchanged.
+
 ## 5. Evidence you can inspect
 
-Verified source deployment: Sepolia block 11,686,978, receipt status 1.
+Ticket: Creditcoin block 5,473,617, status 1, confirmed before source broadcast. https://creditcoin-testnet.blockscout.com/tx/0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1
 
-Source contract: 0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea.
+Source failure: Sepolia block 11,687,232, receipt status 0, zero logs, gas used 22,440. https://sepolia.etherscan.io/tx/0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a
 
-Pending at this snapshot: target deployment; prospective ticket and eligible failure; native proof and tampering rejection; mined rebate and duplicate rejection.
+Claim: Creditcoin block 5,473,655, status 1. Gross fixed rebate 1 test CTC; beneficiary net increase 0.9999184485 after claim gas 0.0000815515. Vault balance 10 -> 9, totalPaid 1; block-boundary balance and public RPC re-verification passed. https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035
 
-Public app: https://gasback-ctc-2026.stetang.chatgpt.site . Verified HTTP 200 without account cookies. The online historical-proof check demonstrates feasibility; it is not this project's rebate.
+Timing: source failure confirmation to first observed attestation readiness 8 min 54.575 s; native verification 8 min 57.415 s; claim submission to confirmation 5.061 s. The 15-second polling interval makes these local observations, not exact protocol publication times or guarantees. Independent block timestamps place ticket at 06:41:45 UTC and source failure at 06:42:00 UTC; source UTC time is not encoded in the proof.
 
-Public source: https://github.com/stetang98/gasback-attestcoin . Remote main commit `4c5a0a19cbc7049f3cf68a8d7c4e0750602d8f17` was verified against 98 published file paths and hashes, with key raw source also checked.
+Execution boundary: CLI executed the real transactions. The website is a read-only evidence replay and verification surface; no replay button initiated this claim. The earlier historical probe is separate.
 
-Public review draft in repository: https://github.com/stetang98/gasback-attestcoin/blob/main/docs/submission/GasBack-deck.pdf ; final prospective-run refresh pending. Demo video remains pending. No complete rebate or accepted submission is claimed.
+Public app: https://gasback-ctc-2026.stetang.chatgpt.site . Public source: https://github.com/stetang98/gasback-attestcoin . The deck is refreshed from the completed run; public PDF synchronization and demonstration video remain publication checks. No accepted DoraHacks submission is claimed.
 
 ## 6. A small product with a measurable next step
 
@@ -72,6 +74,6 @@ Pilot proposal: one protocol, one action, a fixed test campaign budget and a cle
 
 Measure: native-proof availability/latency, eligible claim completion, rejection causes, sponsor spend and user retry behavior. These are proposed measures, not reported results.
 
-Next gate: complete the live proof-to-payment run and publish reproducible evidence. Then validate demand with a sponsor before expanding scope.
+Next gate: publish the completed run's synchronized artifacts and demonstration, then validate demand with one sponsor before expanding scope. One successful testnet run establishes technical feasibility, not adoption or production readiness.
 
 No claimed traction, partners, revenue, or guaranteed awards. Participant details must remain truthful and eligibility requires the participant's own informed declaration.

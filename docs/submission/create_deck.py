@@ -1,4 +1,4 @@
-"""Render the six-page review draft. Update facts only from verified public evidence."""
+"""Render the six-page evidence deck from the independently verified live testnet run."""
 from pathlib import Path
 
 from reportlab.lib.colors import HexColor
@@ -15,14 +15,17 @@ WHITE = HexColor("#F4F7F8")
 MUTED = HexColor("#AFC0CB")
 TEAL = HexColor("#5EE1CA")
 AMBER = HexColor("#FFCB77")
-SNAPSHOT = "2026-09-12 05:56 UTC"
-SOURCE_URL = "https://sepolia.etherscan.io/tx/0x11c6cadadf3b945cda0b2cb4129e736932518cc7d042c83d67fbcb68c2676267"
+SNAPSHOT = "2026-09-12 06:51 UTC"
+SOURCE_URL = "https://sepolia.etherscan.io/tx/0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a"
+TICKET_URL = "https://creditcoin-testnet.blockscout.com/tx/0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1"
+CLAIM_URL = "https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035"
 APP_URL = "https://gasback-ctc-2026.stetang.chatgpt.site"
 GITHUB_URL = "https://github.com/stetang98/gasback-attestcoin"
+VAULT_URL = "https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea?tab=contract"
 OFFICIAL_URL = "https://dorahacks.io/hackathon/buidl-ctc-2026-fall/detail"
 
 c = canvas.Canvas(str(OUT), pagesize=(W, H), pageCompression=1)
-c.setTitle("GasBack | BUIDL CTC 2026 Fall | Review draft")
+c.setTitle("GasBack | BUIDL CTC 2026 Fall | Verified testnet evidence")
 c.setAuthor("GasBack project")
 c.setSubject("Fixed sponsor rebates for preauthorized reverted transactions; testnet prototype")
 
@@ -53,7 +56,7 @@ def base(number, section):
     c.rect(0, 0, W, H, fill=1, stroke=0)
     text("GASBACK", 48, 499, 15, TEAL, True)
     text(section.upper(), 170, 499, 10, MUTED)
-    text("REVIEW DRAFT", 802, 499, 11, AMBER, True)
+    text("TESTNET EVIDENCE", 780, 499, 11, AMBER, True)
     c.setStrokeColor(LINE)
     c.line(48, 478, 912, 478)
     c.line(48, 41, 912, 41)
@@ -79,8 +82,8 @@ for x, n, label, color in cards:
     text(n, x + 19, 226, 12, color, True)
     para(label, x + 19, 198, 238, 18, 22, WHITE, True)
 box(48, 64, 864, 72)
-text("CURRENT EVIDENCE", 66, 108, 10, AMBER, True)
-text("Source deployed. Full native proof and target rebate are pending.", 66, 83, 18)
+text("VERIFIED LIVE RUN", 66, 108, 10, TEAL, True)
+text("Ticket first. Status 0, zero logs. Native proof. Fixed 1 test CTC paid.", 66, 83, 18)
 c.showPage()
 
 # 2 - Product problem, without invented adoption data
@@ -123,11 +126,11 @@ c.showPage()
 base(4, "Hostile-input checks")
 text("A claim should survive hostile inputs.", 48, 417, 34, WHITE, True)
 rows = [
-    ("Tampered evidence", "Native verifier rejects changed proof-bound bytes."),
-    ("Success / wrong intent", "Receipt status and exact ticket checks reject it."),
-    ("Replayed source transaction", "Chain + verified sender + nonce cannot pay twice."),
-    ("Redirected payout", "The ticket fixes beneficiary and rebate."),
-    ("Payment failure / reentry", "Atomic rollback and a claim guard protect state."),
+    ("Changed status 0 -> 1", "Native: Merkle proof validation failed."),
+    ("Wrong source chain", "Vault: WrongSourceChain."),
+    ("Unissued ticket", "Vault: TicketNotIssued."),
+    ("Duplicate claim", "Vault: TicketAlreadyClaimed; no second payout."),
+    ("Success / intent / reentry", "Additional policy cases covered in local tests."),
 ]
 for i, (attack, control) in enumerate(rows):
     y = 353 - i * 45
@@ -136,24 +139,26 @@ for i, (attack, control) in enumerate(rows):
         c.rect(48, y - 13, 864, 37, fill=1, stroke=0)
     text(attack, 61, y, 17, WHITE, True)
     text(control, 339, y, 17, MUTED)
-text("42 local policy/security cases", 48, 119, 22, TEAL, True)
-para("Disclosed verifier harness. Independent source review: no actionable P0-P2 at eb31caa. Neither is a professional audit or native-integration certificate.", 48, 87, 854, 14, 19)
+text("4 live read-only rejection checks", 48, 119, 22, TEAL, True)
+para("Plus 42 local policy/security cases using a disclosed verifier harness. Authentic success, wrong intent, transfer failure and reentry are local tests. The source review is not a professional audit.", 48, 87, 854, 14, 19)
 c.showPage()
 
 # 5 - Honest live evidence
 base(5, "Inspectable evidence")
-text("Proof is a deliverable.", 48, 417, 36, WHITE, True)
-box(48, 238, 864, 132)
-text("VERIFIED: SEPOLIA SOURCE DEPLOYMENT", 67, 339, 12, TEAL, True)
-text("Block 11,686,978 / receipt status 1", 67, 307, 24, WHITE, True)
-text("0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea", 67, 275, 16, MUTED)
-link("Inspect the source deployment receipt", SOURCE_URL, 67, 251, 12)
-text("PENDING AT THIS SNAPSHOT", 48, 207, 11, AMBER, True)
-para("Target vault and prospective ticket. Eligible source failure. Native proof and tamper rejection. Mined rebate and duplicate rejection.", 48, 181, 852, 19, 25)
-link("Public app: gasback-ctc-2026.stetang.chatgpt.site", APP_URL, 48, 107, 14)
-link("Public source: github.com/stetang98/gasback-attestcoin", GITHUB_URL, 48, 85, 14)
-text("Public review PDF in repository; final prospective-run refresh pending. Video pending.", 48, 65, 11, MUTED)
-text("Historical proof is not a rebate. No accepted entry claimed.", 48, 49, 10, MUTED)
+text("A failure without logs. A paid rebate.", 48, 417, 35, WHITE, True)
+box(48, 276, 864, 105)
+text("FIXED GROSS REBATE", 67, 355, 11, TEAL, True)
+text("1 test CTC", 67, 312, 34, WHITE, True)
+text("Net received: 0.9999184485 test CTC", 404, 337, 19, WHITE, True)
+text("Claim gas paid: 0.0000815515 test CTC", 404, 309, 16, MUTED)
+link("Ticket: Creditcoin #5,473,617 / confirmed before source broadcast", TICKET_URL, 48, 251, 14)
+link("Failure: Sepolia #11,687,232 / status 0 / zero logs", SOURCE_URL, 48, 224, 14)
+link("Claim: Creditcoin #5,473,655 / status 1 / vault balance 10 -> 9", CLAIM_URL, 48, 197, 14)
+text("OBSERVED TIMING", 48, 160, 11, AMBER, True)
+text("Attestation ready: 8m 54.575s. Native verified: 8m 57.415s.", 48, 133, 19, WHITE)
+text("Claim submission to confirmation: 5.061s.", 48, 108, 17, MUTED)
+text("15-second polling; local observations, not exact publication times or latency guarantees.", 48, 82, 12, MUTED)
+text("CLI executed the transactions. The website provides read-only replay and verification.", 48, 57, 12, TEAL)
 c.showPage()
 
 # 6 - Focused next step and non-fictional traction
@@ -167,9 +172,12 @@ para("One protocol. One action. A fixed budget and a clear eligibility rule.", 6
 text("PROPOSED MEASURES", 503, 293, 11, TEAL, True)
 para("Proof latency, claim completion, rejection causes, sponsor spend and retry behavior.", 503, 262, 382, 19, 25)
 text("NEXT GATE", 48, 175, 11, AMBER, True)
-para("Complete the real proof-to-payment run and publish reproducible evidence. Validate sponsor demand before expanding scope.", 48, 148, 852, 20, 26)
-text("No claimed traction, partners, revenue or accepted submission.", 48, 78, 15, MUTED)
+para("Publish the synchronized demo and evidence. Then validate demand with one sponsor before expanding scope.", 48, 148, 852, 20, 26)
+text("One verified testnet run. No claimed traction, partners, revenue or accepted submission.", 48, 99, 13, MUTED)
+link("App: gasback-ctc-2026.stetang.chatgpt.site", APP_URL, 48, 78, 11)
+link("Source: github.com/stetang98/gasback-attestcoin", GITHUB_URL, 486, 78, 11)
 link("Official competition", OFFICIAL_URL, 48, 56, 10)
+link("Fully verified vault source on Blockscout", VAULT_URL, 486, 56, 10)
 c.showPage()
 c.save()
 print(OUT)
