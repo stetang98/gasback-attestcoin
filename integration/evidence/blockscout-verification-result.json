@@ -1,0 +1,52 @@
+{
+  "observedAt": "2026-09-12T06:55:01.924Z",
+  "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+  "chainId": 102031,
+  "explorer": "https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea?tab=contract",
+  "verificationStatus": {
+    "message": "OK",
+    "result": "Pass - Verified",
+    "status": "1"
+  },
+  "addressIsVerified": true,
+  "contract": {
+    "name": "GasBackVault",
+    "compiler_version": "v0.8.28+commit.7893614a",
+    "is_verified": true,
+    "is_fully_verified": true,
+    "is_partially_verified": false,
+    "verified_at": "2026-09-12T06:54:57.085901Z",
+    "file_path": "contracts/GasBackVault.sol",
+    "language": "solidity",
+    "license_type": "none",
+    "optimization_enabled": true,
+    "optimization_runs": 200,
+    "evm_version": "paris",
+    "compiler_settings": {
+      "evmVersion": "paris",
+      "libraries": {},
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "*"
+          ],
+          "*": [
+            "*"
+          ]
+        }
+      },
+      "viaIR": true
+    },
+    "additionalSourcesCount": 2,
+    "sourceCodePresent": true
+  },
+  "httpStatuses": {
+    "verificationStatus": 200,
+    "contract": 200,
+    "address": 200
+  }
+}

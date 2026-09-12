@@ -1,0 +1,35 @@
+{
+  "submittedAt": "2026-09-12T06:54:47.251Z",
+  "chainId": 102031,
+  "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+  "method": "Blockscout per-instance public API; no key, wallet, or chain transaction",
+  "compilerVersion": "v0.8.28+commit.7893614a",
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "viaIR": true,
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object",
+          "metadata"
+        ]
+      }
+    }
+  },
+  "creationBytecodeMatchesArtifact": true,
+  "sourceHashesMatchMetadata": true,
+  "standardInputFile": "gasback-vault-standard-input.json",
+  "requestEndpoint": "https://creditcoin-testnet.blockscout.com/api?module=contract&action=verifysourcecode",
+  "httpStatus": 200,
+  "response": {
+    "message": "OK",
+    "result": "b2a5c2772689c05d02e101e8137aabd3b72c57ea6aa4f735",
+    "status": "1"
+  }
+}
