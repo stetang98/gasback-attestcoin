@@ -1,0 +1,92 @@
+{
+  "preparedFor": "GasBack application background integration",
+  "retrievedAt": "2026-09-12T05:56:53.629Z",
+  "reactBitsRevision": "3a1c7f2f9f94ed833934ab5c2635760b9e644583",
+  "templateParameters": "Unknown; green preset is locally selected",
+  "files": [
+    {
+      "file": "react-bits-darkveil/DarkVeil.jsx",
+      "source": "https://raw.githubusercontent.com/DavidHDev/react-bits/3a1c7f2f9f94ed833934ab5c2635760b9e644583/src/content/Backgrounds/DarkVeil/DarkVeil.jsx",
+      "bytes": 12344,
+      "sha256": "38adbe9d5daa619b89bc7cc6cb061e050408a8a82e53a0874a9a9f70e0a0a678"
+    },
+    {
+      "file": "react-bits-darkveil/DarkVeil.css",
+      "source": "https://raw.githubusercontent.com/DavidHDev/react-bits/3a1c7f2f9f94ed833934ab5c2635760b9e644583/src/content/Backgrounds/DarkVeil/DarkVeil.css",
+      "bytes": 70,
+      "sha256": "5e1658de28e5446be8d43c03d0db74a2a99798969cbdc1a921a1fecfe19f1112"
+    },
+    {
+      "file": "react-bits-darkveil/DarkVeilDemo.jsx",
+      "source": "https://raw.githubusercontent.com/DavidHDev/react-bits/3a1c7f2f9f94ed833934ab5c2635760b9e644583/src/demo/Backgrounds/DarkVeilDemo.jsx",
+      "bytes": 5694,
+      "sha256": "465578c61c9ab83a525779289a93997b851662f4eaf36c1dd3249cef47feb4f7"
+    },
+    {
+      "file": "react-bits-darkveil/darkVeilCode.js",
+      "source": "https://raw.githubusercontent.com/DavidHDev/react-bits/3a1c7f2f9f94ed833934ab5c2635760b9e644583/src/constants/code/Backgrounds/darkVeilCode.js",
+      "bytes": 598,
+      "sha256": "2acfebfa299e893b83a471e3d9507eb0913a5eff368bbd24d892963a661130e5"
+    },
+    {
+      "file": "react-bits-darkveil/LICENSE.md",
+      "source": "https://raw.githubusercontent.com/DavidHDev/react-bits/3a1c7f2f9f94ed833934ab5c2635760b9e644583/LICENSE.md",
+      "bytes": 1303,
+      "sha256": "f4c33af6739191537738662d223b68d77bc226f4b57ea883e16481d8cc5c73c9"
+    },
+    {
+      "file": "react-bits-darkveil/vertex.glsl",
+      "source": "extracted unchanged from DarkVeil.jsx",
+      "bytes": 75,
+      "sha256": "51371d2fca6ddcf9b84eaddf2efad37131203837f5f7822b7b51729b439c2a8f"
+    },
+    {
+      "file": "react-bits-darkveil/fragment.glsl",
+      "source": "extracted unchanged from DarkVeil.jsx",
+      "bytes": 9624,
+      "sha256": "964449a7f698333d67eb945923d27ca73323a6a9de28e1b71363484917e77d47"
+    },
+    {
+      "file": "ogl/package.json",
+      "source": "official npm package ogl@1.0.11",
+      "bytes": 1184,
+      "sha256": "cbc35d2fa9feb333dc58957cec0c1aca9f727fb437c93676b30a3b7d9b1c78f9"
+    },
+    {
+      "file": "ogl/README.md",
+      "source": "official npm package ogl@1.0.11",
+      "bytes": 8335,
+      "sha256": "431694c5ceee21023d54c8d11663e028d2f845f00fa49e59cce25f43944c7479"
+    },
+    {
+      "file": "ogl/LICENSE.txt",
+      "source": "full Unlicense section extracted from official OGL README",
+      "bytes": 1211,
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "file": "inter/official-inter.css",
+      "source": "https://rsms.me/inter/inter.css",
+      "bytes": 11497,
+      "sha256": "46d01c7807f64a24c1b2853b756ef15f3a2facdf4a9f066eaf5d39c0c9935441"
+    },
+    {
+      "file": "inter/InterVariable.woff2",
+      "source": "https://rsms.me/inter/font-files/InterVariable.woff2?v=4.1",
+      "bytes": 352240,
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    {
+      "file": "inter/InterVariable-Italic.woff2",
+      "source": "https://rsms.me/inter/font-files/InterVariable-Italic.woff2?v=4.1",
+      "bytes": 387976,
+      "sha256": "e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a"
+    },
+    {
+      "file": "inter/LICENSE.txt",
+      "source": "https://raw.githubusercontent.com/rsms/inter/master/LICENSE.txt",
+      "bytes": 4380,
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    }
+  ]
+}

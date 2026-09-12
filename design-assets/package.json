@@ -1,0 +1,7 @@
+{
+  "name": "gasback-design-assets",
+  "private": true,
+  "type": "module",
+  "scripts": { "serve": "node serve.mjs" },
+  "dependencies": { "ogl": "1.0.11" }
+}

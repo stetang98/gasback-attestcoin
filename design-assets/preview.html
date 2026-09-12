@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DarkVeil — local application background study</title>
+<link rel="stylesheet" href="./inter/inter-local.css">
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#050806;color:#e4f6e9;font:14px InterVariable,system-ui,sans-serif}
+  .stage{position:fixed;inset:0;overflow:hidden}.darkveil-canvas{width:100%;height:100%;display:block}
+  .controls{position:fixed;top:20px;right:20px;width:260px;background:#08120ddd;border:1px solid #ffffff20;padding:18px;border-radius:16px;backdrop-filter:blur(16px)}
+  label{display:grid;gap:8px;margin:16px 0}input{width:100%;accent-color:#69f59b}button{color:inherit;background:#ffffff0b;border:1px solid #ffffff24;border-radius:8px;padding:8px;cursor:pointer}
+  .muted{font-size:11px;color:#a7b9ad;line-height:1.6}a{color:#9ee6b7}strong{font-weight:550}
+</style>
+<div class="stage"><canvas class="darkveil-canvas" aria-hidden="true"></canvas></div>
+<aside class="controls">
+  <strong>DarkVeil background study</strong>
+  <p class="muted">Official React Bits shader. Local green preset; template parameters unknown.</p>
+  <button id="green">Green preset</button> <button id="original">Official default</button>
+  <label>Hue shift <output id="hue-value">110°</output><input id="hue" type="range" min="0" max="360" value="110"></label>
+  <label>Speed <output id="speed-value">0.45</output><input id="speed" type="range" min="0" max="2" step="0.05" value="0.45"></label>
+  <button id="pause">Pause</button>
+  <p class="muted"><a href="./react-bits-darkveil/LICENSE.md">React Bits license</a> · <a href="./inter/LICENSE.txt">Inter license</a></p>
+</aside>
+<script type="importmap">{"imports":{"ogl":"./node_modules/ogl/src/index.js"}}</script>
+<script type="module">
+  import { mountDarkVeil, GREEN_PRESET, OFFICIAL_DEFAULTS } from './darkveil-vanilla.js';
+  const bg = mountDarkVeil(document.querySelector('canvas'), GREEN_PRESET);
+  window.darkVeilStudy = bg;
+  const hue = document.querySelector('#hue'), speed = document.querySelector('#speed');
+  function set(next) { bg.update(next); hue.value = bg.settings.hueShift; speed.value = bg.settings.speed; document.querySelector('#hue-value').value = hue.value + '°'; document.querySelector('#speed-value').value = speed.value; }
+  hue.addEventListener('input', () => set({ hueShift: Number(hue.value) }));
+  speed.addEventListener('input', () => set({ speed: Number(speed.value) }));
+  document.querySelector('#green').onclick = () => set(GREEN_PRESET);
+  document.querySelector('#original').onclick = () => set(OFFICIAL_DEFAULTS);
+  let paused = false; document.querySelector('#pause').onclick = event => { paused = !paused; bg.pause(paused); event.target.textContent = paused ? 'Play' : 'Pause'; };
+  window.addEventListener('pagehide', () => bg.destroy(), { once: true });
+</script>
+</html>
