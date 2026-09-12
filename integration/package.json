@@ -1,0 +1,18 @@
+{
+  "name": "gasback-testnet-integration",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "source": "node source.cjs",
+    "target": "node target.cjs",
+    "fail": "node prospective-source.cjs",
+    "proof": "node proof.cjs --wait",
+    "claim": "node claim.cjs",
+    "evidence": "node normalize.cjs",
+    "verify:public": "node verify-public.cjs"
+  },
+  "dependencies": {
+    "@gluwa/usc-sdk": "0.18.0",
+    "ethers": "6.17.0"
+  }
+}
