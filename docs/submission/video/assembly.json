@@ -1,0 +1,23 @@
+{
+  "run": "../../../integration/evidence/run.json",
+  "publicReverification": "../../../integration/evidence/public-reverification.json",
+  "localPolicyEvidence": "local-policy-tests.json",
+  "narration": "narration-en.json",
+  "narrationMetadata": "narration-metadata.json",
+  "captureRoot": "capture",
+  "output": "GasBack-demo.mp4",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "durationSeconds": 110,
+  "fontRegular": "C:/Windows/Fonts/segoeui.ttf",
+  "fontBold": "C:/Windows/Fonts/seguisb.ttf",
+  "fontMono": "C:/Windows/Fonts/consola.ttf",
+  "appUrl": "https://gasback-ctc-2026.stetang.chatgpt.site",
+  "repositoryUrl": "https://github.com/stetang98/gasback-attestcoin",
+  "recordings": {
+    "01-introduction": { "directory": "01-hero-completed", "trimStartSeconds": 0 },
+    "04-native-verification": { "directory": "04-verification", "trimStartSeconds": 0 },
+    "05-fixed-payment": { "directory": "05-payment", "trimStartSeconds": 0 }
+  }
+}

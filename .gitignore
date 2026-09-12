@@ -12,3 +12,13 @@ dist/
 chain/cache/
 chain/coverage/
 web/.openai/deployments/
+docs/submission/.preview/
+docs/submission/video/capture/
+docs/submission/video/*.wav
+docs/submission/video/*.mp4
+docs/submission/video/render/
+docs/submission/video/work/
+docs/submission/video/layout-preview/
+docs/submission/video/__pycache__/
+docs/submission/video/qc-final/
+docs/submission/video/qc-final-v2/

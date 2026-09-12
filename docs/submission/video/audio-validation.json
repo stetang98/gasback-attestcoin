@@ -1,0 +1,31 @@
+{
+  "file": "GasBack-English-DRAFT-evidence-pending.wav",
+  "checkedAtUtc": "2026-09-12T06:44:42.463Z",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s16le",
+        "sample_fmt": "s16",
+        "sample_rate": "48000",
+        "channels": 1,
+        "bits_per_sample": 16
+      }
+    ],
+    "format": {
+      "duration": "110.000000",
+      "size": "10560044"
+    }
+  },
+  "pcmSampleCount": 5280000,
+  "nonzeroSampleCount": 3920981,
+  "hardClippedSamples": 0,
+  "peakDbFS": -2.609750753142217,
+  "rmsDbFS": -20.64621037812084,
+  "sha256": "d3bd3bd30cc24446536fd0c9451c81f30a7e15d6c8bd40a21a75aeabf2c6ed24",
+  "metadataChecksumMatches": true,
+  "fullDecode": "ffmpeg decoded the entire file without error",
+  "humanListening": "Not performed",
+  "publication": "Not published; draft evidence gates remain pending"
+}

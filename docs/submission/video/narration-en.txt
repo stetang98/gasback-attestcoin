@@ -1,0 +1,13 @@
+A failed transaction should not require a support ticket. GasBack lets a protocol sponsor a fixed rebate, paid only after the failure is independently verified.
+
+The sponsor authorizes this exact transaction intent before the user acts. The ticket fixes who gets paid, the amount, and the claim window. This is a fixed sponsor subsidy, not a full gas refund.
+
+Here is our actual Sepolia transaction. The demo deliberately reverts, so this is a reproducible failed receipt. The proof establishes the failure, not who was at fault.
+
+After attestation, the relayer obtains a proof. Creditcoin verifies it through the native Attestcoin precompile. The vault then reads those same verified bytes and checks every sponsor policy condition. Attestation preparation time is shown separately.
+
+The matching failed transaction receives the fixed sponsor rebate in test C T C. This is the mined claim receipt. A relayer may submit the proof, but cannot change the beneficiary or the amount.
+
+Repeating this claim is rejected by a read-only call. Local policy tests also reject an altered payload and a successful source receipt. These checks do not represent extra mined transactions.
+
+GasBack turns a remote failed receipt into a bounded, inspectable sponsorship decision. The source, proof, policy and payment evidence are available for review. All assets shown are test assets.

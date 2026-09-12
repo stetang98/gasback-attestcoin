@@ -1,0 +1,84 @@
+﻿{
+    "status":  "PRODUCTION DRAFT - evidence gates pending; not published",
+    "voice":  "Microsoft Zira Desktop",
+    "engine":  "Windows System.Speech / installed SAPI voice; local synthesis",
+    "synthesizedAtUtc":  "2026-09-12T06:44:25.1783402Z",
+    "synthesisRatePercent":  91.7,
+    "sampleRateHz":  48000,
+    "channels":  1,
+    "bitsPerSample":  16,
+    "durationSeconds":  110,
+    "speechAndInterSegmentPauseSeconds":  106.622,
+    "finalPaddingSeconds":  3.379,
+    "interSegmentPauseSeconds":  0.3,
+    "wordCount":  214,
+    "audioFile":  "GasBack-English-DRAFT-evidence-pending.wav",
+    "sha256":  "D3BD3BD30CC24446536FD0C9451C81F30A7E15D6C8BD40A21A75AEABF2C6ED24",
+    "listeningCheck":  "Not performed; format and signal checks are separate from human listening.",
+    "renderAttempts":  [
+                           {
+                               "ratePercent":  100,
+                               "seconds":  97.906
+                           },
+                           {
+                               "ratePercent":  89.4,
+                               "seconds":  106.622
+                           },
+                           {
+                               "ratePercent":  87,
+                               "seconds":  106.622
+                           },
+                           {
+                               "ratePercent":  84.7,
+                               "seconds":  118.562
+                           },
+                           {
+                               "ratePercent":  91.7,
+                               "seconds":  106.622
+                           }
+                       ],
+    "segments":  [
+                     {
+                         "id":  "01-introduction",
+                         "startSeconds":  0,
+                         "endSeconds":  12.034,
+                         "evidenceGate":  "Show testnet labels. General product description; no live success claim."
+                     },
+                     {
+                         "id":  "02-sponsor-ticket",
+                         "startSeconds":  12.334,
+                         "endSeconds":  28.319,
+                         "evidenceGate":  "PENDING FINAL EVIDENCE CHECK: show actual ticket issuance before the matching source action; verify sender, destination, nonce, input hash, block window, beneficiary and amount."
+                     },
+                     {
+                         "id":  "03-source-failure",
+                         "startSeconds":  28.619,
+                         "endSeconds":  42.404,
+                         "evidenceGate":  "PENDING FINAL EVIDENCE CHECK: actual prospective project Sepolia receipt has status zero and matches the prior ticket. Do not substitute the historical probe."
+                     },
+                     {
+                         "id":  "04-native-verification",
+                         "startSeconds":  42.704,
+                         "endSeconds":  61.343,
+                         "evidenceGate":  "PENDING FINAL EVIDENCE CHECK: native verification of this prospective run succeeds. Show the real measured preparation interval and label recorded playback."
+                     },
+                     {
+                         "id":  "05-fixed-payment",
+                         "startSeconds":  61.643,
+                         "endSeconds":  76.442,
+                         "evidenceGate":  "PENDING FINAL EVIDENCE CHECK: actual Creditcoin mined receipt status one; RebatePaid identity and amount match; ticket consumed. This paragraph must not be published before the payout is observed."
+                     },
+                     {
+                         "id":  "06-rejection-checks",
+                         "startSeconds":  76.742,
+                         "endSeconds":  91.152,
+                         "evidenceGate":  "PENDING FINAL EVIDENCE CHECK: read-only duplicate check rejects this paid claim. Show altered-payload and successful-receipt evidence explicitly as LOCAL POLICY TESTS unless separate real evidence is available."
+                     },
+                     {
+                         "id":  "07-close",
+                         "startSeconds":  91.452,
+                         "endSeconds":  106.622,
+                         "evidenceGate":  "PENDING FINAL EVIDENCE CHECK: public source, proof, policy and payment evidence links resolve and contain the actual prospective run."
+                     }
+                 ]
+}

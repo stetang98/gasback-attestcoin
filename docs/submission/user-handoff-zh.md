@@ -1,6 +1,6 @@
 # GasBack 参赛交接
 
-真实两链流程已完成：`integration/evidence/run.json` 于 `2026-09-12T06:51:34.633Z` 达到 `completed-live-testnet-rebate`，加强后的公开 RPC 复核记录为 `public-reverification-reviewed.json`（`07:04:13.308Z`），复审通过。网站、PDF、视频的最终公开版本同步与 DoraHacks 接收确认另行验收；当前尚不能称为已提交成功。
+真实两链流程已完成并通过复审；最终网站、Peter V2 视频、PDF 与证据文件已公开发布，7 条匿名 HTTP 200 检查及媒体/证据哈希比对通过。DoraHacks 的 Details 和 Profile 视频地址已保存成功，但尚未提交，仍缺本人 Telegram 主联系方式和知情资格确认。
 
 ## 项目是什么
 
@@ -20,11 +20,11 @@ GasBack 为协议方提供固定额度的失败交易补贴。赞助方先授权
 - 从失败确认到首次观察到 attestation 就绪为 **8 分 54.575 秒**；native 验证完成为 **8 分 57.415 秒**；claim 提交到确认 **5.061 秒**。轮询间隔 15 秒，这是本次观测耗时，不是协议精确发布时间或后续速度承诺。
 - 目标合约源码已在 [Blockscout 完整验证](https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea?tab=contract)，不等于专业安全审计。
 - 本次部署、出票、源动作与领取由 **CLI** 执行；网页是**只读证据回放与验证**，不是通过回放按钮重新发起支付。历史 feasibility probe 与本项目真实 run 分开记录。
-- 正式网页为 `https://gasback-ctc-2026.stetang.chatgpt.site`；公开 v1 已通过无 Cookie 的 HTTP 200 检查，本地完整流程回放已核验，待将新 PDF 与视频同步发布为 v2。
-- 公开仓库 https://github.com/stetang98/gasback-attestcoin 已包含 `17da7ec` 的完整 integration 证据；本轮 README、PDF 与投稿文档另待同步。
-- 英文 README、DoraHacks 文案、约 110 秒演示脚本与六页 PDF 已按真实流程更新。[仓库 PDF](https://github.com/stetang98/gasback-attestcoin/blob/main/docs/submission/GasBack-deck.pdf) 的新版同步、演示视频和 DoraHacks 接收结果仍须验收。计划直链 `/GasBack-deck.pdf` 与 `/demo.mp4` 尚未验证公开，不可当成已上线。
-- 视频在 ChatCut V2 中拆成 7 个可编辑段落，旧旁白已静音；等待本人选择音色后生成新旁白。新版最终视频尚未公开，不能把旧版或本地预览说成最终发布。
-- 用户已登录 DoraHacks，并进入实际 BUIDL 创建流程；登录完成不等于参赛提交已被接收。
+- [正式网站](https://gasback-ctc-2026.stetang.chatgpt.site) 的最终版本已成功部署；[视频页](https://gasback-ctc-2026.stetang.chatgpt.site/demo.html)、[MP4](https://gasback-ctc-2026.stetang.chatgpt.site/demo.mp4)、[字幕](https://gasback-ctc-2026.stetang.chatgpt.site/demo.srt)、[PDF](https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf) 及 run/proof/reviewed-verification 共 7 个公开地址均匿名返回 HTTP 200。MP4、PDF 和三份证据 JSON 与本地正式文件的 SHA-256 完全一致，字幕中的 Attestcoin 已修正。
+- [公开仓库](https://github.com/stetang98/gasback-attestcoin) 已提供完成的链上证据和复审后的源码；英文 README、DoraHacks 文案及六页 PDF 均依据真实流程。
+- 已采用本人选择的 Peter 音色，7 段独立旁白按画面同步，24 张可编辑字幕卡，旧音轨静音。V2 导出并公开：12,123,810 bytes、1280 x 720、24 fps、2,640 帧；视频画面 110 秒，容器 110.08 秒的额外 80 ms 为静音。
+- 本地与公网播放均已到 110.08 秒末尾，`ended=true`、无媒体错误；公网另确认 `currentTime=duration=110.08`、`readyState=4`。公网过程中在 98.78 秒暂停过，随后继续播放至结尾，因此不称无人干预连续播放。尚无完整人工听感验收记录，技术播放成功不等于人工认可全部音色与发音。
+- DoraHacks Details 已替换为真实 completed run 与视频/PDF/GitHub/链上链接，点击 Continue 显示 `Saved successfully`；Profile Demo video 已填公开 `/demo.html` 并保存成功。当前为已保存草稿，尚未提交。
 
 ## 用户需要提供的最少信息
 
@@ -49,13 +49,12 @@ GasBack 为协议方提供固定额度的失败交易补贴。赞助方先授权
 
 GitHub 公开源码上传、测试币到账、真实支付和 DoraHacks 登录已完成。当前尚需本人 Telegram 及对已解释资格条件的事实声明；不需要为了回放重复支付或重新索取助记词。当前没有依据要求另交独立外部报名表；若后续实际流程明确提出，再按页面处理。
 
-## 提交前最后验收
+## 提交前剩余事项
 
-1. 已完成先发 ticket、后源失败、再 Creditcoin 支付；核对投稿链接指向本项目这次真实交易。
-2. 原始 proof、两链回执、到账余额、状态变更与重复领取拒绝证据已保存，核对公开仓库同步结果。
-3. 完成约 110 秒视频并检查完整播放；保留等待时长、CLI 执行与网页只读回放的说明。
-4. 检查 GitHub、网页、PDF、视频均能公开打开，且未包含密钥或个人隐私。
-5. 在 DoraHacks 填写真实成员资料，提交并看到接收确认；再次打开实际 BUIDL 页面检查内容。
+1. 由本人提供 Telegram 主联系方式，并在理解官方限制后如实确认参赛资格。
+2. 补齐 Contact 与必要声明，正式提交，看到接收确认后再次打开实际 BUIDL 页面核对内容。
+
+先出票、源失败、真实支付、证据复核、Peter V2 导出、最终网站发布、匿名文件检查和公网播放到结尾检查均已完成。完整人工听感尚未记录，参赛接收状态仍须取得正式确认。
 
 官方截止时间为 **2026 年 9 月 13 日 23:59 ET，即北京时间 9 月 14 日 11:59**；用户要求的内部完成目标为 9 月 12 日。获奖结果预计 9 月 20 日公布。开发完成、提交成功和获奖是三个不同状态，需分别有证据。
 

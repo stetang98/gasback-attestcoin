@@ -1,0 +1,100 @@
+1
+00:00:00,000 --> 00:00:03,333
+A failed transaction shouldn't need a support ticket.
+
+2
+00:00:03,333 --> 00:00:09,333
+GasBack offers a fixed sponsor rebate,
+paid only after the failure is independently verified.
+
+3
+00:00:12,375 --> 00:00:14,208
+Before the user acts.
+
+4
+00:00:14,208 --> 00:00:18,125
+The sponsor approves this exact transaction intent.
+
+5
+00:00:18,125 --> 00:00:22,750
+The ticket fixes the recipient the amount and the claim window.
+
+6
+00:00:22,750 --> 00:00:25,000
+It's a fixed subsidy,
+
+7
+00:00:25,000 --> 00:00:26,875
+not a full gas refund.
+
+8
+00:00:28,625 --> 00:00:31,458
+This is our real Sepolia transaction.
+
+9
+00:00:31,708 --> 00:00:36,292
+We deliberately make it revert so the failure is reproducible.
+
+10
+00:00:36,292 --> 00:00:39,167
+The proof establishes what happened.
+
+11
+00:00:39,167 --> 00:00:41,875
+It doesn't decide who was at fault.
+
+12
+00:00:42,708 --> 00:00:46,333
+Once attestation is ready, the relayer gets a proof
+
+13
+00:00:46,542 --> 00:00:50,542
+Creditcoin checks it through the native Attestcoin verifier.
+
+14
+00:00:50,542 --> 00:00:54,917
+The vault reads those verified
+bytes and checks the sponsor's policy.
+
+15
+00:00:54,917 --> 00:00:57,625
+The actual preparation time is shown here.
+
+16
+00:01:01,667 --> 00:01:05,208
+The matching failure receives one test CTC.
+
+17
+00:01:05,417 --> 00:01:07,583
+Here's the mined claim receipt.
+
+18
+00:01:07,583 --> 00:01:12,792
+A relayer can submit the proof, but
+can't change who gets paid or how much.
+
+19
+00:01:16,750 --> 00:01:21,125
+Try the same claim again and the read only check rejects it.
+
+20
+00:01:21,833 --> 00:01:27,167
+Local tests also reject an altered
+payload and a successful source receipt.
+
+21
+00:01:27,917 --> 00:01:30,542
+These checks aren't additional payments.
+
+22
+00:01:31,458 --> 00:01:36,875
+GasBack turns a failed receipt on another
+chain into a bounded sponsorship decision.
+
+23
+00:01:37,417 --> 00:01:42,208
+You can inspect the source code, proof policy and payment yourself.
+
+24
+00:01:42,792 --> 00:01:45,792
+Everything shown uses test assets.

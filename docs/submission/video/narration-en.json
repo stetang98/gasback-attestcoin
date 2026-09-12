@@ -1,0 +1,50 @@
+{
+  "title": "GasBack English narration - production draft",
+  "status": "DRAFT: live-run claims require final evidence approval before publication",
+  "voice": "Microsoft Zira Desktop",
+  "targetSeconds": 110,
+  "segments": [
+    {
+      "id": "01-introduction",
+      "screenSeconds": "0-12",
+      "evidenceGate": "Show testnet labels. General product description; no live success claim.",
+      "text": "A failed transaction should not require a support ticket. GasBack lets a protocol sponsor a fixed rebate, paid only after the failure is independently verified."
+    },
+    {
+      "id": "02-sponsor-ticket",
+      "screenSeconds": "12-29",
+      "evidenceGate": "PENDING FINAL EVIDENCE CHECK: show actual ticket issuance before the matching source action; verify sender, destination, nonce, input hash, block window, beneficiary and amount.",
+      "text": "The sponsor authorizes this exact transaction intent before the user acts. The ticket fixes who gets paid, the amount, and the claim window. This is a fixed sponsor subsidy, not a full gas refund."
+    },
+    {
+      "id": "03-source-failure",
+      "screenSeconds": "29-44",
+      "evidenceGate": "PENDING FINAL EVIDENCE CHECK: actual prospective project Sepolia receipt has status zero and matches the prior ticket. Do not substitute the historical probe.",
+      "text": "Here is our actual Sepolia transaction. The demo deliberately reverts, so this is a reproducible failed receipt. The proof establishes the failure, not who was at fault."
+    },
+    {
+      "id": "04-native-verification",
+      "screenSeconds": "44-63",
+      "evidenceGate": "PENDING FINAL EVIDENCE CHECK: native verification of this prospective run succeeds. Show the real measured preparation interval and label recorded playback.",
+      "text": "After attestation, the relayer obtains a proof. Creditcoin verifies it through the native Attestcoin precompile. The vault then reads those same verified bytes and checks every sponsor policy condition. Attestation preparation time is shown separately."
+    },
+    {
+      "id": "05-fixed-payment",
+      "screenSeconds": "63-82",
+      "evidenceGate": "PENDING FINAL EVIDENCE CHECK: actual Creditcoin mined receipt status one; RebatePaid identity and amount match; ticket consumed. This paragraph must not be published before the payout is observed.",
+      "text": "The matching failed transaction receives the fixed sponsor rebate in test C T C. This is the mined claim receipt. A relayer may submit the proof, but cannot change the beneficiary or the amount."
+    },
+    {
+      "id": "06-rejection-checks",
+      "screenSeconds": "82-99",
+      "evidenceGate": "PENDING FINAL EVIDENCE CHECK: read-only duplicate check rejects this paid claim. Show altered-payload and successful-receipt evidence explicitly as LOCAL POLICY TESTS unless separate real evidence is available.",
+      "text": "Repeating this claim is rejected by a read-only call. Local policy tests also reject an altered payload and a successful source receipt. These checks do not represent extra mined transactions."
+    },
+    {
+      "id": "07-close",
+      "screenSeconds": "99-110",
+      "evidenceGate": "PENDING FINAL EVIDENCE CHECK: public source, proof, policy and payment evidence links resolve and contain the actual prospective run.",
+      "text": "GasBack turns a remote failed receipt into a bounded, inspectable sponsorship decision. The source, proof, policy and payment evidence are available for review. All assets shown are test assets."
+    }
+  ]
+}

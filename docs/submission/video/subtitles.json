@@ -1,0 +1,132 @@
+{
+  "timingMethod": "Exact SAPI paragraph anchors; sentence timings estimated by word count. Editable, not word-aligned recognition.",
+  "narrationSha256": "7d3ee6a8d831ed42c3379d579905f8b213a79d028a32bfc6768892438da8b672",
+  "rows": [
+    {
+      "segment": "01-introduction",
+      "startSeconds": 0,
+      "endSeconds": 4.332,
+      "text": "A failed transaction should not require a support ticket."
+    },
+    {
+      "segment": "01-introduction",
+      "startSeconds": 4.332,
+      "endSeconds": 12.034,
+      "text": "GasBack lets a protocol sponsor a fixed rebate, paid only after the failure is independently verified."
+    },
+    {
+      "segment": "02-sponsor-ticket",
+      "startSeconds": 12.334,
+      "endSeconds": 17.506,
+      "text": "The sponsor authorizes this exact transaction intent before the user acts."
+    },
+    {
+      "segment": "02-sponsor-ticket",
+      "startSeconds": 17.506,
+      "endSeconds": 23.147,
+      "text": "The ticket fixes who gets paid, the amount, and the claim window."
+    },
+    {
+      "segment": "02-sponsor-ticket",
+      "startSeconds": 23.147,
+      "endSeconds": 28.319,
+      "text": "This is a fixed sponsor subsidy, not a full gas refund."
+    },
+    {
+      "segment": "03-source-failure",
+      "startSeconds": 28.619,
+      "endSeconds": 31.682,
+      "text": "Here is our actual Sepolia transaction."
+    },
+    {
+      "segment": "03-source-failure",
+      "startSeconds": 31.682,
+      "endSeconds": 37.298,
+      "text": "The demo deliberately reverts, so this is a reproducible failed receipt."
+    },
+    {
+      "segment": "03-source-failure",
+      "startSeconds": 37.298,
+      "endSeconds": 42.404,
+      "text": "The proof establishes the failure, not who was at fault."
+    },
+    {
+      "segment": "04-native-verification",
+      "startSeconds": 42.704,
+      "endSeconds": 46.432,
+      "text": "After attestation, the relayer obtains a proof."
+    },
+    {
+      "segment": "04-native-verification",
+      "startSeconds": 46.432,
+      "endSeconds": 50.692,
+      "text": "Creditcoin verifies it through the native Attestcoin precompile."
+    },
+    {
+      "segment": "04-native-verification",
+      "startSeconds": 50.692,
+      "endSeconds": 58.148,
+      "text": "The vault then reads those same verified bytes and checks every sponsor policy condition."
+    },
+    {
+      "segment": "04-native-verification",
+      "startSeconds": 58.148,
+      "endSeconds": 61.343,
+      "text": "Attestation preparation time is shown separately."
+    },
+    {
+      "segment": "05-fixed-payment",
+      "startSeconds": 61.643,
+      "endSeconds": 67.737,
+      "text": "The matching failed transaction receives the fixed sponsor rebate in test C T C."
+    },
+    {
+      "segment": "05-fixed-payment",
+      "startSeconds": 67.737,
+      "endSeconds": 70.348,
+      "text": "This is the mined claim receipt."
+    },
+    {
+      "segment": "05-fixed-payment",
+      "startSeconds": 70.348,
+      "endSeconds": 76.442,
+      "text": "A relayer may submit the proof, but cannot change the beneficiary or the amount."
+    },
+    {
+      "segment": "06-rejection-checks",
+      "startSeconds": 76.742,
+      "endSeconds": 81.065,
+      "text": "Repeating this claim is rejected by a read-only call."
+    },
+    {
+      "segment": "06-rejection-checks",
+      "startSeconds": 81.065,
+      "endSeconds": 87.309,
+      "text": "Local policy tests also reject an altered payload and a successful source receipt."
+    },
+    {
+      "segment": "06-rejection-checks",
+      "startSeconds": 87.309,
+      "endSeconds": 91.152,
+      "text": "These checks do not represent extra mined transactions."
+    },
+    {
+      "segment": "07-close",
+      "startSeconds": 91.452,
+      "endSeconds": 97.729,
+      "text": "GasBack turns a remote failed receipt into a bounded, inspectable sponsorship decision."
+    },
+    {
+      "segment": "07-close",
+      "startSeconds": 97.729,
+      "endSeconds": 103.483,
+      "text": "The source, proof, policy and payment evidence are available for review."
+    },
+    {
+      "segment": "07-close",
+      "startSeconds": 103.483,
+      "endSeconds": 106.622,
+      "text": "All assets shown are test assets."
+    }
+  ]
+}

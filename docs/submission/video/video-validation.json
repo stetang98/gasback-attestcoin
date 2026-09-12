@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-09-12T06:57:34.983679+00:00",
+  "file": "GasBack-demo.mp4",
+  "sha256": "13fea50331ae41cec304a038da2148d8cfdba5918269a1ea8000f5ccb1baaf55",
+  "bytes": 3778479,
+  "under25MiB": true,
+  "durationSeconds": 110,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "frames": 2640,
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "fullDecodePassed": true,
+  "evidenceGatesPassed": true,
+  "evidenceFilesStillMatchExportManifest": true,
+  "keyFramesSeconds": [
+    5,
+    20,
+    35,
+    50,
+    70,
+    84,
+    102,
+    109
+  ],
+  "keyFrameDirectory": "qc-final-v2",
+  "keyFrameVisualReview": "No overflow observed in subtitles, evidence cards, measured timing and receipt-summary overlays. Real app recordings retained.",
+  "assemblyRegressionTestsPassed": 4,
+  "actualLocalPolicyTestsPassed": 2,
+  "humanFullListen": "Not performed",
+  "humanUninterruptedAudiovisualPlayback": "Not performed",
+  "publication": "Not performed by assembling agent",
+  "gitOperations": "None"
+}

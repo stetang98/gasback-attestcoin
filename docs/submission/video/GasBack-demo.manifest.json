@@ -1,0 +1,89 @@
+{
+  "createdAt": "2026-09-12T06:56:14.594165+00:00",
+  "output": "GasBack-demo.mp4",
+  "outputSha256": "13fea50331ae41cec304a038da2148d8cfdba5918269a1ea8000f5ccb1baaf55",
+  "durationSeconds": 110.0,
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "frameRate": "24/1",
+  "frameCount": "2640",
+  "dimensions": [
+    1280,
+    720
+  ],
+  "timing": {
+    "sourceToAttestationObservedSeconds": 534.575,
+    "sourceToNativeVerifiedObservedSeconds": 537.415,
+    "boundary": "Local observation timestamps; not exact protocol publication time. Waiting is cut from edited playback."
+  },
+  "evidence": {
+    "run": {
+      "file": "../../../integration/evidence/run.json",
+      "sha256": "3aa95e13b79321ee4f12ef4495c0cfc5ad43d39ae86968cce2848a29374e0692"
+    },
+    "publicReverification": {
+      "file": "../../../integration/evidence/public-reverification.json",
+      "sha256": "cb91327768564c1150ca582be0c8efdb0a9c3fd6f8aff5c43c1da8fa527c3b30"
+    },
+    "localPolicyEvidence": {
+      "file": "local-policy-tests.json",
+      "sha256": "2834c310887f0fe848387cdaacd829e968a24003fa82d5aaa080ce8b93660a92"
+    },
+    "narration": {
+      "file": "narration-en.json",
+      "sha256": "7d3ee6a8d831ed42c3379d579905f8b213a79d028a32bfc6768892438da8b672"
+    },
+    "narrationMetadata": {
+      "file": "narration-metadata.json",
+      "sha256": "7c01f72c5a7a583722b59096c8a095bfa53bda70a6dc8c7967532bba70679852"
+    }
+  },
+  "audioSha256": "d3bd3bd30cc24446536fd0c9451c81f30a7e15d6c8bd40a21a75aeabf2c6ed24",
+  "subtitlesSha256": "100e670cf53cc2f7dc927549b83d6e2ae2bc783e29c4de620b1bc33270250024",
+  "sourceTxHash": "0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a",
+  "claimTxHash": "0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035",
+  "recordings": {
+    "01-introduction": {
+      "directory": "capture\\01-hero-completed",
+      "frameCount": 325,
+      "timestampUnits": "seconds",
+      "firstTimestamp": 1789195926.237513,
+      "lastTimestamp": 1789195939.1995,
+      "recordedSeconds": 12.961987018585205,
+      "trimStartSeconds": 0.0,
+      "framesManifestSha256": "a0d4d1345e0404d0b527db6d3e1072ab0d9ed4d3c7557d1404c1b0a32666b4e0",
+      "firstFrameSha256": "2aca18dd36b325e589733dee853a7b08c70009ab61e0dc89582faf41a713d6fa",
+      "lastFrameSha256": "233b4b5f658a4c86a8ee498430146594dc68ace22d88fab79811cbefcb31f6fe",
+      "resampling": "24 fps previous-frame hold at source timestamps, 1x speed; held ending explicitly labelled"
+    },
+    "04-native-verification": {
+      "directory": "capture\\04-verification",
+      "frameCount": 515,
+      "timestampUnits": "seconds",
+      "firstTimestamp": 1789195945.737487,
+      "lastTimestamp": 1789195966.692857,
+      "recordedSeconds": 20.95536994934082,
+      "trimStartSeconds": 0.0,
+      "framesManifestSha256": "bcb0339e805459c813053092e890e97a363bf1a6481f919b8048625e8749660f",
+      "firstFrameSha256": "ec56ddcd7fb48ea78dfae9204d1ea3d113d3a2c1fbf2fdb42f606d0c56689592",
+      "lastFrameSha256": "242243eb87792601c74fa66f9fbdb69ac01b74f416eac357da7a4f092864d36d",
+      "resampling": "24 fps previous-frame hold at source timestamps, 1x speed; held ending explicitly labelled"
+    },
+    "05-fixed-payment": {
+      "directory": "capture\\05-payment",
+      "frameCount": 420,
+      "timestampUnits": "seconds",
+      "firstTimestamp": 1789195973.971569,
+      "lastTimestamp": 1789195992.941337,
+      "recordedSeconds": 18.969768047332764,
+      "trimStartSeconds": 0.0,
+      "framesManifestSha256": "433bba3b6af42a5cd77ef5df2b7d82845daaaa87241abfd37d52ad0175976aa2",
+      "firstFrameSha256": "242243eb87792601c74fa66f9fbdb69ac01b74f416eac357da7a4f092864d36d",
+      "lastFrameSha256": "6ad75f95b4c8b9bffe9789d43dd1ce241aa3eab75e06118ce6291233a27db6a2",
+      "resampling": "24 fps previous-frame hold at source timestamps, 1x speed; held ending explicitly labelled"
+    }
+  },
+  "validation": "Evidence gates, format and full decode passed. Human full playback/picture-to-narration review still required.",
+  "publication": "Local assembly only; no upload or publication performed.",
+  "evidenceGatesPassed": true
+}

@@ -1,0 +1,23 @@
+TAP version 13
+# Using µWS fallback implementation due to UWS_USE_FALLBACK environment flag being enabled; performance may be degraded.
+# Subtest: rejects proof-authenticated successful receipt without consuming ticket
+ok 1 - rejects proof-authenticated successful receipt without consuming ticket
+  ---
+  duration_ms: 767.4384
+  type: 'test'
+  ...
+# Subtest: rejects tampered payload bound to a different verified proof
+ok 2 - rejects tampered payload bound to a different verified proof
+  ---
+  duration_ms: 481.9322
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6534.8838

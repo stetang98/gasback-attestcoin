@@ -1,0 +1,19 @@
+{
+  "observedAt": "2026-09-12T06:51:52.488400+00:00",
+  "mode": "LOCAL POLICY TESTS; in-memory Ganache EVM with mock verifier",
+  "passed": true,
+  "exitCode": 0,
+  "testNames": [
+    "rejects proof-authenticated successful receipt without consuming ticket",
+    "rejects tampered payload bound to a different verified proof"
+  ],
+  "sourceSha256": {
+    "chain/contracts/GasBackVault.sol": "f3d4f5a2edcbc4dd8f44261e713e0bab4ae345b1736d7c99ac0dec1f704bf04e",
+    "chain/test/gasback.test.cjs": "da16d42f822adc95fdeece053f6370ab6da995bcacc9d5f9043973b404e272ee",
+    "chain/test/helpers/TestContracts.sol": "264887ec522df8a4bf65038e87f62c1d13456c42fcc3e9a545a0fe129eeb7d89",
+    "chain/scripts/compile.cjs": "50ad3783ce1fb87f8296f795a62ecbd43655784a45ee69898319b3b623899848"
+  },
+  "logFile": "local-policy-tests.tap",
+  "logSha256": "d2fdad379d6dffb4fb632313bdb40e2166cb3febb872e69b01fbbe5dd22da3b0",
+  "boundary": "Application policy only; not a live native proof or mined testnet rejection."
+}

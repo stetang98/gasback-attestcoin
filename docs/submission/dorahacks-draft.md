@@ -1,6 +1,6 @@
 # DoraHacks submission draft
 
-Submission copy, 2026-09-12. Refreshed against `integration/evidence/run.json` (`completed-live-testnet-rebate`, 06:51:34.633 UTC) and the stricter reviewed public RPC verification (07:04:13.308 UTC). The completed testnet payout is verified; synchronized public media and accepted DoraHacks submission remain separate checks.
+Submission copy, 2026-09-12. Refreshed against `integration/evidence/run.json` (`completed-live-testnet-rebate`, 06:51:34.633 UTC) and the stricter reviewed public RPC verification (07:04:13.308 UTC). Final media and evidence are publicly deployed with seven anonymous HTTP 200 checks and canonical media/evidence hash matches. DoraHacks Details and the Profile demo-video URL are saved, but the entry has not been submitted.
 
 ## Project name
 
@@ -55,14 +55,14 @@ This is the project's positioning, not a claim of global novelty or superiority 
 
 | DoraHacks field | Prepared value |
 | --- | --- |
-| GitHub URL | https://github.com/stetang98/gasback-attestcoin ; completed integration evidence published at commit `17da7ec`; final documentation/media refresh checked separately |
-| Website | https://gasback-ctc-2026.stetang.chatgpt.site ; public v1 access checked; completed-run replay verified locally, with public v2 synchronization pending |
-| Deck / whitepaper PDF URL | [Repository PDF](https://github.com/stetang98/gasback-attestcoin/blob/main/docs/submission/GasBack-deck.pdf); local evidence edition ready for synchronization. Planned direct URL `https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf` is not yet verified public |
-| Prototype video URL | Final narration revision, publication and playback check pending; the revised video is not yet public |
+| GitHub URL | https://github.com/stetang98/gasback-attestcoin ; reviewed source and completed-run evidence publicly accessible |
+| Website | https://gasback-ctc-2026.stetang.chatgpt.site ; final Sites version deployed with completed-run evidence and Peter V2 media |
+| Deck / whitepaper PDF URL | https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf ; anonymous HTTP 200, exact local/public SHA-256 match |
+| Prototype video URL | https://gasback-ctc-2026.stetang.chatgpt.site/demo.html ; entered in Profile Demo video and saved successfully. MP4 and corrected SRT are public; public browser playback reached 110.08 s with `ended=true` and no error |
 | Logo | Required by the live Create new BUIDL Profile form: PNG/JPEG, under 2 MB; 480 x 480 pixels is the recommended size |
 | Profile social links | At least one link is required by the live Profile form |
 
-## Completed chain evidence and remaining publication checks
+## Completed evidence, publication and draft-save state
 
 - Source deployment and contract address: verified in `integration/evidence/source-deployment.json`.
 - Target vault: [Creditcoin deployment](https://creditcoin-testnet.blockscout.com/tx/0x06c5a7072cabdd026c68b8f14412199f0c2b0f7e41859a03bcf2324339ff0127), status 1, block 5,473,616; 10 test CTC initial funds.
@@ -73,13 +73,13 @@ This is the project's positioning, not a claim of global novelty or superiority 
 - Payment: [mined claim](https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035), status 1, block 5,473,655; matching `RebatePaid`, consumed ticket and gas-adjusted beneficiary balance checked independently.
 - Duplicate: read-only `TicketAlreadyClaimed`; no second mined claim, totalPaid remains 1 test CTC.
 - Wrong chain and unissued ticket: read-only `WrongSourceChain` and `TicketNotIssued` before claim. Authentic successful-receipt rejection remains a local test rather than a separate live transaction.
-- Public app access: verified without account cookies at https://gasback-ctc-2026.stetang.chatgpt.site .
-- Public repository includes the completed integration evidence at `17da7ec`; final documentation synchronization is pending.
-- Public PDF final refresh pending; the local deck now describes the verified completed run.
-- Public revised video and playback check: pending. The editable sequence has seven segments and awaits replacement narration. Planned URL `https://gasback-ctc-2026.stetang.chatgpt.site/demo.mp4` must not be treated as the published final version until verified.
-- DoraHacks accepted-submission confirmation and actual BUIDL URL: pending; account login is not submission.
+- Final public app is deployed at https://gasback-ctc-2026.stetang.chatgpt.site . Seven anonymous HTTP 200 checks cover `/demo.html`, `/demo.mp4`, `/demo.srt`, `/GasBack-deck.pdf`, `/evidence/run.json`, `/evidence/source-proof.json` and `/evidence/public-reverification-reviewed.json`.
+- Public repository contains reviewed source and completed-run evidence. The public PDF, Peter V2 MP4 and three evidence JSON files exactly match the canonical local hashes; the subtitle sidecar uses the correct Attestcoin spelling.
+- Peter V2 uses seven aligned narration clips and 24 caption cards, with the old audio muted. Local and public playback reached 110.08 s with `ended=true` and no media error; public playback reported `readyState=4`. The public session paused at 98.78 s and then resumed to the ending. Full human listening acceptance is not recorded.
+- The Details field was replaced with the completed run and video/PDF/GitHub/chain links; Continue showed `Saved successfully`. The Profile Demo video field was set to the public `/demo.html` page and saved successfully.
+- The entry remains unsubmitted. Primary Telegram and informed eligibility confirmation are outstanding; no accepted BUIDL URL is claimed.
 
-Before submission, verify the public app, PDF and video agree with the completed evidence manifest. Ticket/source block timestamps independently observed by RPC were 06:41:45 and 06:42:00 UTC; the Attestcoin transaction encoding itself does not prove a source UTC timestamp. The earlier historical probe must not replace this run's linked transactions.
+Public files now agree with the completed evidence manifest and public playback has reached the ending successfully. Final submission remains outstanding. Ticket/source block timestamps independently observed by RPC were 06:41:45 and 06:42:00 UTC; the Attestcoin transaction encoding itself does not prove a source UTC timestamp. The earlier historical probe must not replace this run's linked transactions.
 
 ## Originality and tool disclosure
 

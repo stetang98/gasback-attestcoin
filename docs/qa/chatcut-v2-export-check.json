@@ -1,0 +1,779 @@
+{
+  "checkedAtUtc": "2026-09-12T07:19:45.685563+00:00",
+  "sourceFile": "C:\\Users\\stetang\\Downloads\\GasBack-demo-Peter-V2.mp4",
+  "sha256": "beb180ef76f7e6059a9eb5fbbaa0bae6dea6bdd0760e18106fd80ce06b23fcfb",
+  "bytes": 12123810,
+  "under25MiB": true,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "avg_frame_rate": "24/1",
+        "start_time": "0.000000",
+        "duration": "110.000000",
+        "nb_frames": "2640"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_fmt": "fltp",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "start_time": "0.000000",
+        "duration": "110.080000",
+        "nb_frames": "5160"
+      }
+    ],
+    "format": {
+      "start_time": "0.000000",
+      "duration": "110.080000",
+      "size": "12123810"
+    }
+  },
+  "fullDecode": {
+    "exitCode": 0,
+    "stderr": "",
+    "passed": true
+  },
+  "syncInput": {
+    "file": "C:\\Users\\stetang\\Documents\\ChatGPT\\Web3 2\\docs\\submission\\video\\chatcut-v2-sync.json",
+    "sha256": "55d9e03a2dbfa668e043e53588e0722b65b734eaba03b5b8669e7b43db86c267"
+  },
+  "subtitleInput": {
+    "file": "C:\\Users\\stetang\\Documents\\ChatGPT\\Web3 2\\docs\\submission\\video\\GasBack-demo-Peter-V2.srt",
+    "sha256": "d372ac0c63ce38169f934fe40727c0b56f8914254471bed87357fc3f5ca86bf3",
+    "cueCount": 24,
+    "allCuesWithin110SecondsAndVisualSections": true,
+    "cues": [
+      {
+        "number": 1,
+        "startSeconds": 0.0,
+        "endSeconds": 3.333,
+        "text": "A failed transaction shouldn't need a support ticket.",
+        "withinOneVisualSegment": true,
+        "segment": 1
+      },
+      {
+        "number": 2,
+        "startSeconds": 3.333,
+        "endSeconds": 9.333,
+        "text": "GasBack offers a fixed sponsor rebate,\npaid only after the failure is independently verified.",
+        "withinOneVisualSegment": true,
+        "segment": 1
+      },
+      {
+        "number": 3,
+        "startSeconds": 12.375,
+        "endSeconds": 14.208,
+        "text": "Before the user acts.",
+        "withinOneVisualSegment": true,
+        "segment": 2
+      },
+      {
+        "number": 4,
+        "startSeconds": 14.208,
+        "endSeconds": 18.125,
+        "text": "The sponsor approves this exact transaction intent.",
+        "withinOneVisualSegment": true,
+        "segment": 2
+      },
+      {
+        "number": 5,
+        "startSeconds": 18.125,
+        "endSeconds": 22.75,
+        "text": "The ticket fixes the recipient the amount and the claim window.",
+        "withinOneVisualSegment": true,
+        "segment": 2
+      },
+      {
+        "number": 6,
+        "startSeconds": 22.75,
+        "endSeconds": 25.0,
+        "text": "It's a fixed subsidy,",
+        "withinOneVisualSegment": true,
+        "segment": 2
+      },
+      {
+        "number": 7,
+        "startSeconds": 25.0,
+        "endSeconds": 26.875,
+        "text": "not a full gas refund.",
+        "withinOneVisualSegment": true,
+        "segment": 2
+      },
+      {
+        "number": 8,
+        "startSeconds": 28.625,
+        "endSeconds": 31.458,
+        "text": "This is our real Sepolia transaction.",
+        "withinOneVisualSegment": true,
+        "segment": 3
+      },
+      {
+        "number": 9,
+        "startSeconds": 31.708,
+        "endSeconds": 36.292,
+        "text": "We deliberately make it revert so the failure is reproducible.",
+        "withinOneVisualSegment": true,
+        "segment": 3
+      },
+      {
+        "number": 10,
+        "startSeconds": 36.292,
+        "endSeconds": 39.167,
+        "text": "The proof establishes what happened.",
+        "withinOneVisualSegment": true,
+        "segment": 3
+      },
+      {
+        "number": 11,
+        "startSeconds": 39.167,
+        "endSeconds": 41.875,
+        "text": "It doesn't decide who was at fault.",
+        "withinOneVisualSegment": true,
+        "segment": 3
+      },
+      {
+        "number": 12,
+        "startSeconds": 42.708,
+        "endSeconds": 46.333,
+        "text": "Once attestation is ready, the relayer gets a proof",
+        "withinOneVisualSegment": true,
+        "segment": 4
+      },
+      {
+        "number": 13,
+        "startSeconds": 46.542,
+        "endSeconds": 50.542,
+        "text": "Creditcoin checks it through the native Attestcoin verifier.",
+        "withinOneVisualSegment": true,
+        "segment": 4
+      },
+      {
+        "number": 14,
+        "startSeconds": 50.542,
+        "endSeconds": 54.917,
+        "text": "The vault reads those verified\nbytes and checks the sponsor's policy.",
+        "withinOneVisualSegment": true,
+        "segment": 4
+      },
+      {
+        "number": 15,
+        "startSeconds": 54.917,
+        "endSeconds": 57.625,
+        "text": "The actual preparation time is shown here.",
+        "withinOneVisualSegment": true,
+        "segment": 4
+      },
+      {
+        "number": 16,
+        "startSeconds": 61.667,
+        "endSeconds": 65.208,
+        "text": "The matching failure receives one test CTC.",
+        "withinOneVisualSegment": true,
+        "segment": 5
+      },
+      {
+        "number": 17,
+        "startSeconds": 65.417,
+        "endSeconds": 67.583,
+        "text": "Here's the mined claim receipt.",
+        "withinOneVisualSegment": true,
+        "segment": 5
+      },
+      {
+        "number": 18,
+        "startSeconds": 67.583,
+        "endSeconds": 72.792,
+        "text": "A relayer can submit the proof, but\ncan't change who gets paid or how much.",
+        "withinOneVisualSegment": true,
+        "segment": 5
+      },
+      {
+        "number": 19,
+        "startSeconds": 76.75,
+        "endSeconds": 81.125,
+        "text": "Try the same claim again and the read only check rejects it.",
+        "withinOneVisualSegment": true,
+        "segment": 6
+      },
+      {
+        "number": 20,
+        "startSeconds": 81.833,
+        "endSeconds": 87.167,
+        "text": "Local tests also reject an altered\npayload and a successful source receipt.",
+        "withinOneVisualSegment": true,
+        "segment": 6
+      },
+      {
+        "number": 21,
+        "startSeconds": 87.917,
+        "endSeconds": 90.542,
+        "text": "These checks aren't additional payments.",
+        "withinOneVisualSegment": true,
+        "segment": 6
+      },
+      {
+        "number": 22,
+        "startSeconds": 91.458,
+        "endSeconds": 96.875,
+        "text": "GasBack turns a failed receipt on another\nchain into a bounded sponsorship decision.",
+        "withinOneVisualSegment": true,
+        "segment": 7
+      },
+      {
+        "number": 23,
+        "startSeconds": 97.417,
+        "endSeconds": 102.208,
+        "text": "You can inspect the source code, proof policy and payment yourself.",
+        "withinOneVisualSegment": true,
+        "segment": 7
+      },
+      {
+        "number": 24,
+        "startSeconds": 102.792,
+        "endSeconds": 105.792,
+        "text": "Everything shown uses test assets.",
+        "withinOneVisualSegment": true,
+        "segment": 7
+      }
+    ],
+    "originalSnapshotSha256": "f905bb130d64171ce28103ec888225cc879a993fb5523e3f9041cfe686878b0a",
+    "correction": {
+      "appliedBy": "root agent",
+      "changes": [
+        {
+          "cue": 13,
+          "oldText": "Creditcoin checks it through the native attest, coin verifier.",
+          "newText": "Creditcoin checks it through the native Attestcoin verifier."
+        }
+      ],
+      "allCueTimesUnchanged": true,
+      "matchesBurnedCaptionAt50Seconds": true,
+      "originalExportFile": "C:\\Users\\stetang\\Documents\\ChatGPT\\Web3 2\\docs\\submission\\video\\GasBack-demo-Peter-V2.chatcut-original.srt",
+      "originalExportSha256": "f905bb130d64171ce28103ec888225cc879a993fb5523e3f9041cfe686878b0a",
+      "reason": "The native ChatCut SRT export did not include the corrected caption Card text override. The burned-in MP4 already had the correct Attestcoin name."
+    }
+  },
+  "audioSignals": {
+    "method": "Both videos decoded and downmixed to mono float PCM at 48 kHz in memory solely for signal analysis. No source media is rewritten or output video re-encoded. RMS uses decoded sample amplitudes. Null dBFS means exact digital silence.",
+    "segments": [
+      {
+        "segment": 1,
+        "visualStartSeconds": 0.0,
+        "visualEndSeconds": 12.375,
+        "placedAudioStartSeconds": 0.0,
+        "placedAudioEndSeconds": 9.958333333333334,
+        "firstActive20msWindowSeconds": 0.08,
+        "lastActive20msWindowSeconds": 9.64,
+        "activeWindowThresholdDbFS": -50,
+        "clipSignal": {
+          "startSeconds": 0.0,
+          "endSeconds": 9.958333,
+          "sampleCount": 478000,
+          "rmsDbFS": -18.148,
+          "peakDbFS": -3.39,
+          "digitalSilence": false
+        },
+        "firstSecondSignal": {
+          "startSeconds": 0.0,
+          "endSeconds": 1.0,
+          "sampleCount": 48000,
+          "rmsDbFS": -14.948,
+          "peakDbFS": -3.526,
+          "digitalSilence": false
+        },
+        "placedAudioFitsVisualWindow": true,
+        "firstActiveOffsetFromPlacementMs": 80.0
+      },
+      {
+        "segment": 2,
+        "visualStartSeconds": 12.375,
+        "visualEndSeconds": 28.625,
+        "placedAudioStartSeconds": 12.375,
+        "placedAudioEndSeconds": 26.875,
+        "firstActive20msWindowSeconds": 12.475,
+        "lastActive20msWindowSeconds": 26.555,
+        "activeWindowThresholdDbFS": -50,
+        "clipSignal": {
+          "startSeconds": 12.375,
+          "endSeconds": 26.875,
+          "sampleCount": 696000,
+          "rmsDbFS": -19.108,
+          "peakDbFS": -0.124,
+          "digitalSilence": false
+        },
+        "firstSecondSignal": {
+          "startSeconds": 12.375,
+          "endSeconds": 13.375,
+          "sampleCount": 48000,
+          "rmsDbFS": -16.481,
+          "peakDbFS": -0.207,
+          "digitalSilence": false
+        },
+        "placedAudioFitsVisualWindow": true,
+        "firstActiveOffsetFromPlacementMs": 100.0
+      },
+      {
+        "segment": 3,
+        "visualStartSeconds": 28.625,
+        "visualEndSeconds": 42.708333333333336,
+        "placedAudioStartSeconds": 28.625,
+        "placedAudioEndSeconds": 41.875,
+        "firstActive20msWindowSeconds": 28.745,
+        "lastActive20msWindowSeconds": 41.745,
+        "activeWindowThresholdDbFS": -50,
+        "clipSignal": {
+          "startSeconds": 28.625,
+          "endSeconds": 41.875,
+          "sampleCount": 636000,
+          "rmsDbFS": -18.911,
+          "peakDbFS": -0.667,
+          "digitalSilence": false
+        },
+        "firstSecondSignal": {
+          "startSeconds": 28.625,
+          "endSeconds": 29.625,
+          "sampleCount": 48000,
+          "rmsDbFS": -16.134,
+          "peakDbFS": -2.157,
+          "digitalSilence": false
+        },
+        "placedAudioFitsVisualWindow": true,
+        "firstActiveOffsetFromPlacementMs": 120.0
+      },
+      {
+        "segment": 4,
+        "visualStartSeconds": 42.708333333333336,
+        "visualEndSeconds": 61.666666666666664,
+        "placedAudioStartSeconds": 42.708333333333336,
+        "placedAudioEndSeconds": 57.625,
+        "firstActive20msWindowSeconds": 42.828333,
+        "lastActive20msWindowSeconds": 57.548333,
+        "activeWindowThresholdDbFS": -50,
+        "clipSignal": {
+          "startSeconds": 42.708333,
+          "endSeconds": 57.625,
+          "sampleCount": 716000,
+          "rmsDbFS": -18.558,
+          "peakDbFS": -1.436,
+          "digitalSilence": false
+        },
+        "firstSecondSignal": {
+          "startSeconds": 42.708333,
+          "endSeconds": 43.708333,
+          "sampleCount": 48000,
+          "rmsDbFS": -18.087,
+          "peakDbFS": -3.034,
+          "digitalSilence": false
+        },
+        "placedAudioFitsVisualWindow": true,
+        "firstActiveOffsetFromPlacementMs": 120.0
+      },
+      {
+        "segment": 5,
+        "visualStartSeconds": 61.666666666666664,
+        "visualEndSeconds": 76.75,
+        "placedAudioStartSeconds": 61.666666666666664,
+        "placedAudioEndSeconds": 72.79166666666666,
+        "firstActive20msWindowSeconds": 61.766667,
+        "lastActive20msWindowSeconds": 72.386667,
+        "activeWindowThresholdDbFS": -50,
+        "clipSignal": {
+          "startSeconds": 61.666667,
+          "endSeconds": 72.791667,
+          "sampleCount": 534000,
+          "rmsDbFS": -19.136,
+          "peakDbFS": -3.749,
+          "digitalSilence": false
+        },
+        "firstSecondSignal": {
+          "startSeconds": 61.666667,
+          "endSeconds": 62.666667,
+          "sampleCount": 48000,
+          "rmsDbFS": -16.689,
+          "peakDbFS": -4.731,
+          "digitalSilence": false
+        },
+        "placedAudioFitsVisualWindow": true,
+        "firstActiveOffsetFromPlacementMs": 100.0
+      },
+      {
+        "segment": 6,
+        "visualStartSeconds": 76.75,
+        "visualEndSeconds": 91.45833333333333,
+        "placedAudioStartSeconds": 76.75,
+        "placedAudioEndSeconds": 90.54166666666667,
+        "firstActive20msWindowSeconds": 76.85,
+        "lastActive20msWindowSeconds": 90.35,
+        "activeWindowThresholdDbFS": -50,
+        "clipSignal": {
+          "startSeconds": 76.75,
+          "endSeconds": 90.541667,
+          "sampleCount": 662000,
+          "rmsDbFS": -19.086,
+          "peakDbFS": -0.544,
+          "digitalSilence": false
+        },
+        "firstSecondSignal": {
+          "startSeconds": 76.75,
+          "endSeconds": 77.75,
+          "sampleCount": 48000,
+          "rmsDbFS": -16.756,
+          "peakDbFS": -2.105,
+          "digitalSilence": false
+        },
+        "placedAudioFitsVisualWindow": true,
+        "firstActiveOffsetFromPlacementMs": 100.0
+      },
+      {
+        "segment": 7,
+        "visualStartSeconds": 91.45833333333333,
+        "visualEndSeconds": 110.0,
+        "placedAudioStartSeconds": 91.45833333333333,
+        "placedAudioEndSeconds": 105.79166666666666,
+        "firstActive20msWindowSeconds": 91.578333,
+        "lastActive20msWindowSeconds": 105.438333,
+        "activeWindowThresholdDbFS": -50,
+        "clipSignal": {
+          "startSeconds": 91.458333,
+          "endSeconds": 105.791667,
+          "sampleCount": 688000,
+          "rmsDbFS": -18.506,
+          "peakDbFS": -0.395,
+          "digitalSilence": false
+        },
+        "firstSecondSignal": {
+          "startSeconds": 91.458333,
+          "endSeconds": 92.458333,
+          "sampleCount": 48000,
+          "rmsDbFS": -17.724,
+          "peakDbFS": -3.008,
+          "digitalSilence": false
+        },
+        "placedAudioFitsVisualWindow": true,
+        "firstActiveOffsetFromPlacementMs": 120.0
+      }
+    ],
+    "interSegmentGapComparisons": [
+      {
+        "afterSegment": 1,
+        "newFinal": {
+          "startSeconds": 10.078333,
+          "endSeconds": 12.255,
+          "sampleCount": 104480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSapiSource": {
+          "startSeconds": 10.078333,
+          "endSeconds": 12.255,
+          "sampleCount": 104480,
+          "rmsDbFS": -21.483,
+          "peakDbFS": -4.191,
+          "digitalSilence": false
+        },
+        "originalSourceHasSignal": true,
+        "newFinalIsSilentOrBelowMinus65DbFS": true,
+        "rmsAttenuationDb": null,
+        "supportsOriginalTrackMuted": true
+      },
+      {
+        "afterSegment": 2,
+        "newFinal": {
+          "startSeconds": 26.995,
+          "endSeconds": 28.505,
+          "sampleCount": 72480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSapiSource": {
+          "startSeconds": 26.995,
+          "endSeconds": 28.505,
+          "sampleCount": 72480,
+          "rmsDbFS": -27.332,
+          "peakDbFS": -4.352,
+          "digitalSilence": false
+        },
+        "originalSourceHasSignal": true,
+        "newFinalIsSilentOrBelowMinus65DbFS": true,
+        "rmsAttenuationDb": null,
+        "supportsOriginalTrackMuted": true
+      },
+      {
+        "afterSegment": 3,
+        "newFinal": {
+          "startSeconds": 41.995,
+          "endSeconds": 42.588333,
+          "sampleCount": 28480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSapiSource": {
+          "startSeconds": 41.995,
+          "endSeconds": 42.588333,
+          "sampleCount": 28480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSourceHasSignal": false,
+        "newFinalIsSilentOrBelowMinus65DbFS": true,
+        "rmsAttenuationDb": null,
+        "supportsOriginalTrackMuted": false
+      },
+      {
+        "afterSegment": 4,
+        "newFinal": {
+          "startSeconds": 57.745,
+          "endSeconds": 61.546667,
+          "sampleCount": 182480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSapiSource": {
+          "startSeconds": 57.745,
+          "endSeconds": 61.546667,
+          "sampleCount": 182480,
+          "rmsDbFS": -20.192,
+          "peakDbFS": -2.913,
+          "digitalSilence": false
+        },
+        "originalSourceHasSignal": true,
+        "newFinalIsSilentOrBelowMinus65DbFS": true,
+        "rmsAttenuationDb": null,
+        "supportsOriginalTrackMuted": true
+      },
+      {
+        "afterSegment": 5,
+        "newFinal": {
+          "startSeconds": 72.911667,
+          "endSeconds": 76.63,
+          "sampleCount": 178480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSapiSource": {
+          "startSeconds": 72.911667,
+          "endSeconds": 76.63,
+          "sampleCount": 178480,
+          "rmsDbFS": -20.254,
+          "peakDbFS": -3.655,
+          "digitalSilence": false
+        },
+        "originalSourceHasSignal": true,
+        "newFinalIsSilentOrBelowMinus65DbFS": true,
+        "rmsAttenuationDb": null,
+        "supportsOriginalTrackMuted": true
+      },
+      {
+        "afterSegment": 6,
+        "newFinal": {
+          "startSeconds": 90.661667,
+          "endSeconds": 91.338333,
+          "sampleCount": 32480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSapiSource": {
+          "startSeconds": 90.661667,
+          "endSeconds": 91.338333,
+          "sampleCount": 32480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSourceHasSignal": false,
+        "newFinalIsSilentOrBelowMinus65DbFS": true,
+        "rmsAttenuationDb": null,
+        "supportsOriginalTrackMuted": false
+      },
+      {
+        "afterSegment": 7,
+        "newFinal": {
+          "startSeconds": 105.911667,
+          "endSeconds": 109.88,
+          "sampleCount": 190480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSapiSource": {
+          "startSeconds": 105.911667,
+          "endSeconds": 109.88,
+          "sampleCount": 190480,
+          "rmsDbFS": null,
+          "peakDbFS": null,
+          "digitalSilence": true
+        },
+        "originalSourceHasSignal": false,
+        "newFinalIsSilentOrBelowMinus65DbFS": true,
+        "rmsAttenuationDb": null,
+        "supportsOriginalTrackMuted": false
+      }
+    ],
+    "allSevenSegmentsContainAudio": true,
+    "allPlacedClipsFitVisualSections": true,
+    "aacTailAfterVideoEnd": {
+      "startSeconds": 110,
+      "endSeconds": 110.08,
+      "sampleCount": 3840,
+      "rmsDbFS": null,
+      "peakDbFS": null,
+      "digitalSilence": true
+    },
+    "overallPcm": {
+      "startSeconds": 0,
+      "endSeconds": 110.08,
+      "sampleCount": 5283840,
+      "rmsDbFS": -19.565,
+      "peakDbFS": -0.124,
+      "digitalSilence": false
+    },
+    "limitation": "A final mix cannot uniquely prove internal track muting during simultaneous speech; the silent gaps where the original SAPI source has signal provide evidence against an unmuted old track. This does not establish pronunciation, word completeness or perceptual quality.",
+    "allSevenMeasuredGapsAreDigitalSilence": true,
+    "oldTrackMutingComparison": {
+      "informativeGapCount": 4,
+      "allInformativeGapsSupportMute": true,
+      "informativeAfterSegments": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "uninformativeAfterSegments": [
+        3,
+        6,
+        7
+      ],
+      "interpretation": "All seven final gaps are digital silence. Four gaps have substantial original SAPI signal and demonstrate its absence in the final mix. In three gaps the original is also silent, so they cannot identify whether an old track is muted."
+    },
+    "originalSapiSourceReference": {
+      "file": "C:\\Users\\stetang\\Documents\\ChatGPT\\Web3 2\\docs\\submission\\video\\GasBack-demo.mp4",
+      "sha256": "13fea50331ae41cec304a038da2148d8cfdba5918269a1ea8000f5ccb1baaf55"
+    }
+  },
+  "frameCheck": {
+    "seconds": [
+      5,
+      20,
+      35,
+      50,
+      70,
+      84,
+      102,
+      109
+    ],
+    "directory": "C:\\Users\\stetang\\.codex\\tmp\\gasback-peter-v2-export-qa",
+    "visualInspectionStatus": "Passed for all eight extracted frames: subtitles remain inside the 1280x720 canvas/bottom matte; no text overflow observed. Evidence labels and receipt/timing overlays remain readable.",
+    "captionTimingAtInspectedFrames": [
+      {
+        "seconds": 5,
+        "expectedCueNumbers": [
+          2
+        ],
+        "observedMatchingCaptionOrExpectedSilence": true
+      },
+      {
+        "seconds": 20,
+        "expectedCueNumbers": [
+          5
+        ],
+        "observedMatchingCaptionOrExpectedSilence": true
+      },
+      {
+        "seconds": 35,
+        "expectedCueNumbers": [
+          9
+        ],
+        "observedMatchingCaptionOrExpectedSilence": true
+      },
+      {
+        "seconds": 50,
+        "expectedCueNumbers": [
+          13
+        ],
+        "observedMatchingCaptionOrExpectedSilence": true
+      },
+      {
+        "seconds": 70,
+        "expectedCueNumbers": [
+          18
+        ],
+        "observedMatchingCaptionOrExpectedSilence": true
+      },
+      {
+        "seconds": 84,
+        "expectedCueNumbers": [
+          20
+        ],
+        "observedMatchingCaptionOrExpectedSilence": true
+      },
+      {
+        "seconds": 102,
+        "expectedCueNumbers": [
+          23
+        ],
+        "observedMatchingCaptionOrExpectedSilence": true
+      },
+      {
+        "seconds": 109,
+        "expectedCueNumbers": [],
+        "observedMatchingCaptionOrExpectedSilence": true
+      }
+    ]
+  },
+  "captionTextObservation": {
+    "status": "Resolved in sidecar SRT by root; no video change",
+    "cue": 13,
+    "correctText": "Creditcoin checks it through the native Attestcoin verifier.",
+    "videoAlreadyCorrect": true
+  },
+  "limits": [
+    "No full human listening pass or uninterrupted audiovisual playback was performed.",
+    "24 fps clip placement omits 6-27 ms versus listed source TTS durations; signal checks cannot guarantee no phoneme was cut.",
+    "Container duration includes an 80 ms AAC tail beyond the 110-second video stream."
+  ],
+  "sourceUnchangedAfterChecks": true,
+  "sourceModifications": false,
+  "reencodingOrEditing": false,
+  "loudnessMeasurement": {
+    "method": "FFmpeg ebur128=peak=true, analysis to null output",
+    "exitCode": 0,
+    "integratedLufs": -18.1,
+    "truePeakDbFS": -3.1
+  },
+  "completedAtUtc": "2026-09-12T07:21:47.407463+00:00",
+  "conclusion": {
+    "technicalChecksPassed": true,
+    "definiteVideoReleaseBlockersFound": [],
+    "sidecarMismatchResolved": true,
+    "humanListeningGuarantee": false,
+    "summary": "Complete decode, expected video format/frame count, seven segment audio signals, silent rests and eight keyframe/caption layout checks passed. Extra 80 ms audio/container tail is exact digital silence. No source edits or re-encoding were performed by this reviewer."
+  },
+  "syncTimeline": {
+    "fps": 24,
+    "durationInFrames": 2640,
+    "matchesVideoFrameRateAndFrameCount": true,
+    "sevenContiguousVisualWindows": true,
+    "allNarrationPlacementsStartAtVisualWindow": true,
+    "allPlacedAudioFitsVisualWindow": true,
+    "note": "Textual voiceStatus/export-rendering fields are production-history labels; export completion is established by this file decode and checksum."
+  }
+}

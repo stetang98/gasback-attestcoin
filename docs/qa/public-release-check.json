@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-09-12 07:25:47 UTC",
+  "site": "https://gasback-ctc-2026.stetang.chatgpt.site",
+  "access": "public",
+  "deploymentId": "appgdep_6aa4fd7510c0819199478da30df2d47b",
+  "versionId": "appgprj_6aa4e64f74848191abccaa1103cd846e~appgver_ea896e5413f4819194b250c9406677d2",
+  "requests": [
+    {
+      "Path": "demo.html",
+      "Status": 200,
+      "Type": "text/html",
+      "Bytes": 3179,
+      "SHA256": "A00B42073D81EC3418461E25917CCDEC1C1EF6A82DC28BFD62F6FF2A8022F599"
+    },
+    {
+      "Path": "demo.mp4",
+      "Status": 200,
+      "Type": "video/mp4",
+      "Bytes": 12123810,
+      "SHA256": "BEB180EF76F7E6059A9EB5FBBAA0BAE6DEA6BDD0760E18106FD80CE06B23FCFB"
+    },
+    {
+      "Path": "demo.srt",
+      "Status": 200,
+      "Type": "text/plain",
+      "Bytes": 2055,
+      "SHA256": "D372AC0C63CE38169F934FE40727C0B56F8914254471BED87357FC3F5CA86BF3"
+    },
+    {
+      "Path": "GasBack-deck.pdf",
+      "Status": 200,
+      "Type": "application/pdf",
+      "Bytes": 12219,
+      "SHA256": "9F3587C1C46F66A1D624B4C55A4DCAE76E8C31CE1802948BCD87DCF6ACA74C01"
+    },
+    {
+      "Path": "evidence/run.json",
+      "Status": 200,
+      "Type": "application/json",
+      "Bytes": 12480,
+      "SHA256": "3AA95E13B79321EE4F12EF4495C0CFC5AD43D39AE86968CCE2848A29374E0692"
+    },
+    {
+      "Path": "evidence/source-proof.json",
+      "Status": 200,
+      "Type": "application/json",
+      "Bytes": 4704,
+      "SHA256": "37A7DFD8AA8817BBDC8C527B7920D30A448177F832D750FCFB4D401539582303"
+    },
+    {
+      "Path": "evidence/public-reverification-reviewed.json",
+      "Status": 200,
+      "Type": "application/json",
+      "Bytes": 2197,
+      "SHA256": "295CEFABCBC0DA555F11E61448A52AD7F1587C3DF001A1948C4CE14FDAEC8E4A"
+    }
+  ],
+  "localBrowserPlayback": {
+    "duration": 110.08,
+    "currentTime": 110.08,
+    "ended": true,
+    "mediaError": null
+  },
+  "publicBrowserPlayback": {
+    "url": "https://gasback-ctc-2026.stetang.chatgpt.site/demo",
+    "duration": 110.08,
+    "currentTime": 110.08,
+    "ended": true,
+    "paused": true,
+    "readyState": 4,
+    "mediaError": null,
+    "status": "reached end successfully",
+    "continuity": "Playback paused at 98.783763 seconds and was resumed to inspect the tail; no uninterrupted human listening claim."
+  },
+  "humanFullListening": "not established",
+  "submission": {
+    "detailsSaved": true,
+    "videoFieldSaved": true,
+    "accepted": false,
+    "remaining": [
+      "Telegram primary contact",
+      "informed organizer eligibility confirmation"
+    ]
+  },
+  "budget": {
+    "externalPaymentsRmb": 0,
+    "chatcutDisplayedCreditsBefore": 15,
+    "chatcutDisplayedCreditsAfter": 14,
+    "notes": "UI integer balances observed; no top-up, purchase or subscription started."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-09-12T06:55:39.773743+00:00",
+  "readyToBuild": true,
+  "blockers": [],
+  "availableRecordings": {
+    "01-introduction": {
+      "directory": "capture\\01-hero-completed",
+      "frameCount": 325,
+      "timestampUnits": "seconds",
+      "firstTimestamp": 1789195926.237513,
+      "lastTimestamp": 1789195939.1995,
+      "recordedSeconds": 12.961987018585205,
+      "trimStartSeconds": 0.0,
+      "framesManifestSha256": "a0d4d1345e0404d0b527db6d3e1072ab0d9ed4d3c7557d1404c1b0a32666b4e0",
+      "firstFrameSha256": "2aca18dd36b325e589733dee853a7b08c70009ab61e0dc89582faf41a713d6fa",
+      "lastFrameSha256": "233b4b5f658a4c86a8ee498430146594dc68ace22d88fab79811cbefcb31f6fe",
+      "resampling": "24 fps previous-frame hold at source timestamps, 1x speed; held ending explicitly labelled"
+    },
+    "04-native-verification": {
+      "directory": "capture\\04-verification",
+      "frameCount": 515,
+      "timestampUnits": "seconds",
+      "firstTimestamp": 1789195945.737487,
+      "lastTimestamp": 1789195966.692857,
+      "recordedSeconds": 20.95536994934082,
+      "trimStartSeconds": 0.0,
+      "framesManifestSha256": "bcb0339e805459c813053092e890e97a363bf1a6481f919b8048625e8749660f",
+      "firstFrameSha256": "ec56ddcd7fb48ea78dfae9204d1ea3d113d3a2c1fbf2fdb42f606d0c56689592",
+      "lastFrameSha256": "242243eb87792601c74fa66f9fbdb69ac01b74f416eac357da7a4f092864d36d",
+      "resampling": "24 fps previous-frame hold at source timestamps, 1x speed; held ending explicitly labelled"
+    },
+    "05-fixed-payment": {
+      "directory": "capture\\05-payment",
+      "frameCount": 420,
+      "timestampUnits": "seconds",
+      "firstTimestamp": 1789195973.971569,
+      "lastTimestamp": 1789195992.941337,
+      "recordedSeconds": 18.969768047332764,
+      "trimStartSeconds": 0.0,
+      "framesManifestSha256": "433bba3b6af42a5cd77ef5df2b7d82845daaaa87241abfd37d52ad0175976aa2",
+      "firstFrameSha256": "242243eb87792601c74fa66f9fbdb69ac01b74f416eac357da7a4f092864d36d",
+      "lastFrameSha256": "6ad75f95b4c8b9bffe9789d43dd1ce241aa3eab75e06118ce6291233a27db6a2",
+      "resampling": "24 fps previous-frame hold at source timestamps, 1x speed; held ending explicitly labelled"
+    }
+  },
+  "timing": {
+    "sourceToAttestationObservedSeconds": 534.575,
+    "sourceToNativeVerifiedObservedSeconds": 537.415,
+    "boundary": "Local observation timestamps; not exact protocol publication time. Waiting is cut from edited playback."
+  },
+  "finalVideoProduced": false
+}

@@ -1,1 +1,280 @@
-{"schemaVersion":1,"status":"source-deployed-awaiting-target-funding","sourceContract":"0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea","sourceTxHash":null,"vaultAddress":null,"ticketId":null,"claimTxHash":null,"proofVerified":false,"duplicateRejected":false}
+{
+  "schemaVersion": 1,
+  "project": "GasBack",
+  "generatedAt": "2026-09-12T06:51:34.633Z",
+  "status": "completed-live-testnet-rebate",
+  "repoURL": "https://github.com/stetang98/gasback-attestcoin",
+  "networkMode": "testnet-only",
+  "networks": {
+    "source": {
+      "name": "Ethereum Sepolia",
+      "chainId": 11155111,
+      "chainKey": 1,
+      "rpc": "https://ethereum-sepolia-rpc.publicnode.com"
+    },
+    "target": {
+      "name": "Creditcoin Testnet",
+      "chainId": 102031,
+      "rpc": "https://rpc.cc3-testnet.creditcoin.network"
+    }
+  },
+  "vaultAddress": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+  "sourceContract": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+  "sourceTxHash": "0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a",
+  "ticketId": "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+  "claimTxHash": "0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035",
+  "beneficiary": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+  "rebateWei": "1000000000000000000",
+  "asset": "test CTC",
+  "proofVerified": true,
+  "duplicateRejected": true,
+  "sourceDeployment": {
+    "observedAt": "2026-09-12T05:50:58.548Z",
+    "chainId": 11155111,
+    "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "deployer": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "receipt": {
+      "transactionHash": "0x11c6cadadf3b945cda0b2cb4129e736932518cc7d042c83d67fbcb68c2676267",
+      "blockNumber": 11686978,
+      "blockHash": "0x52bf8437d052d4106b6320832cf0d54c6752ef8967a3778fbbaf6371e419ee87",
+      "status": 1,
+      "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+      "to": null,
+      "contractAddress": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+      "gasUsed": "97015",
+      "gasPrice": "1013377591",
+      "logs": []
+    },
+    "explorer": "https://sepolia.etherscan.io/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea"
+  },
+  "sourceFailure": {
+    "observedAt": "2026-09-12T06:42:05.151Z",
+    "chainId": 11155111,
+    "chainKey": 1,
+    "fixtureType": "prospective-ticket-live-testnet-demo",
+    "authorizationOrder": "Ticket mined on Creditcoin before source transaction broadcast.",
+    "ticketId": "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+    "authorizationTransaction": "0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1",
+    "sender": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "target": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "nonce": 1,
+    "type": 2,
+    "value": "0",
+    "gasLimit": "100000",
+    "intent": "0xdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+    "data": "0x21d2a07cdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+    "calldataHash": "0x609c6a85acd78ae4b472f29f90fb678a4c201e97202e700a48e51311e4dae0ef",
+    "receipt": {
+      "transactionHash": "0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a",
+      "blockNumber": 11687232,
+      "blockHash": "0x8a96bc421d7428efe9a21764cdfd1c1aa2e5faa2a735224ea6deadead1e3e7de",
+      "status": 0,
+      "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+      "to": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+      "contractAddress": null,
+      "gasUsed": "22440",
+      "gasPrice": "1187437711",
+      "logs": []
+    },
+    "explorer": "https://sepolia.etherscan.io/tx/0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a"
+  },
+  "targetDeployment": {
+    "observedAt": "2026-09-12T06:41:31.755Z",
+    "chainId": 102031,
+    "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "owner": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "initialBudget": "10000000000000000000",
+    "asset": "test CTC",
+    "receipt": {
+      "transactionHash": "0x06c5a7072cabdd026c68b8f14412199f0c2b0f7e41859a03bcf2324339ff0127",
+      "blockNumber": 5473616,
+      "blockHash": "0x17f253483622eb61776240896fd48094a0e915d87912edcdddccd7ddd7c52bd4",
+      "status": 1,
+      "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+      "to": null,
+      "contractAddress": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+      "gasUsed": "1467705",
+      "gasPrice": "500000000",
+      "logs": [
+        {
+          "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+          "topics": [
+            "0x40a14bd23a0a5919e9066881811ad566099a9fe5eec523116c065649e3fe109f",
+            "0x000000000000000000000000619709ff6a37a85baf75419f910c85800d27c427"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000008ac7230489e80000",
+          "index": 0
+        }
+      ]
+    },
+    "codeHash": "0x6a0aa58878f0270b0ca122785798a6e89d63eee2c5edfaae022844896f1fb918",
+    "explorer": "https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea"
+  },
+  "ticket": {
+    "observedAt": "2026-09-12T06:41:49.331Z",
+    "chainId": 102031,
+    "vault": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "ticketId": "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+    "ticket": {
+      "beneficiary": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+      "sourceSender": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+      "sourceTarget": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+      "sourceNonce": 1,
+      "minSourceBlock": 11687230,
+      "maxSourceBlock": 11694429,
+      "claimDeadline": 1789281690,
+      "minGasLimit": 100000,
+      "rebate": "1000000000000000000",
+      "calldataHash": "0x609c6a85acd78ae4b472f29f90fb678a4c201e97202e700a48e51311e4dae0ef"
+    },
+    "intent": "0xdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+    "sourceData": "0x21d2a07cdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+    "transactionHash": "0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1",
+    "sourceHeadAtAuthorizationSubmission": 11687229,
+    "sourceNonceBeforeAuthorization": 1,
+    "authorizationOrder": "Target ticket confirmed before source transaction broadcast.",
+    "receipt": {
+      "transactionHash": "0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1",
+      "blockNumber": 5473617,
+      "blockHash": "0xae83cb7ed9126608e2617c7d3e366de8fd0db3f72785656b1252c020a88d29ec",
+      "status": 1,
+      "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+      "to": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+      "contractAddress": null,
+      "gasUsed": "183508",
+      "gasPrice": "500000000",
+      "logs": [
+        {
+          "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+          "topics": [
+            "0xeec3d375640650aefa1739aa87e008f6130d7d946943e0b1fdceb39ae931e5e8",
+            "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+            "0x000000000000000000000000619709ff6a37a85baf75419f910c85800d27c427"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000",
+          "index": 18
+        }
+      ]
+    },
+    "sourceHeadAfterAuthorization": 11687230,
+    "explorer": "https://creditcoin-testnet.blockscout.com/tx/0x261916243b9d6b4ab526e38a98337eac7f50e371561153939b35c668ed647ac1"
+  },
+  "proofVerification": {
+    "observedAt": "2026-09-12T06:51:02.863Z",
+    "mode": "read-only native precompile eth_call",
+    "sdkVersion": "0.18.0",
+    "timing": {
+      "proofAttemptStartedAt": "2026-09-12T06:47:05.824Z",
+      "sourceFailureConfirmedObservedAt": "2026-09-12T06:42:05.151Z",
+      "attestationReadyObservedAt": "2026-09-12T06:50:59.726Z",
+      "nativeVerificationFinishedAt": "2026-09-12T06:51:02.566Z",
+      "pollingIntervalMs": 15000,
+      "sourceFailureToAttestationObservedMs": 534575,
+      "sourceFailureToNativeVerifiedMs": 537415,
+      "boundary": "Local observation timestamps, not source protocol timestamps or an exact attestation publication time."
+    },
+    "sourceTransaction": "0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a",
+    "headerNumber": 11687232,
+    "chainKey": 1,
+    "supportedChains": [
+      {
+        "chainKey": 3,
+        "chainId": 1,
+        "chainName": "0x457468657265756d",
+        "chainEncoding": 1
+      },
+      {
+        "chainKey": 1,
+        "chainId": 11155111,
+        "chainName": "0x5365706f6c696120657468657265756d",
+        "chainEncoding": 1
+      }
+    ],
+    "verified": true,
+    "tamperRejected": true,
+    "tamperReason": "execution reverted: \"Merkle proof validation failed\"",
+    "decoded": {
+      "type": 2,
+      "nonce": 1,
+      "gasLimit": "100000",
+      "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+      "to": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+      "value": "0",
+      "data": "0x21d2a07cdd898d438a6134afd4a9de42bcca6de54bb89384ab3ce087c07f9aa18453984e",
+      "receiptStatus": 0,
+      "receiptGasUsed": "22440"
+    },
+    "boundary": "Proves failure and transaction identity. Does not establish fault, damages, or source UTC timestamp."
+  },
+  "claim": {
+    "observedAt": "2026-09-12T06:51:20.028Z",
+    "chainId": 102031,
+    "asset": "test CTC",
+    "vault": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+    "ticketId": "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+    "sourceTransaction": "0xaa0c0551306e1e1fb0e2dd603439356ff472e48aadc3b0c8d88013d2760f3d9a",
+    "beneficiary": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+    "amount": "1000000000000000000",
+    "sourceBlock": 11687232,
+    "nullifier": "0xb9c9fcd6457ec61974a9ed70caac97e08fcc666531dc6a34bfda27850e4d9f40",
+    "receipt": {
+      "transactionHash": "0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035",
+      "blockNumber": 5473655,
+      "blockHash": "0xa9fccd0934973fcabefb897359bd18127117ca89b406bb4c1e08b495c0070d5a",
+      "status": 1,
+      "from": "0x619709ff6A37A85BAF75419F910C85800d27c427",
+      "to": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+      "contractAddress": null,
+      "gasUsed": "163103",
+      "gasPrice": "500000000",
+      "logs": [
+        {
+          "address": "0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea",
+          "topics": [
+            "0x9981bb64e5393c4c98908520df5cceb254d5ee4dc27ee846cae6c84062bcf0c5",
+            "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+            "0xb9c9fcd6457ec61974a9ed70caac97e08fcc666531dc6a34bfda27850e4d9f40",
+            "0x000000000000000000000000619709ff6a37a85baf75419f910c85800d27c427"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000b25540",
+          "index": 4
+        }
+      ]
+    },
+    "transactionHash": "0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035",
+    "submittedObservedAt": "2026-09-12T06:51:14.159Z",
+    "vaultBalanceBefore": "10000000000000000000",
+    "totalPaidBefore": "0",
+    "receiptConfirmedObservedAt": "2026-09-12T06:51:19.220Z",
+    "submissionToReceiptObservedMs": 5061,
+    "targetBlockTimestamp": 1789195875,
+    "beneficiaryTransfer": {
+      "balanceBeforeBlockNumber": 5473654,
+      "balanceAfterBlockNumber": 5473655,
+      "balanceBeforeWei": "9989999174393500000000",
+      "balanceAfterWei": "9990999092842000000000",
+      "grossRebateWei": "1000000000000000000",
+      "claimGasFeeWei": "81551500000000",
+      "beneficiaryPaysClaimGas": true,
+      "observedNetDeltaWei": "999918448500000000",
+      "expectedNetDeltaWei": "999918448500000000",
+      "verified": true,
+      "boundary": "Block-boundary RPC balances for this dedicated test wallet; net increase subtracts the claim gas paid by the beneficiary."
+    },
+    "vaultBalanceAfter": "9000000000000000000",
+    "totalPaidAfter": "1000000000000000000",
+    "explorer": "https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035"
+  },
+  "duplicateRejection": {
+    "observedAt": "2026-09-12T06:51:21.107Z",
+    "mode": "read-only eth_call, no second payout transaction",
+    "ticketId": "0xdaaed6547b94010737043af2c46808f9090c1aa80ff3b1b518e27acad07a9cd5",
+    "rejected": true,
+    "errorName": "TicketAlreadyClaimed",
+    "errorData": "0x12d2ded8",
+    "totalPaidAfterAttempt": "1000000000000000000",
+    "vaultBalanceAfterAttempt": "9000000000000000000"
+  },
+  "proofFile": "source-proof.json",
+  "evidenceBoundary": "Historical replay of the explicitly linked live testnet transactions. Null steps have not completed. Native eth_call checks are not mined payout transactions."
+}

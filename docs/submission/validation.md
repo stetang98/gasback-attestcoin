@@ -1,6 +1,6 @@
 # Submission evidence validation
 
-Refreshed on 2026-09-12 against `integration/evidence/run.json`, generated at `06:51:34.633 UTC`, status `completed-live-testnet-rebate`, and the stricter `public-reverification-reviewed.json` at `07:04:13.308 UTC`. The original `public-reverification.json` snapshot is preserved. The initial completed-run integration evidence was published at `17da7ec`; later review and documentation changes require their own public synchronization check.
+Refreshed on 2026-09-12 against `integration/evidence/run.json`, generated at `06:51:34.633 UTC`, status `completed-live-testnet-rebate`, and the stricter `public-reverification-reviewed.json` at `07:04:13.308 UTC`. The original `public-reverification.json` snapshot is preserved. The final Sites version has been deployed with the completed-run evidence, Peter V2 video, corrected SRT and evidence PDF; anonymous public file and hash checks passed.
 
 ## Evidence consistency
 
@@ -9,7 +9,7 @@ Refreshed on 2026-09-12 against `integration/evidence/run.json`, generated at `0
 - Claim `0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035`: status 1, block 5,473,655. Gross rebate 1 test CTC; beneficiary net delta 0.9999184485 after gas 0.0000815515. The vault decreases from 10 to 9; totalPaid is 1; the ticket is consumed.
 - Native proof and public RPC checks passed. Live read-only controls reject changed status, wrong source chain, unissued ticket and duplicate claim. There is no second mined claim. Authentic successful-receipt rejection remains in the local policy suite.
 - Attestation readiness first observed after 8m 54.575s; native verification completed after 8m 57.415s; claim submission to confirmation 5.061s. These are run-specific local observations with 15-second polling, not latency guarantees.
-- The CLI performed real transactions; the app provides read-only replay/verification. Local completed-run UI verification is separate from the pending public v2 refresh.
+- The CLI performed real transactions; the published app provides read-only replay/verification of the completed run. Publishing or replaying it does not create another claim.
 - 42 local policy/security cases use a disclosed verifier harness. Neither those tests, the independent source review, nor explorer source verification is a professional audit.
 
 ## Artifact checks
@@ -18,12 +18,26 @@ The [fresh post-run review](../qa/final-code-review.md) **closed the P2 evidence
 
 - Six-page 16:9 PDF generated with local ReportLab. No paid image, voice or media generation was used for the deck.
 - All six updated pages were rendered with bundled Poppler and visually inspected. No clipping, overlap or missing glyphs was observed. Extraction checks validate six evidence labels, amounts, timing and seven clickable links including ticket, failure, claim and verified contract source.
-- The approximately 110-second script contains 184 English narration words and describes recorded CLI execution and read-only replay. The editable video has seven segments; the prior narration is muted, and replacement narration awaits the participant's voice choice. The revised final video is not claimed published.
-- Public repository: https://github.com/stetang98/gasback-attestcoin . Completed-run evidence has been pushed; the new PDF and documentation must be synchronized separately.
-- Public app: https://gasback-ctc-2026.stetang.chatgpt.site . Public v1 access was verified without account cookies; public v2 with final evidence/media is pending at this document's refresh.
-- Planned direct PDF `/GasBack-deck.pdf` and video `/demo.mp4` paths are not claimed publicly accessible until their actual responses and playback are checked.
-- DoraHacks login is complete, but accepted submission and an actual BUIDL URL are not evidenced. The user's own Telegram and informed qualification declaration remain participant fields, not data to invent or publish in this repository.
+- The released Peter V2 video has seven independently aligned narration clips and 24 caption cards; the original audio is muted. Export: 12,123,810 bytes, H.264/AAC, 1280 x 720, 24 fps, 2,640 video frames. Picture duration is 110.000 s; the 110.080 s container includes an 80 ms silent audio tail.
+- Public repository: https://github.com/stetang98/gasback-attestcoin . The reviewed verifier, reviewed JSON and README were publicly accessible and matched their local versions during the pre-release check; documentation status updates are tracked separately.
+- Final public app: https://gasback-ctc-2026.stetang.chatgpt.site . All seven release artifacts listed below returned anonymous HTTP 200. Public MP4, PDF, run, proof and reviewed-verification hashes exactly matched the local canonical files; SRT spelling is corrected to Attestcoin.
+- Local playback reached 110.08 s with `ended=true` and no media error. Public playback also finished with `currentTime=duration=110.08`, `ended=true`, `readyState=4` and no error. The public session paused at 98.78 s and resumed for the ending; this records successful playback to the end, without claiming unattended continuous playback. No full human listening acceptance has been recorded.
+- DoraHacks Details now contain the completed run and video/PDF/GitHub/chain links; Continue returned `Saved successfully`. The Profile Demo video field contains the published `/demo.html` URL and saved successfully. These are saved-draft observations, not accepted submission. Primary Telegram and informed personal eligibility confirmation remain outstanding.
+
+## Published artifact checks
+
+The coordinator's [public release record](../qa/public-release-check.json) retains the anonymous-response, hash and completed browser-playback observations.
+
+| Artifact | Anonymous access | Byte/hash check |
+| --- | --- | --- |
+| [Video page](https://gasback-ctc-2026.stetang.chatgpt.site/demo.html) | HTTP 200 | Page access verified |
+| [Peter V2 MP4](https://gasback-ctc-2026.stetang.chatgpt.site/demo.mp4) | HTTP 200 | SHA-256 `beb180ef76f7e6059a9eb5fbbaa0bae6dea6bdd0760e18106fd80ce06b23fcfb`, identical to local export |
+| [SRT](https://gasback-ctc-2026.stetang.chatgpt.site/demo.srt) | HTTP 200 | Corrected Attestcoin sidecar available |
+| [Evidence PDF](https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf) | HTTP 200 | SHA-256 `9f3587c1c46f66a1d624b4c55a4dcae76e8c31ce1802948bcd87dcf6aca74c01`, identical to local PDF |
+| [Completed run](https://gasback-ctc-2026.stetang.chatgpt.site/evidence/run.json) | HTTP 200 | Exact canonical local hash match |
+| [Raw proof](https://gasback-ctc-2026.stetang.chatgpt.site/evidence/source-proof.json) | HTTP 200 | Exact canonical local hash match |
+| [Reviewed verification](https://gasback-ctc-2026.stetang.chatgpt.site/evidence/public-reverification-reviewed.json) | HTTP 200 | Exact canonical local hash match |
 
 ## Publication handoff
 
-Publish the synchronized website, deck and video. Verify the publicly served evidence and media against these local artifacts, then complete the actual DoraHacks fields and record acceptance. Technical completion, public artifact availability and accepted submission are separate states.
+The website, deck, Peter V2 video and evidence are publicly deployed and byte-checked; public browser playback reached the end successfully. Obtain the participant's required Telegram and informed eligibility confirmation, then submit the saved DoraHacks draft and record acceptance. Technical completion, publication, browser playback, human listening and accepted submission remain distinct observations.
