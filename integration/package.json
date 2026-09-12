@@ -9,7 +9,8 @@
     "proof": "node proof.cjs --wait",
     "claim": "node claim.cjs",
     "evidence": "node normalize.cjs",
-    "verify:public": "node verify-public.cjs"
+    "verify:public": "node verify-public.cjs",
+    "test": "node --test test/*.test.cjs"
   },
   "dependencies": {
     "@gluwa/usc-sdk": "0.18.0",
