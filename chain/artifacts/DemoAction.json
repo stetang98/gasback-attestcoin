@@ -1,0 +1,173 @@
+{
+  "contractName": "DemoAction",
+  "sourceName": "contracts/DemoAction.sol",
+  "compiler": "0.8.28+commit.7893614a.Emscripten.clang",
+  "evmVersion": "paris",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "intent",
+          "type": "bytes32"
+        }
+      ],
+      "name": "DemoFailure",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "intent",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ActionSucceeded",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "intent",
+          "type": "bytes32"
+        }
+      ],
+      "name": "fail",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "intent",
+          "type": "bytes32"
+        }
+      ],
+      "name": "succeed",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080806040523460135760ca908160198239f35b600080fdfe60806040526004361015601157600080fd5b60003560e01c806321d2a07c14606e5763c0c4cfc914602f57600080fd5b346069576020366003190112606957600435337f45410fd392b59dfd77b0c96ee471de2b4c86aa3b56ceb5ab3611d85327baa5d4600080a3005b600080fd5b3460695760203660031901126069576358a9200760e01b60005260043560045260246000fdfea2646970667358221220b4563eb51f32c72ceb1bb0518be42f19a4c933367cf7a24cf5c1423d66df625264736f6c634300081c0033",
+  "deployedBytecode": "0x60806040526004361015601157600080fd5b60003560e01c806321d2a07c14606e5763c0c4cfc914602f57600080fd5b346069576020366003190112606957600435337f45410fd392b59dfd77b0c96ee471de2b4c86aa3b56ceb5ab3611d85327baa5d4600080a3005b600080fd5b3460695760203660031901126069576358a9200760e01b60005260043560045260246000fdfea2646970667358221220b4563eb51f32c72ceb1bb0518be42f19a4c933367cf7a24cf5c1423d66df625264736f6c634300081c0033",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.28+commit.7893614a"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "intent",
+              "type": "bytes32"
+            }
+          ],
+          "name": "DemoFailure",
+          "type": "error"
+        },
+        {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "bytes32",
+              "name": "intent",
+              "type": "bytes32"
+            }
+          ],
+          "name": "ActionSucceeded",
+          "type": "event"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "intent",
+              "type": "bytes32"
+            }
+          ],
+          "name": "fail",
+          "outputs": [],
+          "stateMutability": "pure",
+          "type": "function"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "intent",
+              "type": "bytes32"
+            }
+          ],
+          "name": "succeed",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "fail(bytes32)": {
+            "notice": "Deliberately fails so the demo can produce an authentic reverted receipt."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "compilationTarget": {
+        "contracts/DemoAction.sol": "DemoAction"
+      },
+      "evmVersion": "paris",
+      "libraries": {},
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "remappings": [],
+      "viaIR": true
+    },
+    "sources": {
+      "contracts/DemoAction.sol": {
+        "keccak256": "0x872a1faf293f1efdccbee3f0c289217364a58b48c404dd4a2d14b68e3dfe7fa5",
+        "license": "MIT",
+        "urls": [
+          "bzz-raw://7fb2517483da0264b621d27d572bc0b8e8f6e7560c78449f929473647bd8fdfb",
+          "dweb:/ipfs/QmVaG42hkTRzEqe4x1BZ2GKJttfAbh7kphfQsy7s4zo7uU"
+        ]
+      }
+    },
+    "version": 1
+  }
+}
