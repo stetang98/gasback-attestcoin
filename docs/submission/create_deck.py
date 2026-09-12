@@ -17,12 +17,13 @@ TEAL = HexColor("#5EE1CA")
 AMBER = HexColor("#FFCB77")
 SNAPSHOT = "2026-09-12 05:56 UTC"
 SOURCE_URL = "https://sepolia.etherscan.io/tx/0x11c6cadadf3b945cda0b2cb4129e736932518cc7d042c83d67fbcb68c2676267"
-APP_URL = "https://gasback-ctc-2026.jazzy-lamp-4850.chatgpt.site"
+APP_URL = "https://gasback-ctc-2026.stetang.chatgpt.site"
+GITHUB_URL = "https://github.com/stetang98/gasback-attestcoin"
 OFFICIAL_URL = "https://dorahacks.io/hackathon/buidl-ctc-2026-fall/detail"
 
 c = canvas.Canvas(str(OUT), pagesize=(W, H), pageCompression=1)
 c.setTitle("GasBack | BUIDL CTC 2026 Fall | Review draft")
-c.setAuthor("GasBack project - human team details pending")
+c.setAuthor("GasBack project")
 c.setSubject("Fixed sponsor rebates for preauthorized reverted transactions; testnet prototype")
 
 
@@ -57,7 +58,7 @@ def base(number, section):
     c.line(48, 478, 912, 478)
     c.line(48, 41, 912, 41)
     text("BUIDL CTC 2026 Fall / DeFi / Testnet assets only", 48, 23, 10, MUTED)
-    text(f"Evidence snapshot: {SNAPSHOT}", 462, 23, 10, MUTED)
+    text(f"On-chain snapshot: {SNAPSHOT}", 462, 23, 10, MUTED)
     text(f"{number:02d} / 06", 867, 23, 10, MUTED)
 
 
@@ -149,8 +150,10 @@ text("0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea", 67, 275, 16, MUTED)
 link("Inspect the source deployment receipt", SOURCE_URL, 67, 251, 12)
 text("PENDING AT THIS SNAPSHOT", 48, 207, 11, AMBER, True)
 para("Target vault and prospective ticket. Eligible source failure. Native proof and tamper rejection. Mined rebate and duplicate rejection.", 48, 181, 852, 19, 25)
-link("Expected app URL - publication and public access unverified", APP_URL, 48, 105, 14)
-text("GitHub, public PDF and video URLs: pending. No accepted entry claimed.", 48, 73, 15, MUTED)
+link("Public app: gasback-ctc-2026.stetang.chatgpt.site", APP_URL, 48, 107, 14)
+link("Public source: github.com/stetang98/gasback-attestcoin", GITHUB_URL, 48, 85, 14)
+text("Public review PDF in repository; final prospective-run refresh pending. Video pending.", 48, 65, 11, MUTED)
+text("Historical proof is not a rebate. No accepted entry claimed.", 48, 49, 10, MUTED)
 c.showPage()
 
 # 6 - Focused next step and non-fictional traction
@@ -165,7 +168,7 @@ text("PROPOSED MEASURES", 503, 293, 11, TEAL, True)
 para("Proof latency, claim completion, rejection causes, sponsor spend and retry behavior.", 503, 262, 382, 19, 25)
 text("NEXT GATE", 48, 175, 11, AMBER, True)
 para("Complete the real proof-to-payment run and publish reproducible evidence. Validate sponsor demand before expanding scope.", 48, 148, 852, 20, 26)
-text("No claimed traction, partners or revenue. Human team details pending.", 48, 78, 15, MUTED)
+text("No claimed traction, partners, revenue or accepted submission.", 48, 78, 15, MUTED)
 link("Official competition", OFFICIAL_URL, 48, 56, 10)
 c.showPage()
 c.save()

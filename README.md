@@ -8,17 +8,18 @@ Built for [BUIDL CTC 2026 Fall](https://dorahacks.io/hackathon/buidl-ctc-2026-fa
 
 ## Current evidence
 
-Snapshot: `2026-09-12T05:56:16.294Z`. The repository is under active development; use [the machine-readable run](integration/evidence/run.json) for the latest recorded state.
+The repository is under active development. The chain evidence snapshot is `2026-09-12T05:56:16.294Z`; use [the machine-readable run](integration/evidence/run.json) for the latest recorded chain state. Public deployment checks were refreshed at approximately `2026-09-12T06:30:00Z`.
 
 | Item | Status |
 | --- | --- |
 | Solidity contracts and 42 policy/security test cases | Implemented; see [contract package](chain/README.md) and [independent source review](docs/research/contract-review.md) |
+| Frontend and 10 proof/payment identity tests | Implemented; see [frontend review](docs/research/frontend-review.md) |
 | Sepolia source deployment | Receipt status 1, block 11,686,978; [deployment transaction](https://sepolia.etherscan.io/tx/0x11c6cadadf3b945cda0b2cb4129e736932518cc7d042c83d67fbcb68c2676267) |
 | Source contract | [`0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea`](https://sepolia.etherscan.io/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea) |
 | Target vault, prospective ticket, eligible failed action, native proof and rebate | Pending at this snapshot; no completed rebate is claimed |
-| Public app | Expected URL: [GasBack](https://gasback-ctc-2026.jazzy-lamp-4850.chatgpt.site); publication and public access are pending verification |
-| Public GitHub repository | [stetang98/gasback-attestcoin](https://github.com/stetang98/gasback-attestcoin) |
-| PDF deck | [Six-page review draft](docs/submission/GasBack-deck.pdf); public PDF URL pending |
+| Public app | [GasBack](https://gasback-ctc-2026.stetang.chatgpt.site); unauthenticated HTTP 200 and historical native proof verification checked; see [deployment evidence](docs/qa/deployment-2026-09-12.md) |
+| Public GitHub repository | [stetang98/gasback-attestcoin](https://github.com/stetang98/gasback-attestcoin); all 98 files in the initial full upload verified against the local commit |
+| PDF deck | [Six-page review draft](docs/submission/GasBack-deck.pdf); published as a repository artifact, pending the final prospective-run evidence refresh |
 | Demonstration video / DoraHacks submission | Pending; [recording script](docs/submission/demo-script.md) and [submission draft](docs/submission/dorahacks-draft.md) are prepared |
 
 A historical proof probe establishes feasibility only. It is not a deployment or payout by this project. Local policy tests use a clearly identified verifier harness; they do not substitute for native verification on Creditcoin.

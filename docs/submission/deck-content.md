@@ -1,6 +1,6 @@
 # GasBack - six-page English deck content
 
-Review draft. Evidence snapshot: 2026-09-12T05:56:16.294Z. Editable PDF builder: `create_deck.py`. Final publication requires replacing pending states with actual verified evidence, not unverified promises.
+Review draft. On-chain evidence snapshot: 2026-09-12T05:56:16.294Z. Public website and repository access verified separately on 2026-09-12. Editable PDF builder: `create_deck.py`. Final publication requires replacing pending states with actual verified evidence, not unverified promises.
 
 ## 1. Prove the failure. Claim the sponsor rebate.
 
@@ -58,9 +58,11 @@ Source contract: 0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea.
 
 Pending at this snapshot: target deployment; prospective ticket and eligible failure; native proof and tampering rejection; mined rebate and duplicate rejection.
 
-App expected URL: https://gasback-ctc-2026.jazzy-lamp-4850.chatgpt.site . Publication/public access pending verification.
+Public app: https://gasback-ctc-2026.stetang.chatgpt.site . Verified HTTP 200 without account cookies. The online historical-proof check demonstrates feasibility; it is not this project's rebate.
 
-GitHub, public PDF and demo video URLs: pending. No complete rebate or accepted submission is claimed.
+Public source: https://github.com/stetang98/gasback-attestcoin . Remote main commit `4c5a0a19cbc7049f3cf68a8d7c4e0750602d8f17` was verified against 98 published file paths and hashes, with key raw source also checked.
+
+Public review draft in repository: https://github.com/stetang98/gasback-attestcoin/blob/main/docs/submission/GasBack-deck.pdf ; final prospective-run refresh pending. Demo video remains pending. No complete rebate or accepted submission is claimed.
 
 ## 6. A small product with a measurable next step
 
@@ -72,4 +74,4 @@ Measure: native-proof availability/latency, eligible claim completion, rejection
 
 Next gate: complete the live proof-to-payment run and publish reproducible evidence. Then validate demand with a sponsor before expanding scope.
 
-No claimed traction, partners, revenue, or guaranteed awards. Human team identity and biography are pending participant input.
+No claimed traction, partners, revenue, or guaranteed awards. Participant details must remain truthful and eligibility requires the participant's own informed declaration.

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">GasBack</title>
+  <desc id="desc">A geometric green G on a black square, echoing the return of a sponsored rebate.</desc>
+  <rect width="480" height="480" fill="#000000"/>
+  <path fill="#12cc8c" d="M 358 143 C 329 108 289 88 241 88 C 156 88 88 155 88 240 C 88 325 156 392 241 392 C 327 392 392 329 392 246 L 392 220 L 232 220 L 232 276 L 330 276 C 318 312 284 336 243 336 C 188 336 146 295 146 240 C 146 185 188 144 243 144 C 273 144 299 156 318 178 Z"/>
+</svg>
