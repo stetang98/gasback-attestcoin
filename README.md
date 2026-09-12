@@ -17,7 +17,7 @@ Snapshot: `2026-09-12T05:56:16.294Z`. The repository is under active development
 | Source contract | [`0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea`](https://sepolia.etherscan.io/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea) |
 | Target vault, prospective ticket, eligible failed action, native proof and rebate | Pending at this snapshot; no completed rebate is claimed |
 | Public app | Expected URL: [GasBack](https://gasback-ctc-2026.jazzy-lamp-4850.chatgpt.site); publication and public access are pending verification |
-| Public GitHub repository | Pending creation; no repository URL assigned |
+| Public GitHub repository | [stetang98/gasback-attestcoin](https://github.com/stetang98/gasback-attestcoin) |
 | PDF deck | [Six-page review draft](docs/submission/GasBack-deck.pdf); public PDF URL pending |
 | Demonstration video / DoraHacks submission | Pending; [recording script](docs/submission/demo-script.md) and [submission draft](docs/submission/dorahacks-draft.md) are prepared |
 
