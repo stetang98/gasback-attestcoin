@@ -1,6 +1,6 @@
 # DoraHacks submission draft
 
-Submission copy, 2026-09-12. Refreshed against `integration/evidence/run.json` (`completed-live-testnet-rebate`, 06:51:34.633 UTC) and the stricter reviewed public RPC verification (07:04:13.308 UTC). Final media and evidence are publicly deployed with seven anonymous HTTP 200 checks and canonical media/evidence hash matches. DoraHacks Details and the Profile demo-video URL are saved, but the entry has not been submitted.
+Submission record, 2026-09-12. GitHub Pages is deployed with seven anonymous HTTP 200 checks and exact local/public hash matches. The live app verified the real proof, native verifier and linked 1.0 test CTC payment. DoraHacks confirmed [GasBack BUIDL 48594](https://dorahacks.io/buidl/48594) submitted to BUIDL CTC 2026 Fall and Under Review (not publicly visible yet), track DeFi. Submission receipt does not establish judging approval or an award. Personal eligibility is self-declared, not independently verified; future prize eligibility and payment remain unresolved.
 
 ## Project name
 
@@ -56,9 +56,9 @@ This is the project's positioning, not a claim of global novelty or superiority 
 | DoraHacks field | Prepared value |
 | --- | --- |
 | GitHub URL | https://github.com/stetang98/gasback-attestcoin ; reviewed source and completed-run evidence publicly accessible |
-| Website | https://gasback-ctc-2026.stetang.chatgpt.site ; final Sites version deployed with completed-run evidence and Peter V2 media |
-| Deck / whitepaper PDF URL | https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf ; anonymous HTTP 200, exact local/public SHA-256 match |
-| Prototype video URL | https://gasback-ctc-2026.stetang.chatgpt.site/demo.html ; entered in Profile Demo video and saved successfully. MP4 and corrected SRT are public; public browser playback reached 110.08 s with `ended=true` and no error |
+| Website | https://stetang98.github.io/gasback-attestcoin/ ; deployed, live proof/native/payment UI verified |
+| Deck / whitepaper PDF URL | https://stetang98.github.io/gasback-attestcoin/GasBack-deck.pdf ; HTTP 200 and exact local/public hash match |
+| Prototype video URL | https://stetang98.github.io/gasback-attestcoin/demo.html ; submitted URL; V3 public file/hash checks passed, public V3 playback reached 110.08 s, ended=true and no media error |
 | Logo | Required by the live Create new BUIDL Profile form: PNG/JPEG, under 2 MB; 480 x 480 pixels is the recommended size |
 | Profile social links | At least one link is required by the live Profile form |
 
@@ -73,26 +73,28 @@ This is the project's positioning, not a claim of global novelty or superiority 
 - Payment: [mined claim](https://creditcoin-testnet.blockscout.com/tx/0xd4dd04ac3686498d4baf090119dfbb7848c1ffba96724743669cb9f1de744035), status 1, block 5,473,655; matching `RebatePaid`, consumed ticket and gas-adjusted beneficiary balance checked independently.
 - Duplicate: read-only `TicketAlreadyClaimed`; no second mined claim, totalPaid remains 1 test CTC.
 - Wrong chain and unissued ticket: read-only `WrongSourceChain` and `TicketNotIssued` before claim. Authentic successful-receipt rejection remains a local test rather than a separate live transaction.
-- Final public app is deployed at https://gasback-ctc-2026.stetang.chatgpt.site . Seven anonymous HTTP 200 checks cover `/demo.html`, `/demo.mp4`, `/demo.srt`, `/GasBack-deck.pdf`, `/evidence/run.json`, `/evidence/source-proof.json` and `/evidence/public-reverification-reviewed.json`.
-- Public repository contains reviewed source and completed-run evidence. The public PDF, Peter V2 MP4 and three evidence JSON files exactly match the canonical local hashes; the subtitle sidecar uses the correct Attestcoin spelling.
-- Peter V2 uses seven aligned narration clips and 24 caption cards, with the old audio muted. Local and public playback reached 110.08 s with `ended=true` and no media error; public playback reported `readyState=4`. The public session paused at 98.78 s and then resumed to the ending. Full human listening acceptance is not recorded.
-- The Details field was replaced with the completed run and video/PDF/GitHub/chain links; Continue showed `Saved successfully`. The Profile Demo video field was set to the public `/demo.html` page and saved successfully.
-- The entry remains unsubmitted. Primary Telegram and informed eligibility confirmation are outstanding; no accepted BUIDL URL is claimed.
+- Published app: https://stetang98.github.io/gasback-attestcoin/ . Seven anonymous HTTP 200 responses and local/public hash matches cover demo.html, demo.mp4, demo.srt, GasBack-deck.pdf and the run, source-proof and reviewed-verification JSON files. The live UI verified the real proof/native/payment and displayed REBATE PAID, 1.0 test CTC and blocked replay.
+- Public repository contains reviewed source and completed-run evidence. The V3 MP4 is 12,121,489 bytes with SHA-256 `d20a94b87b962702367f379bfb23bd2fcd8240f0ec42b6bd8c6b982556041c1c`; the PDF is 12,205 bytes with SHA-256 `c5e06b0efea9bfbd4af766ee25e72c8e52a289310855c32ec67bd15326717aee`. Both public files match local release files.
+- Peter V3 public playback completed with currentTime=duration=110.08 s, ended=true, paused=true, readyState=4 and error=null; currentSrc identified demo.mp4?v=peter-v3. The Peter narration retains seven aligned clips and 24 caption cards, with original audio muted. Full human listening acceptance is not recorded.
+- Profile, Details, Team and Contact have been restored with the new GitHub Pages website/media URLs; every step returned `Saved successfully`. Details contain the completed run and current video/PDF/GitHub/chain links.
+- DoraHacks confirmed BUIDL Submitted! and that GasBack is now Under Review (not publicly visible yet) for BUIDL CTC 2026 Fall. [Entry 48594](https://dorahacks.io/buidl/48594) is on the DeFi track and can be edited before judging. Personal eligibility is self-declared, without independent verification. No private contacts, judging approval or prize entitlement are claimed.
 
-Public files now agree with the completed evidence manifest and public playback has reached the ending successfully. Final submission remains outstanding. Ticket/source block timestamps independently observed by RPC were 06:41:45 and 06:42:00 UTC; the Attestcoin transaction encoding itself does not prove a source UTC timestamp. The earlier historical probe must not replace this run's linked transactions.
+Current GitHub Pages file/hash and live app checks passed, and DoraHacks submission receipt is confirmed. Peter V3 public playback reached 110.08 s with ended=true and no media error. Future prize-payment clarification remains separate; the inquiry is only an unsent private draft. Ticket/source block timestamps independently observed by RPC were 06:41:45 and 06:42:00 UTC; the Attestcoin transaction encoding itself does not prove a source UTC timestamp. The earlier historical probe must not replace this run.
 
 ## Originality and tool disclosure
 
-GasBack's application code and submission materials were created during the September 2026 hackathon period. The project directly imports official Gluwa Solidity libraries and the official SDK, and attributes external dependencies. Codex and Superpowers assisted engineering, planning and review. The participant must personally confirm authorship rights, accurate team details and organizer eligibility conditions. Do not list an AI assistant as a human team member or invent a professional audit.
+GasBack's application code and submission materials were created during the September 2026 hackathon period. The project directly imports official Gluwa Solidity libraries and the official SDK, and attributes external dependencies. AI-assisted workflows supported engineering, planning and review. The participant supplied team information and self-declared compliance with the organizer's eligibility and submission-rights requirements; this is not independent verification. Do not list an AI assistant as a human team member or invent a professional audit.
 
 ## Human member fields
 
 For every actual participant, the published competition requirements request first name, last name, email address, truthful short bio, project role, country of residence and citizenship. The participant has supplied basic identity information and is signed in to DoraHacks. Personal contact values belong in the required form fields, not in this public document.
 
-The live Create new BUIDL flow observed on 2026-09-12 is **Profile -> Details -> Team -> Contact**. The Profile step marks the logo as required and requires at least one social link. The Contact step requires **Telegram as the primary contact**, and offers Discord, WhatsApp or WeChat for the backup channel. The Telegram value has been requested from the participant. Do not substitute another person's contact or invent a handle.
+The observed Create new BUIDL flow was **Profile -> Details -> Team -> Contact -> Submission**. The required logo and social link, privately supplied primary/backup contacts, and final required fields were filled; GitHub Pages URLs were saved. Submission receipt is confirmed at https://dorahacks.io/buidl/48594 with status Under Review (not publicly visible yet). Do not request the supplied contacts again or publish their account values.
 
 This differs from the published competition description, which calls Telegram optional. Follow the actual required form fields to complete this submission; retain the distinction rather than representing the live form as optional. X, LinkedIn and resume remain optional under the published description; the form's at-least-one-link requirement still applies.
 
-The participant must understand and truthfully confirm the organizer's criminal-record/pending-case, sanctions and applicable-law conditions and the rights to the submitted materials. A statement made before those restrictions were explained must not be silently treated as informed confirmation. No personal eligibility declaration has been inferred or published in this draft.
+The participant explicitly self-declared compliance with the previously listed organizer eligibility conditions, while asking for clarification of the restrictions; an explanation was subsequently provided. That statement is recorded as a personal self-declaration, not independent verification or proof of a later repeated confirmation. The existing authorization and declaration remain the basis for the free project submission; no repeated declaration is requested solely because future prize-payment terms are unresolved.
+
+The final Submission Terms of Use Agreement, clause 4, restricts BUIDL-related financial transactions for citizens of the People's Republic of China and countries subject to OFAC sanctions. It does not directly prohibit this free technical project submission. The separate donation clause restricts making grant donations, while optional Hackathon Prize Safe provisions describe third-party prize-fund handling. Future prize eligibility, actual payment methods and application of the financial clause to the advertised USD-denominated awards remain unresolved. No financial transaction is initiated by this submission, and no legal guarantee or right to receive a prize is claimed.
 
 Sources: [official competition details](https://dorahacks.io/hackathon/buidl-ctc-2026-fall/detail), inspected on 2026-09-12, and the signed-in Create new BUIDL form observed by the project owner on the same date. See [the verified competition brief](../research/2026-09-12-competition-brief.md). No separate external registration form has been established by those observations.

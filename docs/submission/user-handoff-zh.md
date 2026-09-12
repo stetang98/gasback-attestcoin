@@ -1,6 +1,6 @@
 # GasBack 参赛交接
 
-真实两链流程已完成并通过复审；最终网站、Peter V2 视频、PDF 与证据文件已公开发布，7 条匿名 HTTP 200 检查及媒体/证据哈希比对通过。DoraHacks 的 Details 和 Profile 视频地址已保存成功，但尚未提交，仍缺本人 Telegram 主联系方式和知情资格确认。
+真实两链流程已完成并通过复审，GitHub Pages 已部署，7 个公开文件匿名 HTTP 200 且哈希与本地一致；新站 UI 验证真实 proof、native 和支付成功。DoraHacks 已显示 BUIDL Submitted!，项目 [GasBack 48594](https://dorahacks.io/buidl/48594) 已提交 BUIDL CTC 2026 Fall，DeFi 赛道，当前 Under Review (not publicly visible yet)。项目页明确提示暂未公开可见；这是提交接收确认，不是审核通过或获奖。本人资格为已自述、未经独立核验；未来领奖资格及支付仍待澄清，不是尚未提交的阻塞。
 
 ## 项目是什么
 
@@ -20,11 +20,11 @@ GasBack 为协议方提供固定额度的失败交易补贴。赞助方先授权
 - 从失败确认到首次观察到 attestation 就绪为 **8 分 54.575 秒**；native 验证完成为 **8 分 57.415 秒**；claim 提交到确认 **5.061 秒**。轮询间隔 15 秒，这是本次观测耗时，不是协议精确发布时间或后续速度承诺。
 - 目标合约源码已在 [Blockscout 完整验证](https://creditcoin-testnet.blockscout.com/address/0xB2A5c2772689C05d02E101E8137Aabd3B72C57Ea?tab=contract)，不等于专业安全审计。
 - 本次部署、出票、源动作与领取由 **CLI** 执行；网页是**只读证据回放与验证**，不是通过回放按钮重新发起支付。历史 feasibility probe 与本项目真实 run 分开记录。
-- [正式网站](https://gasback-ctc-2026.stetang.chatgpt.site) 的最终版本已成功部署；[视频页](https://gasback-ctc-2026.stetang.chatgpt.site/demo.html)、[MP4](https://gasback-ctc-2026.stetang.chatgpt.site/demo.mp4)、[字幕](https://gasback-ctc-2026.stetang.chatgpt.site/demo.srt)、[PDF](https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf) 及 run/proof/reviewed-verification 共 7 个公开地址均匿名返回 HTTP 200。MP4、PDF 和三份证据 JSON 与本地正式文件的 SHA-256 完全一致，字幕中的 Attestcoin 已修正。
+- [正式网站](https://stetang98.github.io/gasback-attestcoin/) 已上线；[视频页](https://stetang98.github.io/gasback-attestcoin/demo.html)、[MP4](https://stetang98.github.io/gasback-attestcoin/demo.mp4)、[字幕](https://stetang98.github.io/gasback-attestcoin/demo.srt)、[PDF](https://stetang98.github.io/gasback-attestcoin/GasBack-deck.pdf) 和三份证据 JSON 共 7 个文件匿名 HTTP 200，哈希均与本地一致。新站 UI 显示 REBATE PAID、1.0 test CTC，并阻止重复回放领取；实际 proof/native/payment 验证通过。
 - [公开仓库](https://github.com/stetang98/gasback-attestcoin) 已提供完成的链上证据和复审后的源码；英文 README、DoraHacks 文案及六页 PDF 均依据真实流程。
-- 已采用本人选择的 Peter 音色，7 段独立旁白按画面同步，24 张可编辑字幕卡，旧音轨静音。V2 导出并公开：12,123,810 bytes、1280 x 720、24 fps、2,640 帧；视频画面 110 秒，容器 110.08 秒的额外 80 ms 为静音。
-- 本地与公网播放均已到 110.08 秒末尾，`ended=true`、无媒体错误；公网另确认 `currentTime=duration=110.08`、`readyState=4`。公网过程中在 98.78 秒暂停过，随后继续播放至结尾，因此不称无人干预连续播放。尚无完整人工听感验收记录，技术播放成功不等于人工认可全部音色与发音。
-- DoraHacks Details 已替换为真实 completed run 与视频/PDF/GitHub/链上链接，点击 Continue 显示 `Saved successfully`；Profile Demo video 已填公开 `/demo.html` 并保存成功。当前为已保存草稿，尚未提交。
+- 当前 Peter V3 视频已发布：12,121,489 bytes，SHA-256 `d20a94b87b962702367f379bfb23bd2fcd8240f0ec42b6bd8c6b982556041c1c`。PDF 为 12,205 bytes，SHA-256 `c5e06b0efea9bfbd4af766ee25e72c8e52a289310855c32ec67bd15326717aee`。两者公网字节均与本地一致；Peter 旁白保留 7 段同步音轨与 24 张字幕卡，旧音轨静音。
+- 新站当前 Peter V3 视频已播放到结尾：currentTime=duration=110.08、ended=true、paused=true、readyState=4、error=null，currentSrc 为 demo.mp4?v=peter-v3。完整人工听感尚未记录。
+- DoraHacks Profile、Details、Team、Contact 已恢复为新网址并逐步保存成功，最终字段已填好。随后实际显示 BUIDL Submitted! 和 Under Review (not publicly visible yet)；项目地址 https://dorahacks.io/buidl/48594 ，赛道 DeFi，评审开始前仍可编辑。
 
 ## 用户需要提供的最少信息
 
@@ -33,28 +33,29 @@ GasBack 为协议方提供固定额度的失败交易补贴。赞助方先授权
 1. 姓、名，以及比赛联系邮箱。
 2. 简短真实个人简介、在 GasBack 项目中的实际角色。
 3. 常住国家与国籍。
-4. 由本人确认主办方要求的参赛资格：无犯罪记录/无未决刑事案件、不属于受制裁个人或受制裁国家居民、当地法律允许参加，以及对提交材料拥有必要权利。
+4. 主办方要求的参赛资格包括无犯罪记录/无未决刑事案件、不属于受制裁个人或受制裁国家居民、当地法律允许参加，以及对提交材料拥有必要权利；本人已自述符合此前列明的要求，未作独立核验。
 
-实际创建流程为 **Profile -> Details -> Team -> Contact**，2026-09-12 登录后观察到以下必填要求：
+实际创建流程为 **Profile -> Details -> Team -> Contact -> Submission**，2026-09-12 登录后观察到以下必填要求：
 
 - Profile 的 Logo 带星号：PNG/JPEG，大小低于 2 MB；480 x 480 是建议尺寸，并非硬性尺寸要求。
 - Profile 的 social links 至少填写一条链接。
-- Contact 的主要联系方式 **Telegram 必填**；已向用户询问所需 Telegram 信息。备用联系方式可选择 Discord、WhatsApp 或 WeChat，实际联系方式仅填表，不公开写入项目文档。
+- Contact 的主要联系方式 **Telegram 必填**；本人提供的 Telegram 主联系和 WeChat 备用联系已填写，点击 Continue 后出现 `Saved successfully` 并进入 Submission。不再重复索取联系方式，具体账号不公开写入项目文档。
 
 公开比赛说明把 Telegram 标为 optional，但当前真实表单把它设为必填，提交时须按实际表单完成。X、LinkedIn、简历在公开比赛说明中为可选；仍需满足 Profile 至少一条社交链接的要求。不要编造 Telegram 账号来通过表单。
 
-资格限制须先解释清楚，再由用户依据真实情况确认；不能把用户尚不了解限制时的表示直接当作知情确认。官方资格段落没有给出受制裁国家名单或采用的制裁体系，也没有把中国单独列为禁止参赛国家，不能仅因居住中国就判断不合规。AI 助手不能充当人类队员，也不能替用户证明个人资格。
+本人曾明确自述符合前述参赛资格，同时询问限制，之后已获得解释。这记录为本人自述，不能写成从未声明，也不能写成已独立核验或已在解释后再次确认。已沿用既有参赛授权与本人自述完成免费项目提交，不因未来奖金条款未明而要求重复声明。平台 Terms of Use Agreement 第 4 条涉及中国公民及受 OFAC 制裁国家公民参与 BUIDL 相关金融交易，未直接禁止本次免费技术项目提交；独立的 grant donation 限制针对作出捐赠，Hackathon Prize Safe 则描述可选第三方奖金资金处理。未来领奖资格、实际支付方式与该金融条款的适用范围仍待澄清，不据此保证可领奖或发起金融交易。AI 助手不能充当人类队员，也不能替用户证明个人资格。
 
 不要提供身份证扫描件、钱包助记词或私钥来填写普通参赛信息；当前已读取的表单要求没有这些字段。
 
-GitHub 公开源码上传、测试币到账、真实支付和 DoraHacks 登录已完成。当前尚需本人 Telegram 及对已解释资格条件的事实声明；不需要为了回放重复支付或重新索取助记词。当前没有依据要求另交独立外部报名表；若后续实际流程明确提出，再按页面处理。
+GitHub 公开源码、测试币到账、真实测试网支付、GitHub Pages 发布和 DoraHacks 提交接收均已完成。本人资格自述与未来领奖支付问题分别记录；后者不作为免费技术项目提交禁令。资格询问信仅保存为私有草稿，尚未发送。
 
-## 提交前剩余事项
+## 后续事项
 
-1. 由本人提供 Telegram 主联系方式，并在理解官方限制后如实确认参赛资格。
-2. 补齐 Contact 与必要声明，正式提交，看到接收确认后再次打开实际 BUIDL 页面核对内容。
+1. 当前 Peter V3 公网视频已播放到 110.08 秒末尾，无媒体错误；匿名文件、哈希与新站真实 proof/native/payment 验证也已通过。完整人工听感尚未记录。
+2. 项目已提交、审核中，项目页暂未公开可见；记录后续真实评审结果，不把提交成功写成审核通过或获奖。评审开始前可修改项目。
+3. 若后续涉及领奖，在任何奖金金融交易前分别澄清领取资格、条款适用范围及实际合法支付方式。当前询问信未发送，未发起金融交易。
 
-先出票、源失败、真实支付、证据复核、Peter V2 导出、最终网站发布、匿名文件检查和公网播放到结尾检查均已完成。完整人工听感尚未记录，参赛接收状态仍须取得正式确认。
+先出票、源失败、真实测试币支付、证据复核、V3 公开发布、匿名文件/哈希验证和 DoraHacks 提交接收均已完成。视频已播放至末尾，完整人工听感尚未记录；项目已提交、审核中且暂未公开可见，不代表审核通过或获奖。
 
 官方截止时间为 **2026 年 9 月 13 日 23:59 ET，即北京时间 9 月 14 日 11:59**；用户要求的内部完成目标为 9 月 12 日。获奖结果预计 9 月 20 日公布。开发完成、提交成功和获奖是三个不同状态，需分别有证据。
 

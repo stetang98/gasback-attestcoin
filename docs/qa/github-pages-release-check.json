@@ -1,0 +1,126 @@
+{
+  "checkedAt": "2026-09-12T07:47:24.849945+00:00",
+  "site": "https://stetang98.github.io/gasback-attestcoin/",
+  "access": "public",
+  "provider": "GitHub Pages",
+  "finalEvidenceRecordedAt": "2026-09-12T07:52:02.843Z",
+  "requests": [
+    {
+      "path": "demo.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 2241,
+      "sha256": "345a070e68bbf1a9803bc8db6a662cf36e645a61b020e89711cea692c070f392",
+      "matchesLocal": true
+    },
+    {
+      "path": "demo.mp4",
+      "status": 200,
+      "contentType": "video/mp4",
+      "bytes": 12121489,
+      "sha256": "d20a94b87b962702367f379bfb23bd2fcd8240f0ec42b6bd8c6b982556041c1c",
+      "matchesLocal": true
+    },
+    {
+      "path": "demo.srt",
+      "status": 200,
+      "contentType": "application/x-subrip",
+      "bytes": 2055,
+      "sha256": "d372ac0c63ce38169f934fe40727c0b56f8914254471bed87357fc3f5ca86bf3",
+      "matchesLocal": true
+    },
+    {
+      "path": "GasBack-deck.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 12205,
+      "sha256": "c5e06b0efea9bfbd4af766ee25e72c8e52a289310855c32ec67bd15326717aee",
+      "matchesLocal": true
+    },
+    {
+      "path": "evidence/run.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 12480,
+      "sha256": "3aa95e13b79321ee4f12ef4495c0cfc5ad43d39ae86968cce2848a29374e0692",
+      "matchesLocal": true
+    },
+    {
+      "path": "evidence/source-proof.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 4704,
+      "sha256": "37a7dfd8aa8817bbdc8c527b7920d30a448177f832d750fcfb4d401539582303",
+      "matchesLocal": true
+    },
+    {
+      "path": "evidence/public-reverification-reviewed.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 2197,
+      "sha256": "295cefabcbc0da555f11e61448a52ad7f1587c3df001a1948c4ce14fdaec8e4a",
+      "matchesLocal": true
+    }
+  ],
+  "staticPathReview": {
+    "localReferencesChecked": 34,
+    "invalidReferences": 0,
+    "symlinks": false
+  },
+  "browserPlayback": {
+    "url": "https://stetang98.github.io/gasback-attestcoin/demo.html",
+    "duration": 110.08,
+    "currentTime": 110.08,
+    "ended": true,
+    "paused": true,
+    "readyState": 4,
+    "mediaError": null,
+    "source": "https://stetang98.github.io/gasback-attestcoin/demo.mp4?v=peter-v3",
+    "humanFullListening": "not established"
+  },
+  "liveAppProofVerification": {
+    "url": "https://stetang98.github.io/gasback-attestcoin/",
+    "action": "Inspect completed run",
+    "sourceStatus": "Failed - status 0",
+    "nativeProof": "Verified",
+    "payment": "Paid on-chain",
+    "displayedAmount": "1.0 test CTC",
+    "receiptStatus": "REBATE PAID",
+    "replayButton": "Rebate paid - replay blocked",
+    "newTransactionSent": false
+  },
+  "deployment": {
+    "workflowRun": 34681599215,
+    "conclusion": "success",
+    "url": "https://github.com/stetang98/gasback-attestcoin/actions/runs/34681599215",
+    "commit": "5c22459648cd5b4f7813f40543b6f3314a697de7",
+    "httpsEnforced": true
+  },
+  "submission": {
+    "profileLinksSaved": true,
+    "detailsSaved": true,
+    "contactSaved": true,
+    "finalRequiredFieldsFilled": true,
+    "submitted": true,
+    "reviewStatus": "Under Review",
+    "reviewApproved": false,
+    "publiclyVisible": false,
+    "buidlUrl": "https://dorahacks.io/buidl/48594",
+    "track": "DeFi",
+    "confirmation": "BUIDL Submitted!",
+    "message": "GasBack has been submitted to BUIDL CTC 2026 Fall and is now under review. It can still be edited before judging.",
+    "profileLinksVerified": true,
+    "detailsLinksVerified": true,
+    "projectDescriptionCharacters": 936,
+    "integrationSummaryCharacters": 940,
+    "eligibilitySource": "Participant self-declaration; not independently verified",
+    "prizePaymentEligibility": "Future payment eligibility remains unresolved; no financial transaction initiated and no organizer message sent",
+    "agreementsAccepted": true,
+    "remainingSubmissionActions": []
+  },
+  "budget": {
+    "newHostingPaymentsRmb": 0,
+    "externalPaymentsRmb": 0,
+    "voiceRegeneration": false
+  }
+}

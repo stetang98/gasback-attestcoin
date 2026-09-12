@@ -1,6 +1,6 @@
 # GasBack - six-page English deck content
 
-Testnet evidence edition. Run completed at 2026-09-12T06:51:34.633Z; the stricter reviewed public RPC re-verification passed at 07:04:13.308Z. Editable PDF builder: `create_deck.py`. Public artifact synchronization, revised demonstration video and DoraHacks acceptance are separate publication checks.
+Testnet evidence edition. Run completed at 2026-09-12T06:51:34.633Z; reviewed public RPC re-verification passed at 07:04:13.308Z. GitHub Pages file/hash and live app checks passed. GasBack BUIDL 48594 is submitted and Under Review (not publicly visible yet); judging approval and an award are not claimed. Editable PDF builder: `create_deck.py`.
 
 ## 1. Prove the failure. Claim the sponsor rebate.
 
@@ -64,7 +64,7 @@ Timing: source failure confirmation to first observed attestation readiness 8 mi
 
 Execution boundary: CLI executed the real transactions. The website is a read-only evidence replay and verification surface; no replay button initiated this claim. The earlier historical probe is separate.
 
-Public app: https://gasback-ctc-2026.stetang.chatgpt.site . Public source: https://github.com/stetang98/gasback-attestcoin . The deck is refreshed from the completed run; public PDF synchronization and demonstration video remain publication checks. No accepted DoraHacks submission is claimed.
+Public app: https://stetang98.github.io/gasback-attestcoin/ . Seven release files passed anonymous HTTP 200 and exact local/public hash checks; the app verified the real proof/native/payment and displayed REBATE PAID, 1.0 test CTC and blocked replay. Public source: https://github.com/stetang98/gasback-attestcoin . DoraHacks entry: https://dorahacks.io/buidl/48594 — submitted to BUIDL CTC 2026 Fall, DeFi, Under Review (not publicly visible yet). Current V3 public playback completed at 110.08 s with ended=true, readyState=4 and no media error; full human listening acceptance is not recorded. Self-declared eligibility is not independently verified, and future prize eligibility/payment remain unresolved.
 
 ## 6. A small product with a measurable next step
 

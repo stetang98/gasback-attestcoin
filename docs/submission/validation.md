@@ -1,6 +1,6 @@
 # Submission evidence validation
 
-Refreshed on 2026-09-12 against `integration/evidence/run.json`, generated at `06:51:34.633 UTC`, status `completed-live-testnet-rebate`, and the stricter `public-reverification-reviewed.json` at `07:04:13.308 UTC`. The original `public-reverification.json` snapshot is preserved. The final Sites version has been deployed with the completed-run evidence, Peter V2 video, corrected SRT and evidence PDF; anonymous public file and hash checks passed.
+Refreshed on 2026-09-12 against the completed prospective run and reviewed public RPC verification. GitHub Pages is deployed; seven anonymous HTTP 200 responses and exact local/public hash matches are recorded in `docs/qa/github-pages-release-check.json` at 07:47:24 UTC. The live app proof/native/payment UI check passed. At approximately 07:48 UTC, DoraHacks confirmed [GasBack BUIDL 48594](https://dorahacks.io/buidl/48594) submitted to BUIDL CTC 2026 Fall and Under Review (not publicly visible yet), not judging approval or an award.
 
 ## Evidence consistency
 
@@ -18,26 +18,27 @@ The [fresh post-run review](../qa/final-code-review.md) **closed the P2 evidence
 
 - Six-page 16:9 PDF generated with local ReportLab. No paid image, voice or media generation was used for the deck.
 - All six updated pages were rendered with bundled Poppler and visually inspected. No clipping, overlap or missing glyphs was observed. Extraction checks validate six evidence labels, amounts, timing and seven clickable links including ticket, failure, claim and verified contract source.
-- The released Peter V2 video has seven independently aligned narration clips and 24 caption cards; the original audio is muted. Export: 12,123,810 bytes, H.264/AAC, 1280 x 720, 24 fps, 2,640 video frames. Picture duration is 110.000 s; the 110.080 s container includes an 80 ms silent audio tail.
+- The current Peter V3 export is 12,121,489 bytes, SHA-256 `d20a94b87b962702367f379bfb23bd2fcd8240f0ec42b6bd8c6b982556041c1c`; its public file matches the local release. The Peter narration uses seven aligned clips and 24 caption cards, with the original audio muted. The prior V2 production checks remain historical records.
 - Public repository: https://github.com/stetang98/gasback-attestcoin . The reviewed verifier, reviewed JSON and README were publicly accessible and matched their local versions during the pre-release check; documentation status updates are tracked separately.
-- Final public app: https://gasback-ctc-2026.stetang.chatgpt.site . All seven release artifacts listed below returned anonymous HTTP 200. Public MP4, PDF, run, proof and reviewed-verification hashes exactly matched the local canonical files; SRT spelling is corrected to Attestcoin.
-- Local playback reached 110.08 s with `ended=true` and no media error. Public playback also finished with `currentTime=duration=110.08`, `ended=true`, `readyState=4` and no error. The public session paused at 98.78 s and resumed for the ending; this records successful playback to the end, without claiming unattended continuous playback. No full human listening acceptance has been recorded.
-- DoraHacks Details now contain the completed run and video/PDF/GitHub/chain links; Continue returned `Saved successfully`. The Profile Demo video field contains the published `/demo.html` URL and saved successfully. These are saved-draft observations, not accepted submission. Primary Telegram and informed personal eligibility confirmation remain outstanding.
+- Public app: https://stetang98.github.io/gasback-attestcoin/ . Seven release files returned anonymous HTTP 200 and matched local hashes. The app UI verified the actual proof, native verification and payment, displaying REBATE PAID and 1.0 test CTC with replay blocked. This read-only UI verification does not initiate a new claim.
+- Current Peter V3 public playback completed with currentTime=duration=110.08 s, ended=true, paused=true, readyState=4 and error=null. The source was demo.mp4?v=peter-v3. No complete human listening acceptance has been recorded.
+- DoraHacks Profile, Details, Team and Contact were restored with GitHub Pages links and saved successfully; all required fields were filled, DeFi selected and Need teammates set to No. Final submission displayed BUIDL Submitted! and confirmed the entry is now Under Review (not publicly visible yet). The entry is https://dorahacks.io/buidl/48594 and remains editable before judging. The participant self-declared organizer eligibility; no independent verification, judging approval or prize entitlement is claimed. Contact values remain private.
+- The signed-in final Submission Terms of Use Agreement, clause 4, names citizens of the People's Republic of China and countries subject to OFAC sanctions in its BUIDL-related financial-transactions restriction. It does not directly prohibit this free technical project submission. The separate grant-donation restriction concerns making donations, and the optional Hackathon Prize Safe describes third-party handling of prize funds. Future prize eligibility, payment methods and the financial clause's application to this season's advertised USD-denominated awards remain unresolved; they are not treated as a precondition for uploading this nonfinancial entry. This reading is not a legal guarantee or authorization to initiate a financial transaction.
 
-## Published artifact checks
+## GitHub Pages artifact verification
 
-The coordinator's [public release record](../qa/public-release-check.json) retains the anonymous-response, hash and completed browser-playback observations.
+The [GitHub Pages release record](../qa/github-pages-release-check.json) records seven anonymous HTTP 200 responses and local/public hash matches. Later live UI and submission observations are described above; the earlier release record remains historical evidence.
 
 | Artifact | Anonymous access | Byte/hash check |
 | --- | --- | --- |
-| [Video page](https://gasback-ctc-2026.stetang.chatgpt.site/demo.html) | HTTP 200 | Page access verified |
-| [Peter V2 MP4](https://gasback-ctc-2026.stetang.chatgpt.site/demo.mp4) | HTTP 200 | SHA-256 `beb180ef76f7e6059a9eb5fbbaa0bae6dea6bdd0760e18106fd80ce06b23fcfb`, identical to local export |
-| [SRT](https://gasback-ctc-2026.stetang.chatgpt.site/demo.srt) | HTTP 200 | Corrected Attestcoin sidecar available |
-| [Evidence PDF](https://gasback-ctc-2026.stetang.chatgpt.site/GasBack-deck.pdf) | HTTP 200 | SHA-256 `9f3587c1c46f66a1d624b4c55a4dcae76e8c31ce1802948bcd87dcf6aca74c01`, identical to local PDF |
-| [Completed run](https://gasback-ctc-2026.stetang.chatgpt.site/evidence/run.json) | HTTP 200 | Exact canonical local hash match |
-| [Raw proof](https://gasback-ctc-2026.stetang.chatgpt.site/evidence/source-proof.json) | HTTP 200 | Exact canonical local hash match |
-| [Reviewed verification](https://gasback-ctc-2026.stetang.chatgpt.site/evidence/public-reverification-reviewed.json) | HTTP 200 | Exact canonical local hash match |
+| [Video page](https://stetang98.github.io/gasback-attestcoin/demo.html) | HTTP 200 | Exact local/public hash match; current V3 playback reached 110.08 s, ended=true, no media error |
+| [Peter V3 MP4](https://stetang98.github.io/gasback-attestcoin/demo.mp4) | HTTP 200 | 12,121,489 bytes; SHA-256 `d20a94b87b962702367f379bfb23bd2fcd8240f0ec42b6bd8c6b982556041c1c`; matches local |
+| [SRT](https://stetang98.github.io/gasback-attestcoin/demo.srt) | HTTP 200 | Exact local/public hash match; Attestcoin spelling corrected |
+| [Evidence PDF](https://stetang98.github.io/gasback-attestcoin/GasBack-deck.pdf) | HTTP 200 | 12,205 bytes; SHA-256 `c5e06b0efea9bfbd4af766ee25e72c8e52a289310855c32ec67bd15326717aee`; matches local |
+| [Completed run](https://stetang98.github.io/gasback-attestcoin/evidence/run.json) | HTTP 200 | Exact canonical local/public hash match |
+| [Raw proof](https://stetang98.github.io/gasback-attestcoin/evidence/source-proof.json) | HTTP 200 | Exact canonical local/public hash match |
+| [Reviewed verification](https://stetang98.github.io/gasback-attestcoin/evidence/public-reverification-reviewed.json) | HTTP 200 | Exact canonical local/public hash match |
 
 ## Publication handoff
 
-The website, deck, Peter V2 video and evidence are publicly deployed and byte-checked; public browser playback reached the end successfully. Obtain the participant's required Telegram and informed eligibility confirmation, then submit the saved DoraHacks draft and record acceptance. Technical completion, publication, browser playback, human listening and accepted submission remain distinct observations.
+GitHub Pages publication, anonymous file/hash verification, live app proof/native/payment verification and DoraHacks submission receipt are confirmed. The entry is Under Review (not publicly visible yet); no judging approval or award is claimed. Peter V3 public playback reached 110.08 s with ended=true and no media error. Personal eligibility is self-declared, without independent verification. Future prize eligibility and payment require separate clarification before any prize-related financial transaction; the private inquiry draft has not been sent. This unresolved future matter is not an unsubmitted-entry blocker.
