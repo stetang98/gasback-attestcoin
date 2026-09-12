@@ -6,19 +6,21 @@ or live-wallet operation was performed. This report is the reviewer's only chang
 
 ## Result at the reviewed snapshot
 
-No P0 was found. Two P2 issues remain in wallet submission/recovery. A P1 replay
-evidence bug and a P2 replay race were reported during review and repaired by the
-root task before this report was finalized.
+**No open P0–P2 finding remains in the final reviewed source.** Root repaired the
+replay, wallet submission and recovery findings described below. This conclusion is
+limited to source review and Node control-flow regression checks; it is not a claim
+that a real wallet interaction or real target-chain payout has been tested.
 
 Latest reviewed SHA-256:
 
-- `app.js`: `CFDF7395C85206D97AF7F0DB82AA06F1018DE6C001DB191C4D4C67F7926B3010`
+- `app.js`: `D1C0ED605461B1786E52764893ABE2F16F189C463FA06C2A8C3240DD18CEA043`
 - `proof.js`: `BE8C7CD0EB922711B74A7F838B923737B18A17738B6997B6BE568633420347C8`
 
-Root is editing concurrently. Findings and line references below apply to this
-snapshot; a subsequent root fix must be checked against its new file hash.
+Root edited concurrently during the review. The defects below describe earlier
+snapshots and explicitly record their fixes. A later change should be checked
+against its new file hash.
 
-## Open findings
+## Wallet findings repaired and rechecked
 
 ### P2 — A successfully accelerated claim is treated as a failed transaction
 
@@ -45,6 +47,14 @@ cancelled or semantically different replacement must not be labeled paid.
 Evidence: direct control-flow review plus the installed ethers implementation in
 `chain/node_modules/ethers/lib.commonjs/providers/provider.js:1118`, which creates
 this error for a same-call fee replacement. No live speed-up was attempted.
+
+**Final status: fixed in source and exercised in a Node control-flow regression.**
+Root now accepts a replacement only when not cancelled and when destination, sender,
+calldata, value and nonce match the original transaction. It retrieves the final
+receipt from the fixed Creditcoin provider, then performs payment identity checks.
+An actual-app-function harness with a synthetic repriced transaction produced
+`REBATE PAID`, kept Claim disabled and used the replacement receipt hash. The
+observed send request included `chainId: 102031n`.
 
 ### P2 — A pending claim is not invalidated when the wallet changes network
 
@@ -76,6 +86,26 @@ includes `chainId` when present in the supplied transaction and ultimately calls
 `eth_sendTransaction`; see the installed primary implementation in
 `chain/node_modules/ethers/lib.commonjs/providers/provider-jsonrpc.js:92` and its
 RPC transaction serialization around line 534. No wrong-chain transaction was sent.
+
+**Final status: fixed in source and exercised in a Node control-flow regression.**
+Root increments `walletEpoch` on account/network changes, captures it after
+connection, and checks it after simulation. The sent transaction explicitly binds
+chain ID 102031. The regression injected a wallet-context change during simulation;
+the actual `claim()` function made **zero send calls** and displayed its wallet-change
+message. Real wallet handling of late chain changes remains a UI/integration test.
+
+### P2 follow-up — RPC failure after broadcast could lose the known transaction hash
+
+During re-review, the first recovery patch only disabled retry when the local
+`hash = tx.hash` assignment had run. Ethers can broadcast successfully and then fail
+while looking up the transaction, before returning a TransactionResponse. In that
+case the known hash is attached to `error.info.sendTransactionHash`.
+
+**Final status: fixed in source and exercised in a Node control-flow regression.**
+Root now validates and adopts `error.info.sendTransactionHash` at the start of the
+catch path. A synthetic post-broadcast network failure produced one send call,
+`eligible: false`, a disabled Claim button, and the known Creditcoin transaction
+link. The app requires fresh verification before retrying an uncertain submission.
 
 ## Findings fixed during this review
 
@@ -130,6 +160,28 @@ and releases the lock in the enclosing finally block. Because the continuation
 relocks before another normal DOM event runs, the reproduced editable-input window
 is closed. Passing explicit immutable verification snapshots would still make the
 code easier to extend safely, but is not counted as an additional current defect.
+The WebMCP entry point also checks `busy` before changing input values, so a
+concurrent read-only tool invocation cannot replace the visible input during a claim.
+
+## Final regression evidence
+
+`node --test web/test/*.test.js`: **10 passed, 0 failed, 0 skipped**. This includes
+four payment-identity regressions in `payment.test.js` and six proof tests.
+
+An additional ephemeral Node harness executed the latest actual app function bodies
+with controlled DOM, wallet-send and RPC boundaries, the real frontend helper module,
+and the real vault event ABI. No application file was rewritten to run it.
+
+| Scenario | Observed behavior |
+| --- | --- |
+| Same-call fee replacement mines | One send call; replacement receipt verified through fixed-provider boundary; paid state; Claim disabled |
+| Wallet context changes during simulation | Zero send calls; wallet-change message |
+| RPC fails after broadcast with `sendTransactionHash` | Known hash retained; eligibility cleared; Claim disabled |
+| No injected wallet | Zero send calls; useful wallet-required message; read-only verification remains available |
+
+These checks exercise the application's asynchronous control flow. The mocked
+wallet/RPC boundaries do not establish wallet compatibility, public RPC availability,
+cryptographic validity or a real testnet payout.
 
 ## Checked boundaries without an additional P0–P2 finding
 
@@ -148,8 +200,8 @@ code easier to extend safely, but is not counted as an additional current defect
   required at this snapshot.
 - Payout recipients come from the stored ticket. Allowing a different connected
   account as relayer is intentional and is not a beneficiary mismatch.
-- Existing helper tests run with `node --test web/test/proof.test.js`: **6 passed,
-  0 failed, 0 skipped**. These do not cover wallet/network or full app races.
+- The six proof tests and four payment tests all pass. Actual wallet/network behavior
+  still requires the separate browser/integration check described above.
 - Current `run.json` contains null source/claim/ticket/vault completion fields, so
   the page does not activate a falsely completed run from that unfinished manifest.
 
